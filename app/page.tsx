@@ -1,4 +1,5 @@
 import ContactForm from "./components/ContactForm";
+import EventSlider from "./components/EventSlider";
 
 export default function Home() {
   return (
@@ -150,6 +151,9 @@ export default function Home() {
         <p className="text-gray-600 mb-8">
           多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
         </p>
+
+        {/* イベント写真スライダー */}
+        <EventSlider />
 
         <a
           href="#"
