@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const navItems = [
   { label: "KANDA Startup Commons とは", href: "#about" },
-  { label: "KANDA Open Day とは", href: "#openday" },
+  { label: "過去のイベント実績", href: "#openday" },
   { label: "神田について", href: "#kanda" },
   { label: "お問い合わせ", href: "#contact" },
 ];

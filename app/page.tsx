@@ -147,7 +147,7 @@ export default function Home() {
 
       {/* 過去のイベントセクション */}
       <section id="openday" className="py-24 px-8 max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">過去のイベント</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">過去のイベント実績</h2>
         <p className="text-lg text-gray-500 mb-4">KANDA Open Day</p>
         <p className="text-gray-600 mb-8">
           多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
