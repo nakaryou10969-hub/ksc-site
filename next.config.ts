@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.microcms-assets.io",
       },
+      // novolba.com の画像（OGP画像など）
+      {
+        protocol: "https",
+        hostname: "novolba.com",
+      },
     ],
   },
 };

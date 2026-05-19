@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ContactForm from "./components/ContactForm";
 import EventSlider from "./components/EventSlider";
 
@@ -164,15 +165,41 @@ export default function Home() {
 
         {/* イベント記事一覧（2列） */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {[1, 2].map((i) => (
-            <div key={i} className="rounded-2xl overflow-hidden border border-gray-100">
-              <div className="bg-gray-200 aspect-video flex items-center justify-center text-gray-400">
-                <span>画像</span>
+          {[
+            {
+              href: "https://novolba.com/media/event260415/",
+              img: "https://novolba.com/media/wp-content/uploads/2026/05/NovolBa%E3%83%90%E3%83%8A%E3%83%BC-6-1%E8%A1%8Cver.png",
+              title: "【イベントレポート】「KANDA Open Day@神田錦町」第2回を開催しました！",
+              date: "2026.04.15",
+            },
+            {
+              href: "https://novolba.com/media/event260303/",
+              img: "https://novolba.com/media/wp-content/uploads/2026/03/NovolBa%E3%83%90%E3%83%8A%E3%83%BC-5-1%E8%A1%8Cver.png",
+              title: "【イベントレポート】「KANDA Open Day@神田錦町」第1回を開催しました！",
+              date: "2026.03.03",
+            },
+          ].map((article) => (
+            <a
+              key={article.href}
+              href={article.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-2xl overflow-hidden border border-gray-100 hover:shadow-md transition-shadow"
+            >
+              <div className="relative aspect-video overflow-hidden bg-gray-100">
+                <Image
+                  src={article.img}
+                  alt={article.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
               <div className="p-5">
-                <p className="font-medium text-gray-800">記事タイトル</p>
+                <p className="text-xs text-gray-400 mb-2">{article.date}</p>
+                <p className="font-medium text-gray-800 leading-snug line-clamp-2">{article.title}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
