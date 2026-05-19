@@ -1,13 +1,28 @@
-import Image from "next/image";
+"use client";
+
 import ContactForm from "./components/ContactForm";
 import EventSlider from "./components/EventSlider";
+import ArticleCard from "./components/ArticleCard";
+import { useScrollReveal } from "./hooks/useScrollReveal";
+
+function RevealSection({ children, className = "", delay = "" }: {
+  children: React.ReactNode;
+  className?: string;
+  delay?: string;
+}) {
+  const ref = useScrollReveal<HTMLDivElement>();
+  return (
+    <div ref={ref} className={`reveal ${delay} ${className}`}>
+      {children}
+    </div>
+  );
+}
 
 export default function Home() {
   return (
     <main className="pt-[72px]">
       {/* ヒーローセクション */}
       <section className="relative w-full h-[754px] bg-gray-200 flex items-center justify-center overflow-hidden">
-        {/* 背景画像（後で差し替え） */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900" />
         <div className="relative z-10 text-center text-white">
           <p className="text-sm tracking-widest mb-4 opacity-80">KANDA Startup Commons</p>
@@ -19,12 +34,13 @@ export default function Home() {
 
       {/* KSCとはセクション */}
       <section id="about" className="py-24 px-8 max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">KANDA Startup Commons とは</h2>
-        <p className="text-lg text-gray-500 mb-16">社会課題から、次世代の豊かさへ</p>
+        <RevealSection>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">KANDA Startup Commons とは</h2>
+          <p className="text-lg text-gray-500 mb-16">社会課題から、次世代の豊かさへ</p>
+        </RevealSection>
 
         <div className="grid md:grid-cols-2 gap-16 items-start">
-          {/* 左：本文 */}
-          <div className="space-y-6 text-gray-700 leading-relaxed">
+          <RevealSection className="space-y-6 text-gray-700 leading-relaxed">
             <p>
               KANDA Startup Commonsが応援したいのは、
               一人ひとりから湧き上がる想いや社会課題の解決を出発点にしながら、
@@ -39,23 +55,17 @@ export default function Home() {
               社会性と事業性、理想と現実のあいだを行き来しながら、
               試し、学び、前に進もうとする人たちが集まる場を、神田からつくっていきます。
             </p>
-          </div>
-
-          {/* 右：画像プレースホルダー */}
-          <div className="rounded-2xl bg-gray-200 aspect-[5/4] flex items-center justify-center text-gray-400">
+          </RevealSection>
+          <RevealSection delay="reveal-delay-2" className="rounded-2xl bg-gray-200 aspect-[5/4] flex items-center justify-center text-gray-400">
             <span>画像</span>
-          </div>
+          </RevealSection>
         </div>
 
-        {/* 役割を持って持ち寄る */}
         <div className="mt-24 grid md:grid-cols-2 gap-16 items-start">
-          {/* 左：画像プレースホルダー */}
-          <div className="rounded-2xl bg-gray-200 aspect-[5/4] flex items-center justify-center text-gray-400">
+          <RevealSection className="rounded-2xl bg-gray-200 aspect-[5/4] flex items-center justify-center text-gray-400">
             <span>画像</span>
-          </div>
-
-          {/* 右：本文 */}
-          <div className="space-y-6 text-gray-700 leading-relaxed">
+          </RevealSection>
+          <RevealSection delay="reveal-delay-2" className="space-y-6 text-gray-700 leading-relaxed">
             <h3 className="text-2xl font-bold text-black">役割を持って持ち寄る</h3>
             <p>
               KANDA Startup Commonsは、参画する一人ひとりが、
@@ -75,21 +85,25 @@ export default function Home() {
               一人ひとりのゆるやかな参加を通じて、共に創り上げていく。
               このまちに、そんな豊かな「共（Commons）」の土壌を育んでいきたいと、私たちは考えています。
             </p>
-          </div>
+          </RevealSection>
         </div>
       </section>
 
       {/* 役割セクション */}
       <section id="roles" className="py-24 bg-gray-50 px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-16">KANDA Startup Commons 内の役割</h2>
+          <RevealSection>
+            <h2 className="text-3xl md:text-4xl font-bold mb-16">KANDA Startup Commons 内の役割</h2>
+          </RevealSection>
 
           {/* スタートアップ会員 */}
           <div className="mb-20">
-            <h3 className="text-xl font-bold mb-2">スタートアップ会員</h3>
-            <p className="text-gray-500 mb-8">◾︎ 挑戦者</p>
+            <RevealSection>
+              <h3 className="text-xl font-bold mb-2">スタートアップ会員</h3>
+              <p className="text-gray-500 mb-8">◾︎ 挑戦者</p>
+            </RevealSection>
             <div className="grid md:grid-cols-2 gap-12 items-start">
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <RevealSection className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
                   スタートアップの立ち上げ、新規事業、社会課題への挑戦。
                   まだ途中で、答えが見えていなくても構いません。
@@ -114,16 +128,18 @@ export default function Home() {
                     <li>テーマや場づくりへの意見参加</li>
                   </ul>
                 </div>
-              </div>
-              <div className="rounded-2xl bg-gray-200 aspect-[4/5] flex items-center justify-center text-gray-400">
+              </RevealSection>
+              <RevealSection delay="reveal-delay-2" className="rounded-2xl bg-gray-200 aspect-[4/5] flex items-center justify-center text-gray-400">
                 <span>画像</span>
-              </div>
+              </RevealSection>
             </div>
           </div>
 
           {/* サポート会員 */}
           <div>
-            <h3 className="text-xl font-bold mb-2">サポート会員</h3>
+            <RevealSection>
+              <h3 className="text-xl font-bold mb-8">サポート会員</h3>
+            </RevealSection>
             <div className="space-y-12">
               {[
                 { role: "◾︎ 応援団", desc: "スタートアップの立ち上げ、新規事業、社会課題への挑戦。まだ途中で、答えが見えていなくても構いません。未完成なアイデアや問いが大歓迎です。" },
@@ -131,13 +147,13 @@ export default function Home() {
                 { role: "◾︎ 助っ人団（盛り上げ隊）", desc: "スタートアップの立ち上げ、新規事業、社会課題への挑戦。まだ途中で、答えが見えていなくても構いません。未完成なアイデアや問いが大歓迎です。" },
               ].map((item) => (
                 <div key={item.role} className="grid md:grid-cols-2 gap-12 items-start">
-                  <div className="rounded-2xl bg-gray-200 aspect-[4/3] flex items-center justify-center text-gray-400">
+                  <RevealSection className="rounded-2xl bg-gray-200 aspect-[4/3] flex items-center justify-center text-gray-400">
                     <span>画像</span>
-                  </div>
-                  <div className="space-y-4 text-gray-700 leading-relaxed">
+                  </RevealSection>
+                  <RevealSection delay="reveal-delay-2" className="space-y-4 text-gray-700 leading-relaxed">
                     <p className="text-gray-500">{item.role}</p>
                     <p>{item.desc}</p>
-                  </div>
+                  </RevealSection>
                 </div>
               ))}
             </div>
@@ -145,82 +161,67 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 過去のイベントセクション */}
+      {/* 過去のイベント実績セクション */}
       <section id="openday" className="py-24 px-8 max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">過去のイベント実績</h2>
-        <p className="text-lg text-gray-500 mb-4">KANDA Open Day</p>
-        <p className="text-gray-600 mb-8">
-          多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
-        </p>
+        <RevealSection>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">過去のイベント実績</h2>
+          <p className="text-lg text-gray-500 mb-4">KANDA Open Day</p>
+          <p className="text-gray-600 mb-8">
+            多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
+          </p>
+        </RevealSection>
 
-        {/* イベント写真スライダー */}
-        <EventSlider />
+        <RevealSection>
+          <EventSlider />
+        </RevealSection>
 
-        <a
-          href="#"
-          className="inline-block mb-16 px-8 py-3 border border-gray-800 text-gray-800 rounded-full text-sm hover:bg-gray-800 hover:text-white transition-colors"
-        >
-          最新のイベント情報を確認する
-        </a>
+        <RevealSection className="mb-16">
+          <a
+            href="#"
+            className="inline-block px-8 py-3 border border-gray-800 text-gray-800 rounded-full text-sm hover:bg-gray-800 hover:text-white transition-colors"
+          >
+            最新のイベント情報を確認する
+          </a>
+        </RevealSection>
 
-        {/* イベント記事一覧（2列） */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {[
-            {
-              href: "https://novolba.com/media/event260415/",
-              img: "/images/events/leftside.png",
-              title: "【イベントレポート】「KANDA Open Day@神田錦町」第2回を開催しました！",
-              date: "2026.04.15",
-            },
-            {
-              href: "https://novolba.com/media/event260303/",
-              img: "/images/events/rightside.png",
-              title: "【イベントレポート】「KANDA Open Day@神田錦町」第1回を開催しました！",
-              date: "2026.03.03",
-            },
-          ].map((article) => (
-            <a
-              key={article.href}
-              href={article.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group rounded-2xl overflow-hidden border border-gray-100 hover:shadow-md transition-shadow"
-            >
-              <div className="relative aspect-video overflow-hidden bg-gray-100">
-                <Image
-                  src={article.img}
-                  alt={article.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-              <div className="p-5">
-                <p className="text-xs text-gray-400 mb-2">{article.date}</p>
-                <p className="font-medium text-gray-800 leading-snug line-clamp-2">{article.title}</p>
-              </div>
-            </a>
-          ))}
+          <ArticleCard
+            href="https://novolba.com/media/event260415/"
+            img="/images/events/leftside.png"
+            title="【イベントレポート】「KANDA Open Day@神田錦町」第2回を開催しました！"
+            date="2026.04.15"
+          />
+          <ArticleCard
+            href="https://novolba.com/media/event260303/"
+            img="/images/events/rightside.png"
+            title="【イベントレポート】「KANDA Open Day@神田錦町」第1回を開催しました！"
+            date="2026.03.03"
+            delay="reveal-delay-2"
+          />
         </div>
 
-        <div className="text-center">
+        <RevealSection className="text-center">
           <a
             href="#"
             className="inline-block px-8 py-3 border border-gray-800 text-gray-800 rounded-full text-sm hover:bg-gray-800 hover:text-white transition-colors"
           >
             もっとみる
           </a>
-        </div>
+        </RevealSection>
       </section>
 
       {/* お問い合わせセクション */}
       <section id="contact" className="py-24 bg-gray-50 px-8">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">お問い合わせ</h2>
-          <p className="text-gray-600 mb-12">
-            多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
-          </p>
-          <ContactForm />
+          <RevealSection>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">お問い合わせ</h2>
+            <p className="text-gray-600 mb-12">
+              多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
+            </p>
+          </RevealSection>
+          <RevealSection>
+            <ContactForm />
+          </RevealSection>
         </div>
       </section>
     </main>
