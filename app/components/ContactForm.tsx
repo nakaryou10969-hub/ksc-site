@@ -1,0 +1,126 @@
+"use client";
+
+import { useState } from "react";
+
+export default function ContactForm() {
+  const [form, setForm] = useState({
+    lastName: "",
+    firstName: "",
+    organization: "",
+    email: "",
+    category: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    const endpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
+    if (!endpoint) {
+      setStatus("error");
+      return;
+    }
+
+    try {
+      const res = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          姓: form.lastName,
+          名: form.firstName,
+          機関組織名: form.organization,
+          メールアドレス: form.email,
+          お問い合わせ内容: form.category,
+          メッセージ: form.message,
+        }),
+      });
+      if (res.ok) {
+        setStatus("success");
+        setForm({ lastName: "", firstName: "", organization: "", email: "", category: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  const inputClass = "w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400";
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-6">
+      {/* 姓・名 */}
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <label className="block text-sm mb-1">姓</label>
+          <input name="lastName" value={form.lastName} onChange={handleChange} className={inputClass} required />
+        </div>
+        <div>
+          <label className="block text-sm mb-1">名</label>
+          <input name="firstName" value={form.firstName} onChange={handleChange} className={inputClass} required />
+        </div>
+      </div>
+
+      {/* 機関・組織名 */}
+      <div>
+        <label className="block text-sm mb-1">機関 / 組織名</label>
+        <input name="organization" value={form.organization} onChange={handleChange} className={inputClass} />
+      </div>
+
+      {/* メールアドレス */}
+      <div>
+        <label className="block text-sm mb-1">メールアドレス</label>
+        <input type="email" name="email" value={form.email} onChange={handleChange} className={inputClass} required />
+      </div>
+
+      {/* お問い合わせ内容 */}
+      <div>
+        <label className="block text-sm mb-1">お問い合わせ内容</label>
+        <select name="category" value={form.category} onChange={handleChange} className={inputClass} required>
+          <option value="">選択してください</option>
+          <option value="スタートアップ会員について">スタートアップ会員について</option>
+          <option value="サポート会員について">サポート会員について</option>
+          <option value="イベントについて">イベントについて</option>
+          <option value="その他">その他</option>
+        </select>
+      </div>
+
+      {/* お問い合わせ内容（その他） */}
+      <div>
+        <label className="block text-sm mb-1">お問い合わせ内容（その他）</label>
+        <textarea
+          name="message"
+          value={form.message}
+          onChange={handleChange}
+          rows={5}
+          className={inputClass}
+          required
+        />
+      </div>
+
+      {/* 送信ボタン */}
+      <div className="text-center">
+        <button
+          type="submit"
+          disabled={status === "sending"}
+          className="px-12 py-3 bg-gray-800 text-white rounded-full text-sm hover:bg-gray-700 transition-colors disabled:opacity-50"
+        >
+          {status === "sending" ? "送信中..." : "送信"}
+        </button>
+      </div>
+
+      {status === "success" && (
+        <p className="text-center text-green-600 text-sm">送信が完了しました。ありがとうございます。</p>
+      )}
+      {status === "error" && (
+        <p className="text-center text-red-600 text-sm">送信に失敗しました。時間をおいて再度お試しください。</p>
+      )}
+    </form>
+  );
+}
