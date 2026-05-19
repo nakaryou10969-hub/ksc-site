@@ -168,13 +168,13 @@ export default function Home() {
           {[
             {
               href: "https://novolba.com/media/event260415/",
-              img: "https://novolba.com/media/wp-content/uploads/2026/05/NovolBa%E3%83%90%E3%83%8A%E3%83%BC-6-1%E8%A1%8Cver.png",
+              img: "/images/events/leftside.png",
               title: "【イベントレポート】「KANDA Open Day@神田錦町」第2回を開催しました！",
               date: "2026.04.15",
             },
             {
               href: "https://novolba.com/media/event260303/",
-              img: "https://novolba.com/media/wp-content/uploads/2026/03/NovolBa%E3%83%90%E3%83%8A%E3%83%BC-5-1%E8%A1%8Cver.png",
+              img: "/images/events/rightside.png",
               title: "【イベントレポート】「KANDA Open Day@神田錦町」第1回を開催しました！",
               date: "2026.03.03",
             },
