@@ -22,22 +22,42 @@ export default function EventSlider() {
   const next = () => setCurrent((c) => (c + 1) % images.length);
 
   return (
-    <div className="relative w-full max-w-3xl mx-auto mb-10">
-      {/* 画像エリア */}
+    <div className="w-full max-w-3xl mx-auto mb-10">
+      {/* スライダー本体 */}
       <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-100">
-        <Image
-          src={images[current].src}
-          alt={images[current].alt}
-          fill
-          className="object-cover transition-opacity duration-300"
-          sizes="(max-width: 768px) 100vw, 768px"
-        />
+        {/* 全画像を横並びにしてtranslateXでスライド */}
+        <div
+          className="flex h-full"
+          style={{
+            width: `${images.length * 100}%`,
+            transform: `translateX(-${(current * 100) / images.length}%)`,
+            transition: "transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+            willChange: "transform",
+          }}
+        >
+          {images.map((img, i) => (
+            <div
+              key={i}
+              className="relative h-full flex-shrink-0"
+              style={{ width: `${100 / images.length}%` }}
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 768px"
+                priority={i === 0}
+              />
+            </div>
+          ))}
+        </div>
 
         {/* 左矢印 */}
         <button
           onClick={prev}
           aria-label="前の画像"
-          className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white shadow flex items-center justify-center transition-colors"
+          className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white shadow-md flex items-center justify-center transition-colors z-10"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -48,7 +68,7 @@ export default function EventSlider() {
         <button
           onClick={next}
           aria-label="次の画像"
-          className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white shadow flex items-center justify-center transition-colors"
+          className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white shadow-md flex items-center justify-center transition-colors z-10"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -63,8 +83,8 @@ export default function EventSlider() {
             key={i}
             onClick={() => setCurrent(i)}
             aria-label={`画像 ${i + 1}`}
-            className={`w-2 h-2 rounded-full transition-colors ${
-              i === current ? "bg-gray-800" : "bg-gray-300"
+            className={`rounded-full transition-all duration-300 ${
+              i === current ? "w-4 h-2 bg-gray-800" : "w-2 h-2 bg-gray-300"
             }`}
           />
         ))}
