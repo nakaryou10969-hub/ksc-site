@@ -8,7 +8,7 @@ import RevealSection from "./components/RevealSection";
 async function getLatestEvents(): Promise<Event[]> {
   try {
     const data = await client.getList<Event>({
-      endpoint: "events",
+      endpoint: "blog",
       queries: {
         limit: 2,
         orders: "-date",
