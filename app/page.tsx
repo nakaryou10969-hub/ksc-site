@@ -195,7 +195,7 @@ export default async function Home() {
             events.map((event, i) => (
               <ArticleCard
                 key={event.id}
-                href={`/events/${event.id}`}
+                href={`/events/${event.id}/`}
                 img={event.eyecatch?.url ?? ""}
                 title={event.title}
                 date={event.date
@@ -216,6 +216,7 @@ export default async function Home() {
                 img="/images/events/leftside.png"
                 title="【イベントレポート】「KANDA Open Day@神田錦町」第2回を開催しました！"
                 date="2026.04.15"
+                external
               />
               <ArticleCard
                 href="https://novolba.com/media/event260303/"
@@ -223,6 +224,7 @@ export default async function Home() {
                 title="【イベントレポート】「KANDA Open Day@神田錦町」第1回を開催しました！"
                 date="2026.03.03"
                 delay="reveal-delay-2"
+                external
               />
             </>
           )}

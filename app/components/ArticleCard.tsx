@@ -9,17 +9,17 @@ interface Props {
   title: string;
   date: string;
   delay?: string;
+  external?: boolean;
 }
 
-export default function ArticleCard({ href, img, title, date, delay = "" }: Props) {
+export default function ArticleCard({ href, img, title, date, delay = "", external = false }: Props) {
   const ref = useScrollReveal<HTMLAnchorElement>();
 
   return (
     <a
       ref={ref}
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className={`reveal ${delay} group rounded-2xl overflow-hidden border border-gray-100 hover:shadow-md transition-shadow block`}
     >
       <div className="relative aspect-video overflow-hidden bg-gray-100">
