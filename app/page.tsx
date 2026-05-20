@@ -1,24 +1,29 @@
-"use client";
-
+import { client } from "@/libs/client";
+import { Event } from "@/libs/types";
 import ContactForm from "./components/ContactForm";
 import EventSlider from "./components/EventSlider";
 import ArticleCard from "./components/ArticleCard";
-import { useScrollReveal } from "./hooks/useScrollReveal";
+import RevealSection from "./components/RevealSection";
 
-function RevealSection({ children, className = "", delay = "" }: {
-  children: React.ReactNode;
-  className?: string;
-  delay?: string;
-}) {
-  const ref = useScrollReveal<HTMLDivElement>();
-  return (
-    <div ref={ref} className={`reveal ${delay} ${className}`}>
-      {children}
-    </div>
-  );
+async function getLatestEvents(): Promise<Event[]> {
+  try {
+    const data = await client.getList<Event>({
+      endpoint: "events",
+      queries: {
+        limit: 2,
+        orders: "-date",
+        fields: "id,title,date,thumbnail,summary",
+      },
+    });
+    return data.contents;
+  } catch {
+    return [];
+  }
 }
 
-export default function Home() {
+export default async function Home() {
+  const events = await getLatestEvents();
+
   return (
     <main className="pt-[72px]">
       {/* ヒーローセクション */}
@@ -184,20 +189,41 @@ export default function Home() {
           </a>
         </RevealSection>
 
+        {/* microCMSから取得した記事カード */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <ArticleCard
-            href="https://novolba.com/media/event260415/"
-            img="/images/events/leftside.png"
-            title="【イベントレポート】「KANDA Open Day@神田錦町」第2回を開催しました！"
-            date="2026.04.15"
-          />
-          <ArticleCard
-            href="https://novolba.com/media/event260303/"
-            img="/images/events/rightside.png"
-            title="【イベントレポート】「KANDA Open Day@神田錦町」第1回を開催しました！"
-            date="2026.03.03"
-            delay="reveal-delay-2"
-          />
+          {events.length > 0 ? (
+            events.map((event, i) => (
+              <ArticleCard
+                key={event.id}
+                href={`/events/${event.id}`}
+                img={event.thumbnail?.url ?? ""}
+                title={event.title}
+                date={new Date(event.date).toLocaleDateString("ja-JP", {
+                  year: "numeric",
+                  month: "2-digit",
+                  day: "2-digit",
+                }).replace(/\//g, ".")}
+                delay={i === 1 ? "reveal-delay-2" : ""}
+              />
+            ))
+          ) : (
+            // microCMSに記事がない場合のフォールバック
+            <>
+              <ArticleCard
+                href="https://novolba.com/media/event260415/"
+                img="/images/events/leftside.png"
+                title="【イベントレポート】「KANDA Open Day@神田錦町」第2回を開催しました！"
+                date="2026.04.15"
+              />
+              <ArticleCard
+                href="https://novolba.com/media/event260303/"
+                img="/images/events/rightside.png"
+                title="【イベントレポート】「KANDA Open Day@神田錦町」第1回を開催しました！"
+                date="2026.03.03"
+                delay="reveal-delay-2"
+              />
+            </>
+          )}
         </div>
 
         <RevealSection className="text-center">
