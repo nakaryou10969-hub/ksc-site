@@ -4,6 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+// generateStaticParams で生成したパス以外は404にする（静的エクスポート必須）
+export const dynamicParams = false;
+
 type Props = {
   params: Promise<{ id: string }>;
 };
