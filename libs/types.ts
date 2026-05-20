@@ -7,7 +7,7 @@ export type Event = {
   id: string;
   title: string;
   date: string;
-  thumbnail: {
+  eyecatch: {
     url: string;
     height: number;
     width: number;

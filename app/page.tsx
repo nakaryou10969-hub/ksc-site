@@ -12,7 +12,7 @@ async function getLatestEvents(): Promise<Event[]> {
       queries: {
         limit: 2,
         orders: "-date",
-        fields: "id,title,date,thumbnail,summary",
+        fields: "id,title,date,eyecatch,summary",
       },
     });
     return data.contents;
@@ -196,13 +196,15 @@ export default async function Home() {
               <ArticleCard
                 key={event.id}
                 href={`/events/${event.id}`}
-                img={event.thumbnail?.url ?? ""}
+                img={event.eyecatch?.url ?? ""}
                 title={event.title}
-                date={new Date(event.date).toLocaleDateString("ja-JP", {
-                  year: "numeric",
-                  month: "2-digit",
-                  day: "2-digit",
-                }).replace(/\//g, ".")}
+                date={event.date
+                  ? new Date(event.date).toLocaleDateString("ja-JP", {
+                      year: "numeric",
+                      month: "2-digit",
+                      day: "2-digit",
+                    }).replace(/\//g, ".")
+                  : ""}
                 delay={i === 1 ? "reveal-delay-2" : ""}
               />
             ))
