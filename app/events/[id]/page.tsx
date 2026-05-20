@@ -4,6 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+type Props = {
+  params: Promise<{ id: string }>;
+};
+
 // 静的エクスポート用：全記事IDを事前生成
 export async function generateStaticParams() {
   try {
@@ -17,7 +21,7 @@ export async function generateStaticParams() {
   }
 }
 
-export default async function EventDetail({ params }: { params: Promise<{ id: string }> }) {
+export default async function EventDetail({ params }: Props) {
   const { id } = await params;
 
   let event: Event;
@@ -30,8 +34,8 @@ export default async function EventDetail({ params }: { params: Promise<{ id: st
     notFound();
   }
 
-  const formattedDate = event.date
-    ? new Date(event.date).toLocaleDateString("ja-JP", {
+  const formattedDate = event!.date
+    ? new Date(event!.date).toLocaleDateString("ja-JP", {
         year: "numeric",
         month: "long",
         day: "numeric",
@@ -47,7 +51,7 @@ export default async function EventDetail({ params }: { params: Promise<{ id: st
           <span className="mx-2">/</span>
           <Link href="/#openday" className="hover:text-gray-600 transition-colors">過去のイベント実績</Link>
           <span className="mx-2">/</span>
-          <span className="text-gray-600">{event.title}</span>
+          <span className="text-gray-600 line-clamp-1">{event!.title}</span>
         </nav>
 
         {/* 日付 */}
@@ -56,14 +60,14 @@ export default async function EventDetail({ params }: { params: Promise<{ id: st
         )}
 
         {/* タイトル */}
-        <h1 className="text-2xl md:text-3xl font-bold leading-tight mb-8">{event.title}</h1>
+        <h1 className="text-2xl md:text-3xl font-bold leading-tight mb-8">{event!.title}</h1>
 
         {/* アイキャッチ */}
-        {event.eyecatch?.url && (
+        {event!.eyecatch?.url && (
           <div className="relative aspect-video rounded-2xl overflow-hidden mb-12">
             <Image
-              src={event.eyecatch.url}
-              alt={event.title}
+              src={event!.eyecatch.url}
+              alt={event!.title}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 768px"
@@ -73,10 +77,14 @@ export default async function EventDetail({ params }: { params: Promise<{ id: st
         )}
 
         {/* 本文 */}
-        <div
-          className="prose-content"
-          dangerouslySetInnerHTML={{ __html: event.body ?? "" }}
-        />
+        {event!.content ? (
+          <div
+            className="prose-content"
+            dangerouslySetInnerHTML={{ __html: event!.content }}
+          />
+        ) : (
+          <p className="text-gray-400 text-sm">本文はまだ登録されていません。</p>
+        )}
 
         {/* 戻るボタン */}
         <div className="mt-16 pt-8 border-t border-gray-100">

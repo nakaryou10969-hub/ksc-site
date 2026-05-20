@@ -7,13 +7,13 @@ export type Event = {
   id: string;
   title: string;
   date: string;
-  eyecatch: {
+  eyecatch?: {
     url: string;
     height: number;
     width: number;
   };
-  category?: Category[];
-  body: string;
+  tag?: string[];
+  content?: string;
   summary?: string;
 };
 
