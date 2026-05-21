@@ -37,6 +37,8 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
         run: |
+          # _next/static は古いファイルを完全削除してから同期
+          aws s3 rm s3://${{ secrets.S3_BUCKET }}/_next/ --recursive
           aws s3 sync out/ s3://${{ secrets.S3_BUCKET }} --delete
 
       - name: Invalidate CloudFront cache
