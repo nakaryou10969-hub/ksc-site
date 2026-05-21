@@ -4,6 +4,7 @@ import ContactForm from "./components/ContactForm";
 import EventSlider from "./components/EventSlider";
 import ArticleCard from "./components/ArticleCard";
 import RevealSection from "./components/RevealSection";
+import Image from "next/image";
 
 async function getLatestEvents(): Promise<Event[]> {
   try {
@@ -23,14 +24,14 @@ export default async function Home() {
   return (
     <main className="pt-[72px]">
       {/* ヒーローセクション */}
-      <section className="relative w-full h-[754px] bg-gray-200 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900" />
-        <div className="relative z-10 text-center text-white">
-          <p className="text-sm tracking-widest mb-4 opacity-80">KANDA Startup Commons</p>
-          <h1 className="hero-h1">
-            社会課題から、<br />次世代の豊かさへ
-          </h1>
-        </div>
+      <section className="relative w-full h-[754px] overflow-hidden">
+        <Image
+          src="/images/events/TOP画像.png"
+          alt="KANDA Startup Commons"
+          fill
+          className="object-cover"
+          priority
+        />
       </section>
 
       {/* KSCとはセクション */}
