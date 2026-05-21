@@ -59,10 +59,10 @@ export default async function EventDetail({ params }: Props) {
     : "";
 
   return (
-    <main className="pt-[72px] bg-white">
+    <main className="pt-[72px]">
 
       {/* ページヘッダー */}
-      <section className="bg-gray-50 border-b border-gray-100 py-12 px-8">
+      <section className="border-b border-gray-300 py-12 px-8">
         <div className="max-w-3xl mx-auto">
           {/* パンくず */}
           <nav className="text-xs text-gray-400 mb-6 flex items-center gap-1.5">

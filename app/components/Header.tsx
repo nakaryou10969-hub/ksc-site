@@ -14,7 +14,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-300" style={{ backgroundColor: "#E3E0DA" }}>
       <div className="max-w-7xl mx-auto px-8 h-[72px] flex items-center justify-between">
         {/* ロゴ */}
         <Link href="/" className="font-bold text-lg tracking-wide">
@@ -48,7 +48,7 @@ export default function Header() {
 
       {/* モバイルメニュー */}
       {menuOpen && (
-        <nav className="lg:hidden bg-white border-t border-gray-100 px-8 py-6 flex flex-col gap-5 text-sm">
+        <nav className="lg:hidden border-t border-gray-300 px-8 py-6 flex flex-col gap-5 text-sm" style={{ backgroundColor: "#E3E0DA" }}>
           {navItems.map((item) => (
             <Link
               key={item.href}

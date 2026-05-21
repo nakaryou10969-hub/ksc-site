@@ -92,7 +92,7 @@ export default async function Home() {
       </section>
 
       {/* 役割セクション */}
-      <section id="roles" className="py-24 bg-gray-50 px-8">
+      <section id="roles" className="py-24 px-8" style={{ backgroundColor: "#D6D3CD" }}>
         <div className="max-w-7xl mx-auto">
           <RevealSection>
             <h2>KANDA Startup Commons 内の役割</h2>
@@ -237,7 +237,7 @@ export default async function Home() {
       </section>
 
       {/* お問い合わせセクション */}
-      <section id="contact" className="py-24 bg-gray-50 px-8">
+      <section id="contact" className="py-24 px-8" style={{ backgroundColor: "#D6D3CD" }}>
         <div className="max-w-3xl mx-auto">
           <RevealSection>
             <h2>お問い合わせ</h2>
