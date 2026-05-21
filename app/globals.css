@@ -3,6 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* KSCカラー */
+  --color-h1: #3B3C3E;
+  --color-h2: #D94C0B;
+  --color-h3: #585858;
+  --color-btn-bg: #767676;
+  --color-btn-text: #FFFFFF;
 }
 
 @theme inline {
@@ -13,7 +19,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: "Noto Sans JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   overflow-x: hidden;
   font-size: 16px;
 }
@@ -22,6 +28,94 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* ===== タイポグラフィ（記事ページ除く） ===== */
+
+/* h1: NotoSans JP Bold, 40px, 行間32px, 色#3B3C3E, padding上下40px, FVとのマージン40px */
+main h1 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 32px;
+  color: var(--color-h1);
+  padding: 40px 0;
+  margin-top: 40px; /* FVとのマージン */
+}
+
+/* ヒーローセクション専用h1（白文字・大サイズ） */
+.hero-h1 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 3.75rem);
+  line-height: 1.2;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+
+/* h2: NotoSans JP Bold（DNP代替）, 32px, 行間30px, 色#D94C0B, padding左右12px 上下20px */
+main h2 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 30px;
+  color: var(--color-h2);
+  padding: 20px 12px;
+}
+
+/* h3: NotoSans JP Bold（DNP代替）, 28px, 行間30px, 色#585858, padding左右12px 上下12px, 左に■ */
+main h3 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 30px;
+  color: var(--color-h3);
+  padding: 12px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+main h3::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-h3);
+  flex-shrink: 0;
+}
+
+/* p（本文）: NotoSans JP Black, 16px（SP:15px）, 行間40px, padding左右20px 上下12px */
+main p {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 40px;
+  padding: 12px 20px;
+}
+
+@media (max-width: 768px) {
+  main p {
+    font-size: 15px;
+  }
+}
+
+/* button: NotoSans JP Bold（DNP代替）, 22px, 背面#767676, 文字#FFFFFF, 左右44px 上下16px（文字に対して）, 行間なし, 中央揃え */
+.ksc-btn {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: normal;
+  background-color: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  padding: 16px 44px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+
+/* ===== ユーティリティ ===== */
 
 .line-clamp-2 {
   display: -webkit-box;

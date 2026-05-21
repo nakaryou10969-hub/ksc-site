@@ -79,7 +79,7 @@ export default async function EventDetail({ params }: Props) {
           )}
 
           {/* タイトル */}
-          <h1 className="text-2xl md:text-3xl font-bold leading-tight text-gray-900">
+          <h1>
             {event!.title}
           </h1>
         </div>

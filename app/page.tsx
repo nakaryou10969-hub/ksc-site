@@ -27,7 +27,7 @@ export default async function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900" />
         <div className="relative z-10 text-center text-white">
           <p className="text-sm tracking-widest mb-4 opacity-80">KANDA Startup Commons</p>
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+          <h1 className="hero-h1">
             社会課題から、<br />次世代の豊かさへ
           </h1>
         </div>
@@ -36,8 +36,8 @@ export default async function Home() {
       {/* KSCとはセクション */}
       <section id="about" className="py-24 px-8 max-w-7xl mx-auto">
         <RevealSection>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">KANDA Startup Commons とは</h2>
-          <p className="text-lg text-gray-500 mb-16">社会課題から、次世代の豊かさへ</p>
+          <h2>KANDA Startup Commons とは</h2>
+          <p>社会課題から、次世代の豊かさへ</p>
         </RevealSection>
 
         <div className="grid md:grid-cols-2 gap-16 items-start">
@@ -66,8 +66,8 @@ export default async function Home() {
           <RevealSection className="rounded-2xl bg-gray-200 aspect-[5/4] flex items-center justify-center text-gray-400">
             <span>画像</span>
           </RevealSection>
-          <RevealSection delay="reveal-delay-2" className="space-y-6 text-gray-700 leading-relaxed">
-            <h3 className="text-2xl font-bold text-black">役割を持って持ち寄る</h3>
+          <RevealSection delay="reveal-delay-2" className="space-y-6 leading-relaxed">
+            <h3>役割を持って持ち寄る</h3>
             <p>
               KANDA Startup Commonsは、参画する一人ひとりが、
               自分なりの役割を持って関わることを大切にしています。
@@ -94,14 +94,14 @@ export default async function Home() {
       <section id="roles" className="py-24 bg-gray-50 px-8">
         <div className="max-w-7xl mx-auto">
           <RevealSection>
-            <h2 className="text-3xl md:text-4xl font-bold mb-16">KANDA Startup Commons 内の役割</h2>
+            <h2>KANDA Startup Commons 内の役割</h2>
           </RevealSection>
 
           {/* スタートアップ会員 */}
           <div className="mb-20">
             <RevealSection>
-              <h3 className="text-xl font-bold mb-2">スタートアップ会員</h3>
-              <p className="text-gray-500 mb-8">◾︎ 挑戦者</p>
+              <h3>スタートアップ会員</h3>
+              <p>◾︎ 挑戦者</p>
             </RevealSection>
             <div className="grid md:grid-cols-2 gap-12 items-start">
               <RevealSection className="space-y-4 text-gray-700 leading-relaxed">
@@ -139,7 +139,7 @@ export default async function Home() {
           {/* サポート会員 */}
           <div>
             <RevealSection>
-              <h3 className="text-xl font-bold mb-8">サポート会員</h3>
+              <h3>サポート会員</h3>
             </RevealSection>
             <div className="space-y-12">
               {[
@@ -165,9 +165,9 @@ export default async function Home() {
       {/* 過去のイベント実績セクション */}
       <section id="openday" className="py-24 px-8 max-w-7xl mx-auto">
         <RevealSection>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">過去のイベント実績</h2>
-          <p className="text-lg text-gray-500 mb-4">KANDA Open Day</p>
-          <p className="text-gray-600 mb-8">
+          <h2>過去のイベント実績</h2>
+          <p>KANDA Open Day</p>
+          <p>
             多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
           </p>
         </RevealSection>
@@ -239,7 +239,7 @@ export default async function Home() {
       <section id="contact" className="py-24 bg-gray-50 px-8">
         <div className="max-w-3xl mx-auto">
           <RevealSection>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">お問い合わせ</h2>
+            <h2>お問い合わせ</h2>
             <p className="text-gray-600 mb-12">
               多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
             </p>
