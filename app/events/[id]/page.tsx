@@ -4,14 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-// generateStaticParams で生成したパス以外は404にする（静的エクスポート必須）
-export const dynamicParams = false;
-
 type Props = {
   params: Promise<{ id: string }>;
 };
 
-// 静的エクスポート用：全記事IDを事前生成
 export async function generateStaticParams() {
   try {
     const data = await client.getList<Event>({
@@ -29,7 +25,7 @@ export default async function EventDetail({ params }: Props) {
 
   let event: Event;
   try {
-    event = await client.getListDetail<Event>({
+    event = await client.get<Event>({
       endpoint: "blog",
       contentId: id,
     });

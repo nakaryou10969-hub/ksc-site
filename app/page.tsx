@@ -1,9 +1,24 @@
+import { client } from "@/libs/client";
+import { Event } from "@/libs/types";
 import ContactForm from "./components/ContactForm";
 import EventSlider from "./components/EventSlider";
 import ArticleCard from "./components/ArticleCard";
 import RevealSection from "./components/RevealSection";
 
+async function getLatestEvents(): Promise<Event[]> {
+  try {
+    const data = await client.getList<Event>({
+      endpoint: "blog",
+      queries: { limit: 2, orders: "-date", fields: "id,title,date,eyecatch" },
+    });
+    return data.contents;
+  } catch {
+    return [];
+  }
+}
+
 export default async function Home() {
+  const events = await getLatestEvents();
 
   return (
     <main className="pt-[72px]">
@@ -172,21 +187,42 @@ export default async function Home() {
 
         {/* 記事カード */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <ArticleCard
-            href="https://novolba.com/media/event260415/"
-            img="/images/events/leftside.png"
-            title="【イベントレポート】「KANDA Open Day@神田錦町」第2回を開催しました！"
-            date="2026.04.15"
-            external
-          />
-          <ArticleCard
-            href="https://novolba.com/media/event260303/"
-            img="/images/events/rightside.png"
-            title="【イベントレポート】「KANDA Open Day@神田錦町」第1回を開催しました！"
-            date="2026.03.03"
-            delay="reveal-delay-2"
-            external
-          />
+          {events.length > 0 ? (
+            events.map((event, i) => (
+              <ArticleCard
+                key={event.id}
+                href={`/events/${event.id}/`}
+                img={event.eyecatch?.url ?? ""}
+                title={event.title}
+                date={event.date
+                  ? new Date(event.date).toLocaleDateString("ja-JP", {
+                      year: "numeric",
+                      month: "2-digit",
+                      day: "2-digit",
+                    }).replace(/\//g, ".")
+                  : ""}
+                delay={i === 1 ? "reveal-delay-2" : ""}
+              />
+            ))
+          ) : (
+            <>
+              <ArticleCard
+                href="https://novolba.com/media/event260415/"
+                img="/images/events/leftside.png"
+                title="【イベントレポート】「KANDA Open Day@神田錦町」第2回を開催しました！"
+                date="2026.04.15"
+                external
+              />
+              <ArticleCard
+                href="https://novolba.com/media/event260303/"
+                img="/images/events/rightside.png"
+                title="【イベントレポート】「KANDA Open Day@神田錦町」第1回を開催しました！"
+                date="2026.03.03"
+                delay="reveal-delay-2"
+                external
+              />
+            </>
+          )}
         </div>
 
         <RevealSection className="text-center">
