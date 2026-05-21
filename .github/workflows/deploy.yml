@@ -39,7 +39,8 @@ jobs:
         run: |
           # _next/static は古いファイルを完全削除してから同期
           aws s3 rm s3://${{ secrets.S3_BUCKET }}/_next/ --recursive
-          aws s3 sync out/ s3://${{ secrets.S3_BUCKET }} --delete
+          # HTMLは必ず上書き（syncはスキップする場合があるため）
+          aws s3 sync out/ s3://${{ secrets.S3_BUCKET }} --delete --exact-timestamps
 
       - name: Invalidate CloudFront cache
         env:
