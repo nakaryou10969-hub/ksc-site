@@ -20,9 +20,10 @@ export default function ArticleCard({ href, img, title, date, delay = "", extern
       ref={ref}
       href={href}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-      className={`reveal ${delay} group rounded-2xl overflow-hidden border border-gray-100 hover:shadow-md transition-shadow block`}
+      className={`reveal ${delay} group rounded-2xl overflow-hidden hover:shadow-md transition-shadow block`}
+      style={{ border: "1px solid #D6D3CD" }}
     >
-      <div className="relative aspect-video overflow-hidden bg-gray-100">
+      <div className="relative aspect-video overflow-hidden" style={{ backgroundColor: "#D6D3CD" }}>
         <Image
           src={img}
           alt={title}
@@ -32,8 +33,8 @@ export default function ArticleCard({ href, img, title, date, delay = "", extern
         />
       </div>
       <div className="p-5">
-        <p className="text-xs text-gray-400 mb-2">{date}</p>
-        <p className="font-medium text-gray-800 leading-snug line-clamp-2">{title}</p>
+        <p className="text-xs mb-2" style={{ color: "#767676" }}>{date}</p>
+        <p className="font-medium leading-snug line-clamp-2" style={{ color: "#3B3C3E" }}>{title}</p>
       </div>
     </a>
   );

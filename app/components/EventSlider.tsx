@@ -84,14 +84,15 @@ export default function EventSlider() {
             onClick={() => setCurrent(i)}
             aria-label={`画像 ${i + 1}`}
             className={`rounded-full transition-all duration-300 ${
-              i === current ? "w-4 h-2 bg-gray-800" : "w-2 h-2 bg-gray-300"
+              i === current ? "w-4 h-2" : "w-2 h-2"
             }`}
+            style={{ backgroundColor: i === current ? "#3B3C3E" : "#767676" }}
           />
         ))}
       </div>
 
       {/* カウンター */}
-      <p className="text-center text-sm text-gray-400 mt-2">
+      <p className="text-center text-sm mt-2" style={{ color: "#767676" }}>
         {current + 1} / {images.length}
       </p>
     </div>

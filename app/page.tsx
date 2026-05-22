@@ -42,7 +42,7 @@ export default async function Home() {
         </RevealSection>
 
         <div className="grid md:grid-cols-2 gap-16 items-start">
-          <RevealSection className="space-y-6 text-gray-700 leading-relaxed">
+          <RevealSection className="space-y-6 leading-relaxed" style={{ color: "#3B3C3E" }}>
             <p>
               KANDA Startup Commonsが応援したいのは、
               一人ひとりから湧き上がる想いや社会課題の解決を出発点にしながら、
@@ -58,13 +58,13 @@ export default async function Home() {
               試し、学び、前に進もうとする人たちが集まる場を、神田からつくっていきます。
             </p>
           </RevealSection>
-          <RevealSection delay="reveal-delay-2" className="rounded-2xl bg-gray-200 aspect-[5/4] flex items-center justify-center text-gray-400">
+          <RevealSection delay="reveal-delay-2" className="rounded-2xl aspect-[5/4] flex items-center justify-center" style={{ backgroundColor: "#D6D3CD", color: "#767676" }}>
             <span>画像</span>
           </RevealSection>
         </div>
 
         <div className="mt-24 grid md:grid-cols-2 gap-16 items-start">
-          <RevealSection className="rounded-2xl bg-gray-200 aspect-[5/4] flex items-center justify-center text-gray-400">
+          <RevealSection className="rounded-2xl aspect-[5/4] flex items-center justify-center" style={{ backgroundColor: "#D6D3CD", color: "#767676" }}>
             <span>画像</span>
           </RevealSection>
           <RevealSection delay="reveal-delay-2" className="space-y-6 leading-relaxed">
@@ -73,7 +73,7 @@ export default async function Home() {
               KANDA Startup Commonsは、参画する一人ひとりが、
               自分なりの役割を持って関わることを大切にしています。
             </p>
-            <ul className="space-y-2 text-gray-600">
+            <ul className="space-y-2" style={{ color: "#585858" }}>
               <li>こんな挑戦をしたい</li>
               <li>こんな応援があれば前に進めそう</li>
               <li>自分は、こんな形で力を貸せる</li>
@@ -105,7 +105,7 @@ export default async function Home() {
               <p>◾︎ 挑戦者</p>
             </RevealSection>
             <div className="grid md:grid-cols-2 gap-12 items-start">
-              <RevealSection className="space-y-4 text-gray-700 leading-relaxed">
+              <RevealSection className="space-y-4 leading-relaxed" style={{ color: "#3B3C3E" }}>
                 <p>
                   スタートアップの立ち上げ、新規事業、社会課題への挑戦。
                   まだ途中で、答えが見えていなくても構いません。
@@ -115,15 +115,15 @@ export default async function Home() {
                   一人で抱え込まず、「何をやりたいか」「何に困っているか」を言葉にして、
                   参加してみてください。
                 </p>
-                <div className="mt-6 space-y-3 text-sm text-gray-600">
-                  <p className="font-semibold text-black">役割：</p>
-                  <ul className="space-y-1 list-disc list-inside">
+                <div className="mt-6 space-y-3">
+                  <p className="font-semibold" style={{ color: "#3B3C3E" }}>役割：</p>
+                  <ul className="space-y-1 list-disc list-inside" style={{ color: "#585858" }}>
                     <li>事業や課題をオープンにし、挑戦を可視化</li>
                     <li>神田の場を実験フィールドとして活用</li>
                     <li>次の挑戦者への知見共有・応援</li>
                   </ul>
-                  <p className="font-semibold text-black mt-4">主な権利：</p>
-                  <ul className="space-y-1 list-disc list-inside">
+                  <p className="font-semibold mt-4" style={{ color: "#3B3C3E" }}>主な権利：</p>
+                  <ul className="space-y-1 list-disc list-inside" style={{ color: "#585858" }}>
                     <li>Open Day・会員限定イベントへの参加</li>
                     <li>サポート会員との壁打ち・マッチング機会</li>
                     <li>Commons公式メディア・登壇などの発信機会</li>
@@ -131,7 +131,7 @@ export default async function Home() {
                   </ul>
                 </div>
               </RevealSection>
-              <RevealSection delay="reveal-delay-2" className="rounded-2xl bg-gray-200 aspect-[4/5] flex items-center justify-center text-gray-400">
+              <RevealSection delay="reveal-delay-2" className="rounded-2xl aspect-[4/5] flex items-center justify-center" style={{ backgroundColor: "#D6D3CD", color: "#767676" }}>
                 <span>画像</span>
               </RevealSection>
             </div>
@@ -149,12 +149,12 @@ export default async function Home() {
                 { role: "◾︎ 助っ人団（盛り上げ隊）", desc: "スタートアップの立ち上げ、新規事業、社会課題への挑戦。まだ途中で、答えが見えていなくても構いません。未完成なアイデアや問いが大歓迎です。" },
               ].map((item) => (
                 <div key={item.role} className="grid md:grid-cols-2 gap-12 items-start">
-                  <RevealSection className="rounded-2xl bg-gray-200 aspect-[4/3] flex items-center justify-center text-gray-400">
+                  <RevealSection className="rounded-2xl aspect-[4/3] flex items-center justify-center" style={{ backgroundColor: "#D6D3CD", color: "#767676" }}>
                     <span>画像</span>
                   </RevealSection>
-                  <RevealSection delay="reveal-delay-2" className="space-y-4 text-gray-700 leading-relaxed">
-                    <p className="text-gray-500">{item.role}</p>
-                    <p>{item.desc}</p>
+                  <RevealSection delay="reveal-delay-2" className="space-y-4 leading-relaxed">
+                    <p style={{ color: "#767676" }}>{item.role}</p>
+                    <p style={{ color: "#3B3C3E" }}>{item.desc}</p>
                   </RevealSection>
                 </div>
               ))}
@@ -180,7 +180,8 @@ export default async function Home() {
         <RevealSection className="mb-16">
           <a
             href="#"
-            className="inline-block px-8 py-3 border border-gray-800 text-gray-800 rounded-full text-sm hover:bg-gray-800 hover:text-white transition-colors"
+            className="inline-block px-8 py-3 border text-sm hover:opacity-70 transition-opacity"
+            style={{ borderColor: "#3B3C3E", color: "#3B3C3E", borderRadius: "9999px" }}
           >
             最新のイベント情報を確認する
           </a>
@@ -229,7 +230,8 @@ export default async function Home() {
         <RevealSection className="text-center">
           <a
             href="#"
-            className="inline-block px-8 py-3 border border-gray-800 text-gray-800 rounded-full text-sm hover:bg-gray-800 hover:text-white transition-colors"
+            className="inline-block px-8 py-3 border text-sm hover:opacity-70 transition-opacity"
+            style={{ borderColor: "#3B3C3E", color: "#3B3C3E", borderRadius: "9999px" }}
           >
             もっとみる
           </a>
@@ -241,7 +243,7 @@ export default async function Home() {
         <div className="max-w-3xl mx-auto">
           <RevealSection>
             <h2>お問い合わせ</h2>
-            <p className="text-gray-600 mb-12">
+            <p style={{ color: "#585858" }} className="mb-12">
               多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
             </p>
           </RevealSection>

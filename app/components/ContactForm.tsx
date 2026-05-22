@@ -17,7 +17,7 @@ export default function ContactForm() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("sending");
 
@@ -51,38 +51,39 @@ export default function ContactForm() {
     }
   };
 
-  const inputClass = "w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400";
+  const inputClass = "w-full border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400";
+  const labelClass = "block text-sm mb-1" ;
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       {/* 姓・名 */}
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm mb-1">姓</label>
-          <input name="lastName" value={form.lastName} onChange={handleChange} className={inputClass} required />
+          <label className={labelClass} style={{ color: "#3B3C3E" }}>姓</label>
+          <input name="lastName" value={form.lastName} onChange={handleChange} className={inputClass} style={{ color: "#3B3C3E" }} required />
         </div>
         <div>
-          <label className="block text-sm mb-1">名</label>
-          <input name="firstName" value={form.firstName} onChange={handleChange} className={inputClass} required />
+          <label className={labelClass} style={{ color: "#3B3C3E" }}>名</label>
+          <input name="firstName" value={form.firstName} onChange={handleChange} className={inputClass} style={{ color: "#3B3C3E" }} required />
         </div>
       </div>
 
       {/* 機関・組織名 */}
       <div>
-        <label className="block text-sm mb-1">機関 / 組織名</label>
-        <input name="organization" value={form.organization} onChange={handleChange} className={inputClass} />
+        <label className={labelClass} style={{ color: "#3B3C3E" }}>機関 / 組織名</label>
+        <input name="organization" value={form.organization} onChange={handleChange} className={inputClass} style={{ color: "#3B3C3E" }} />
       </div>
 
       {/* メールアドレス */}
       <div>
-        <label className="block text-sm mb-1">メールアドレス</label>
-        <input type="email" name="email" value={form.email} onChange={handleChange} className={inputClass} required />
+        <label className={labelClass} style={{ color: "#3B3C3E" }}>メールアドレス</label>
+        <input type="email" name="email" value={form.email} onChange={handleChange} className={inputClass} style={{ color: "#3B3C3E" }} required />
       </div>
 
       {/* お問い合わせ内容 */}
       <div>
-        <label className="block text-sm mb-1">お問い合わせ内容</label>
-        <select name="category" value={form.category} onChange={handleChange} className={inputClass} required>
+        <label className={labelClass} style={{ color: "#3B3C3E" }}>お問い合わせ内容</label>
+        <select name="category" value={form.category} onChange={handleChange} className={inputClass} style={{ color: "#3B3C3E" }} required>
           <option value="">選択してください</option>
           <option value="スタートアップ会員について">スタートアップ会員について</option>
           <option value="サポート会員について">サポート会員について</option>
@@ -93,13 +94,14 @@ export default function ContactForm() {
 
       {/* お問い合わせ内容（その他） */}
       <div>
-        <label className="block text-sm mb-1">お問い合わせ内容（その他）</label>
+        <label className={labelClass} style={{ color: "#3B3C3E" }}>お問い合わせ内容（その他）</label>
         <textarea
           name="message"
           value={form.message}
           onChange={handleChange}
           rows={5}
           className={inputClass}
+          style={{ color: "#3B3C3E" }}
           required
         />
       </div>
@@ -109,14 +111,15 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="px-12 py-3 bg-gray-800 text-white rounded-full text-sm hover:bg-gray-700 transition-colors disabled:opacity-50"
+          className="px-12 py-3 rounded-full text-sm transition-opacity hover:opacity-70 disabled:opacity-50"
+          style={{ backgroundColor: "#767676", color: "#FFFFFF" }}
         >
           {status === "sending" ? "送信中..." : "送信"}
         </button>
       </div>
 
       {status === "success" && (
-        <p className="text-center text-green-600 text-sm">送信が完了しました。ありがとうございます。</p>
+        <p className="text-center text-sm" style={{ color: "#3B3C3E" }}>送信が完了しました。ありがとうございます。</p>
       )}
       {status === "error" && (
         <p className="text-center text-red-600 text-sm">送信に失敗しました。時間をおいて再度お試しください。</p>
