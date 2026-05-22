@@ -166,8 +166,8 @@ export default async function Home() {
       {/* 過去のイベント実績セクション */}
       <section id="openday" className="py-24 px-8 max-w-7xl mx-auto">
         <RevealSection>
-          <h2>過去のイベント実績</h2>
-          <p>KANDA Open Day</p>
+          <h2>過去のイベント</h2>
+          <h3 style={{ color: "#D94C0B" }}>KANDA Open Day</h3>
           <p>
             多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
           </p>

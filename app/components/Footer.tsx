@@ -11,7 +11,7 @@ export default function Footer() {
           </div>
           <nav className="flex flex-col gap-3 text-sm" style={{ color: "#D6D3CD" }}>
             <Link href="#about" className="hover:text-white transition-colors">KANDA Startup Commons とは</Link>
-            <Link href="#openday" className="hover:text-white transition-colors">過去のイベント実績</Link>
+            <Link href="#openday" className="hover:text-white transition-colors">過去のイベント</Link>
             <Link href="#kanda" className="hover:text-white transition-colors">神田について</Link>
             <Link href="#contact" className="hover:text-white transition-colors">お問い合わせ</Link>
           </nav>
