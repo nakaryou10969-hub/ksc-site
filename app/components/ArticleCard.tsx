@@ -21,7 +21,7 @@ export default function ArticleCard({ href, img, title, date, delay = "", extern
       href={href}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className={`reveal ${delay} group rounded-2xl overflow-hidden hover:shadow-md transition-shadow block`}
-      style={{ border: "1px solid #D6D3CD" }}
+      style={{ border: "1px solid #3B3C3E" }}
     >
       <div className="relative aspect-video overflow-hidden" style={{ backgroundColor: "#D6D3CD" }}>
         <Image
