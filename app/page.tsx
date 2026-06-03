@@ -22,7 +22,7 @@ export default async function Home() {
   const events = await getLatestEvents();
 
   return (
-    <main className="pt-[72px]">
+    <main className="pt-[147px]">
       {/* ヒーローセクション */}
       <section className="relative w-full h-[754px] overflow-hidden">
         <Image

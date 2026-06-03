@@ -5,7 +5,8 @@ import { useState } from "react";
 
 const navItems = [
   { label: "KANDA Startup Commons とは", href: "#about" },
-  { label: "過去のイベント", href: "#openday" },
+  { label: "役割について", href: "#roles" },
+  { label: "過去イベント", href: "#openday" },
   { label: "神田について", href: "#kanda" },
   { label: "お問い合わせ", href: "#contact" },
 ];
@@ -14,20 +15,24 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-300" style={{ backgroundColor: "#E3E0DA" }}>
-      <div className="max-w-7xl mx-auto px-8 h-[72px] flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: "#E3E0DA" }}>
+      <div className="max-w-[1440px] mx-auto px-[117px] h-[147px] flex items-center">
         {/* ロゴ */}
-        <Link href="/" className="font-bold text-lg tracking-wide">
-          KANDA Startup Commons
+        <Link href="/" className="shrink-0 font-bold text-2xl tracking-wide" style={{ color: "#3B3C3E" }}>
+          KANDA startup Commons
         </Link>
 
+        {/* セパレーター */}
+        <div className="hidden lg:block mx-10 self-stretch" style={{ width: "1px", backgroundColor: "#3B3C3E", margin: "24px 40px" }} />
+
         {/* デスクトップナビ */}
-        <nav className="hidden lg:flex items-center gap-8 text-sm">
+        <nav className="hidden lg:flex items-center gap-8 text-sm flex-1">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-gray-700 hover:text-black transition-colors whitespace-nowrap"
+              className="hover:opacity-60 transition-opacity whitespace-nowrap"
+              style={{ color: "#3B3C3E" }}
             >
               {item.label}
             </Link>
@@ -36,24 +41,25 @@ export default function Header() {
 
         {/* ハンバーガーメニュー（モバイル） */}
         <button
-          className="lg:hidden p-2 flex flex-col gap-1.5"
+          className="lg:hidden ml-auto p-2 flex flex-col gap-1.5"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="メニューを開く"
         >
-          <span className={`block w-6 h-0.5 bg-gray-800 transition-transform ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-gray-800 transition-opacity ${menuOpen ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-gray-800 transition-transform ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+          <span className={`block w-6 h-0.5 transition-transform`} style={{ backgroundColor: "#3B3C3E", transform: menuOpen ? "rotate(45deg) translateY(8px)" : "none" }} />
+          <span className={`block w-6 h-0.5 transition-opacity`} style={{ backgroundColor: "#3B3C3E", opacity: menuOpen ? 0 : 1 }} />
+          <span className={`block w-6 h-0.5 transition-transform`} style={{ backgroundColor: "#3B3C3E", transform: menuOpen ? "rotate(-45deg) translateY(-8px)" : "none" }} />
         </button>
       </div>
 
       {/* モバイルメニュー */}
       {menuOpen && (
-        <nav className="lg:hidden border-t border-gray-300 px-8 py-6 flex flex-col gap-5 text-sm" style={{ backgroundColor: "#E3E0DA" }}>
+        <nav className="lg:hidden border-t px-[40px] py-6 flex flex-col gap-5 text-sm" style={{ backgroundColor: "#E3E0DA", borderColor: "#3B3C3E" }}>
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-gray-700 hover:text-black transition-colors"
+              className="hover:opacity-60 transition-opacity"
+              style={{ color: "#3B3C3E" }}
               onClick={() => setMenuOpen(false)}
             >
               {item.label}
