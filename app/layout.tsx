@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   },
   description: "KSC公式サイト",
   authors: [{ name: "KSC" }],
+  icons: {
+    icon: "/images/events/kansta-logo.png",
+    apple: "/images/events/kansta-logo.png",
+  },
   openGraph: {
     type: "website",
     locale: "ja_JP",
