@@ -85,94 +85,97 @@ export default function SupportMemberCarousel() {
 
   return (
     <div className="flex flex-col items-center">
-      {/* スライドエリア */}
-      <div className="w-full overflow-hidden">
-        <div
-          className="flex flex-col items-center text-center px-8"
-          style={{
-            transition: "opacity 0.5s ease, transform 0.5s ease",
-            opacity: animating ? 0 : 1,
-            transform: animating
-              ? `translateX(${direction === "right" ? "-40px" : "40px"})`
-              : "translateX(0)",
-          }}
-        >
-          {/* 丸い画像 */}
-          <div style={{ width: "192px", height: "192px", borderRadius: "50%", overflow: "hidden", marginBottom: "24px", flexShrink: 0 }}>
-            <Image
-              src="/images/events/challenger.png"
-              alt={member.role}
-              width={192}
-              height={192}
-              style={{ width: "192px", height: "192px", objectFit: "cover" }}
-            />
+      {/* 白い丸角カード背景 */}
+      <div style={{ backgroundColor: "white", borderRadius: "24px", padding: "40px 32px 32px", width: "100%", maxWidth: "640px" }}>
+        {/* スライドエリア */}
+        <div className="w-full overflow-hidden">
+          <div
+            className="flex flex-col items-center text-center"
+            style={{
+              transition: "opacity 0.5s ease, transform 0.5s ease",
+              opacity: animating ? 0 : 1,
+              transform: animating
+                ? `translateX(${direction === "right" ? "-40px" : "40px"})`
+                : "translateX(0)",
+            }}
+          >
+            {/* 丸い画像 */}
+            <div style={{ width: "192px", height: "192px", borderRadius: "50%", overflow: "hidden", marginBottom: "24px", flexShrink: 0 }}>
+              <Image
+                src="/images/events/challenger.png"
+                alt={member.role}
+                width={192}
+                height={192}
+                style={{ width: "192px", height: "192px", objectFit: "cover" }}
+              />
+            </div>
+
+            {/* ラベル */}
+            <p className="text-sm mb-2" style={{ color: "#767676" }}>
+              {member.label}
+            </p>
+
+            {/* 説明文 */}
+            <p
+              className="leading-relaxed max-w-xl text-sm"
+              style={{ color: "#3B3C3E" }}
+            >
+              {member.desc}
+            </p>
+          </div>
+        </div>
+
+        {/* 左右矢印 */}
+        <div className="flex items-center gap-12 mt-10 justify-center">
+          <button
+            onClick={prev}
+            className="w-10 h-10 flex items-center justify-center rounded-full border hover:opacity-60 transition-opacity"
+            style={{ borderColor: "#3B3C3E", color: "#3B3C3E" }}
+            aria-label="前へ"
+          >
+            ←
+          </button>
+
+          {/* ドットボタン */}
+          <div className="flex items-center gap-3">
+            {members.map((m, i) => (
+              <button
+                key={m.role}
+                onClick={() => goTo(i, i > current ? "right" : "left")}
+                className="flex flex-col items-center gap-1 group"
+                aria-label={m.role}
+              >
+                <span
+                  className="text-xs transition-opacity"
+                  style={{
+                    color: "#3B3C3E",
+                    opacity: i === current ? 1 : 0.35,
+                    fontWeight: i === current ? "600" : "400",
+                  }}
+                >
+                  {m.role}
+                </span>
+                <span
+                  className="block rounded-full transition-all"
+                  style={{
+                    width: i === current ? "10px" : "8px",
+                    height: i === current ? "10px" : "8px",
+                    backgroundColor: i === current ? "#3B3C3E" : "#A8A5A0",
+                  }}
+                />
+              </button>
+            ))}
           </div>
 
-          {/* ラベル */}
-          <p className="text-sm mb-2" style={{ color: "#767676" }}>
-            {member.label}
-          </p>
-
-          {/* 説明文 */}
-          <p
-            className="leading-relaxed max-w-xl text-sm"
-            style={{ color: "#3B3C3E" }}
+          <button
+            onClick={next}
+            className="w-10 h-10 flex items-center justify-center rounded-full border hover:opacity-60 transition-opacity"
+            style={{ borderColor: "#3B3C3E", color: "#3B3C3E" }}
+            aria-label="次へ"
           >
-            {member.desc}
-          </p>
+            →
+          </button>
         </div>
-      </div>
-
-      {/* 左右矢印 */}
-      <div className="flex items-center gap-12 mt-10">
-        <button
-          onClick={prev}
-          className="w-10 h-10 flex items-center justify-center rounded-full border hover:opacity-60 transition-opacity"
-          style={{ borderColor: "#3B3C3E", color: "#3B3C3E" }}
-          aria-label="前へ"
-        >
-          ←
-        </button>
-
-        {/* ドットボタン */}
-        <div className="flex items-center gap-3">
-          {members.map((m, i) => (
-            <button
-              key={m.role}
-              onClick={() => goTo(i, i > current ? "right" : "left")}
-              className="flex flex-col items-center gap-1 group"
-              aria-label={m.role}
-            >
-              <span
-                className="text-xs transition-opacity"
-                style={{
-                  color: "#3B3C3E",
-                  opacity: i === current ? 1 : 0.35,
-                  fontWeight: i === current ? "600" : "400",
-                }}
-              >
-                {m.role}
-              </span>
-              <span
-                className="block rounded-full transition-all"
-                style={{
-                  width: i === current ? "10px" : "8px",
-                  height: i === current ? "10px" : "8px",
-                  backgroundColor: i === current ? "#3B3C3E" : "#A8A5A0",
-                }}
-              />
-            </button>
-          ))}
-        </div>
-
-        <button
-          onClick={next}
-          className="w-10 h-10 flex items-center justify-center rounded-full border hover:opacity-60 transition-opacity"
-          style={{ borderColor: "#3B3C3E", color: "#3B3C3E" }}
-          aria-label="次へ"
-        >
-          →
-        </button>
       </div>
     </div>
   );
