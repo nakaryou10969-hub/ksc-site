@@ -98,13 +98,13 @@ export default function SupportMemberCarousel() {
           }}
         >
           {/* 丸い画像 */}
-          <div style={{ width: "192px", height: "192px", borderRadius: "50%", overflow: "hidden", marginBottom: "24px", flexShrink: 0, position: "relative" }}>
+          <div style={{ width: "192px", height: "192px", borderRadius: "50%", overflow: "hidden", marginBottom: "24px", flexShrink: 0 }}>
             <Image
               src="/images/events/challenger.png"
               alt={member.role}
-              fill
-              className="object-cover"
-              sizes="192px"
+              width={192}
+              height={192}
+              style={{ width: "192px", height: "192px", objectFit: "cover" }}
             />
           </div>
 
