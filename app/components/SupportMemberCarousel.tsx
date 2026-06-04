@@ -102,7 +102,7 @@ export default function SupportMemberCarousel() {
             {/* 丸い画像 */}
             <div style={{ width: "192px", height: "192px", borderRadius: "50%", overflow: "hidden", marginBottom: "24px", flexShrink: 0 }}>
               <Image
-                src="/images/events/challenger.png"
+                src="/images/events/neo-challenger.png"
                 alt={member.role}
                 width={192}
                 height={192}
