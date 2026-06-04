@@ -24,7 +24,7 @@ body {
   font-size: 16px;
 }
 
-img {
+img:not([data-nimg]) {
   max-width: 100%;
   height: auto;
 }
