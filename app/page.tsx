@@ -74,11 +74,11 @@ export default async function Home() {
               KANDA Startup Commonsは、参画する一人ひとりが、
               自分なりの役割を持って関わることを大切にしています。
             </p>
-            <ul className="space-y-2" style={{ color: "#585858" }}>
-              <li>こんな挑戦をしたい</li>
-              <li>こんな応援があれば前に進めそう</li>
-              <li>自分は、こんな形で力を貸せる</li>
-            </ul>
+            <div className="space-y-2 px-5" style={{ color: "#585858" }}>
+              <p style={{ padding: "0", lineHeight: "40px" }}>「こんな挑戦をしたい」</p>
+              <p style={{ padding: "0", lineHeight: "40px" }}>「こんな応援があれば前に進めそう」</p>
+              <p style={{ padding: "0", lineHeight: "40px" }}>「自分は、こんな形で力を貸せる」</p>
+            </div>
             <p>
               それを言葉にして持ち寄ることで、一人ではできなかったことが、少しずつ動き出す。
               それぞれができることを少しずつ出し合えば、もっと大きな挑戦ができる。
