@@ -6,7 +6,7 @@ import Image from "next/image";
 const members = [
   {
     role: "挑戦者",
-    label: "◾︎ スタートアップ会員",
+    label: "スタートアップ会員",
     desc: (
       <>
         自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。<br />
@@ -16,7 +16,7 @@ const members = [
   },
   {
     role: "応援団",
-    label: "◾︎ 応援団",
+    label: "応援団",
     desc: (
       <>
         資金・人材面などでのバックアップをいただきながら、<br />
@@ -30,7 +30,7 @@ const members = [
   },
   {
     role: "盛り上げ隊",
-    label: "◾︎ 盛り上げ隊",
+    label: "盛り上げ隊",
     desc: (
       <>
         イベントPRや登壇者となる方の紹介や対外的な宣伝など、<br />
@@ -44,7 +44,7 @@ const members = [
   },
   {
     role: "助っ人団",
-    label: "◾︎ 助っ人団（盛り上げ隊）",
+    label: "助っ人団（盛り上げ隊）",
     desc: (
       <>
         自らの持つスキルやプロダクト、アセットなどでコミュニティ運営を<br />
@@ -111,7 +111,7 @@ export default function SupportMemberCarousel() {
             </div>
 
             {/* ラベル */}
-            <p className="text-sm mb-2" style={{ color: "#767676" }}>
+            <p className="text-sm mb-2" style={{ color: "#D94C0B" }}>
               {member.label}
             </p>
 
