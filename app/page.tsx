@@ -4,6 +4,7 @@ import ContactForm from "./components/ContactForm";
 import EventSlider from "./components/EventSlider";
 import ArticleCard from "./components/ArticleCard";
 import RevealSection from "./components/RevealSection";
+import SupportMemberCarousel from "./components/SupportMemberCarousel";
 import Image from "next/image";
 
 async function getLatestEvents(): Promise<Event[]> {
@@ -142,54 +143,9 @@ export default async function Home() {
             <RevealSection>
               <h3>サポート会員</h3>
             </RevealSection>
-            <div className="space-y-12">
-              {[
-                {
-                  role: "◾︎ 応援団",
-                  desc: (
-                    <>
-                      資金・人材面などでのバックアップをいただきながら、<br />
-                      KANDA Startup Commons運営のコアメンバーとして活動していただく方たち。<br />
-                      単なる支援にとどまらず、運営サイドとしてスタートアップ支援及びCommons(共有地)の仕組みを<br />
-                      デザインし、次世代のイノベーションを支えていきます。
-                    </>
-                  ),
-                },
-                {
-                  role: "◾︎ 盛り上げ隊",
-                  desc: (
-                    <>
-                      イベントPRや登壇者となる方の紹介や対外的な宣伝など、<br />
-                      人と人の懸け橋としてコミュニティの熱量を最大化させる方たち。<br />
-                      「KANDA Startup Commonsを紹介したい！」<br />
-                      「この挑戦と持ち寄りの輪をもっと広げていきたい！」<br />
-                      という情熱を持ち、人と人をつなぐ懸け橋としてイベント活性化に<br />
-                      ご尽力いただいております。
-                    </>
-                  ),
-                },
-                {
-                  role: "◾︎ 助っ人団（盛り上げ隊）",
-                  desc: (
-                    <>
-                      自らの持つスキルやプロダクト、アセットなどでコミュニティ運営を支えていただく方たち。<br />
-                      プロダクト、コンテンツを提供し、裏側から強く支えるパートナー。<br />
-                      あなたのテクノロジー・プロダクトが、KANDA Startup Commonsの円滑な運営を支えます。
-                    </>
-                  ),
-                },
-              ].map((item) => (
-                <div key={item.role} className="grid md:grid-cols-2 gap-12 items-start">
-                  <RevealSection className="rounded-2xl aspect-[4/3] flex items-center justify-center" style={{ backgroundColor: "#D6D3CD", color: "#767676" }}>
-                    <span>画像</span>
-                  </RevealSection>
-                  <RevealSection delay="reveal-delay-2" className="space-y-4 leading-relaxed">
-                    <p style={{ color: "#767676" }}>{item.role}</p>
-                    <p style={{ color: "#3B3C3E" }}>{item.desc}</p>
-                  </RevealSection>
-                </div>
-              ))}
-            </div>
+            <RevealSection>
+              <SupportMemberCarousel />
+            </RevealSection>
           </div>
         </div>
       </section>
