@@ -6,7 +6,7 @@ import Image from "next/image";
 const members = [
   {
     role: "挑戦者",
-    label: "スタートアップ会員",
+    label: "挑戦者",
     desc: (
       <>
         自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。<br />
