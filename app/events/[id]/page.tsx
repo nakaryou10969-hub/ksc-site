@@ -59,7 +59,7 @@ export default async function EventDetail({ params }: Props) {
     : "";
 
   return (
-    <main className="pt-[72px]">
+    <main className="pt-[72px] lg:pt-[147px]">
 
       {/* ページヘッダー */}
       <section className="border-b border-gray-300 py-12 px-8">
