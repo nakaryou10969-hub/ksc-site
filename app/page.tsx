@@ -25,14 +25,28 @@ export default async function Home() {
   return (
     <main className="pt-[147px]">
       {/* ヒーローセクション */}
-      <section className="relative w-full h-[754px] overflow-hidden">
-        <Image
-          src="/images/events/TOP画像.png"
-          alt="KANDA Startup Commons"
-          fill
-          className="object-cover"
-          priority
-        />
+      <section className="relative w-full overflow-hidden flex flex-col items-center justify-center" style={{ backgroundColor: "#ffffff", minHeight: "clamp(400px, 60vw, 754px)" }}>
+        {/* ロゴ画像 */}
+        <div className="relative" style={{ width: "clamp(160px, 30vw, 360px)", height: "clamp(160px, 30vw, 360px)" }}>
+          <Image
+            src="/images/events/ksc_logo_縁あり (1).png"
+            alt="KANDA Startup Commons ロゴ"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
+        {/* サイト名テキスト */}
+        <p
+          className="mt-6 text-center font-bold tracking-widest"
+          style={{
+            color: "#3B3C3E",
+            fontSize: "clamp(16px, 2.5vw, 32px)",
+            letterSpacing: "0.15em",
+          }}
+        >
+          KANDA Startup Commons
+        </p>
       </section>
 
       {/* KSCとはセクション */}
