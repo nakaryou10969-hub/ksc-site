@@ -228,6 +228,7 @@ export default async function Home() {
           )}
         </div>
 
+        {/* もっとみるボタン（将来的に復活予定）
         <RevealSection className="text-center">
           <a
             href="#"
@@ -237,6 +238,7 @@ export default async function Home() {
             もっとみる
           </a>
         </RevealSection>
+        */}
       </section>
 
       {/* お問い合わせセクション */}
