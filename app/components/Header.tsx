@@ -25,7 +25,7 @@ export default function Header() {
         <div className="hidden lg:block" style={{ width: "1px", backgroundColor: "#3B3C3E", margin: "24px 40px", alignSelf: "stretch" }} />
 
         {/* デスクトップナビ */}
-        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm flex-1">
+        <nav className="hidden lg:flex items-center justify-end gap-6 xl:gap-8 text-sm flex-1">
           {navItems.map((item) => (
             <Link
               key={item.href}
