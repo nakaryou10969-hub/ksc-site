@@ -86,12 +86,12 @@ export default async function EventDetail({ params }: Props) {
       </section>
 
       {/* 記事本文 */}
-      <section className="py-16 px-8">
+      <section className="py-8 px-8">
         <div className="max-w-3xl mx-auto">
 
           {/* アイキャッチ */}
           {event!.eyecatch?.url && (
-            <div className="relative aspect-video rounded-2xl overflow-hidden mb-12 shadow-sm">
+            <div className="relative aspect-video rounded-2xl overflow-hidden mb-6 shadow-sm">
               <Image
                 src={event!.eyecatch.url}
                 alt={event!.title}
