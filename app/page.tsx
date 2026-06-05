@@ -180,7 +180,9 @@ export default async function Home() {
 
         <RevealSection className="mb-16">
           <a
-            href="#"
+            href="https://peatix.com/group/16534116"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block px-8 py-3 border text-sm hover:opacity-70 transition-opacity"
             style={{ borderColor: "#3B3C3E", color: "#3B3C3E", borderRadius: "9999px" }}
           >
