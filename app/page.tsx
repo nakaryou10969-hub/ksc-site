@@ -244,9 +244,6 @@ export default async function Home() {
         <div className="max-w-3xl mx-auto">
           <RevealSection>
             <h2>お問い合わせ</h2>
-            <p style={{ color: "#585858" }} className="mb-12">
-              多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
-            </p>
           </RevealSection>
           <RevealSection>
             <ContactForm />
