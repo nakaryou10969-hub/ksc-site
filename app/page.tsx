@@ -23,7 +23,7 @@ export default async function Home() {
   const events = await getLatestEvents();
 
   return (
-    <main className="pt-[147px]">
+    <main className="pt-[72px] lg:pt-[147px]">
       {/* ヒーローセクション */}
       <section className="relative w-full overflow-hidden flex flex-col items-center justify-center" style={{ backgroundColor: "#ffffff", minHeight: "clamp(400px, 60vw, 754px)" }}>
         {/* ロゴ画像 */}
