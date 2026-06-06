@@ -178,13 +178,13 @@ export default async function Home() {
           <EventSlider />
         </RevealSection>
 
-        <RevealSection className="mb-16">
+        <RevealSection className="mb-16 text-center">
           <a
             href="https://peatix.com/group/16534116"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3 border text-sm hover:opacity-70 transition-opacity"
-            style={{ borderColor: "#3B3C3E", color: "#3B3C3E", borderRadius: "9999px" }}
+            className="inline-block px-8 py-3 text-sm hover:opacity-70 transition-opacity"
+            style={{ backgroundColor: "#D94C0B", color: "#ffffff", borderRadius: "9999px" }}
           >
             最新のイベント情報を確認する
           </a>
