@@ -33,8 +33,8 @@ export default function ArticleCard({ href, img, title, date, delay = "", extern
         />
       </div>
       <div className="p-5" style={{ backgroundColor: "white" }}>
-        <p className="text-xs mb-2" style={{ color: "#767676" }}>{date}</p>
-        <p className="font-medium leading-snug line-clamp-2" style={{ color: "#3B3C3E" }}>{title}</p>
+        <p className="text-xs mb-1" style={{ color: "#767676", padding: "0", lineHeight: "1.5" }}>{date}</p>
+        <p className="font-medium leading-snug line-clamp-2" style={{ color: "#3B3C3E", padding: "0", lineHeight: "1.6" }}>{title}</p>
       </div>
     </a>
   );
