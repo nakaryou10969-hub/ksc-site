@@ -36,7 +36,6 @@ export default function ContactForm() {
           名: form.firstName,
           機関組織名: form.organization,
           メールアドレス: form.email,
-          お問い合わせ内容: form.category,
           メッセージ: form.message,
         }),
       });
@@ -78,18 +77,6 @@ export default function ContactForm() {
       <div>
         <label className={labelClass} style={{ color: "#3B3C3E" }}>メールアドレス</label>
         <input type="email" name="email" value={form.email} onChange={handleChange} className={inputClass} style={{ color: "#3B3C3E" }} required />
-      </div>
-
-      {/* お問い合わせ内容 */}
-      <div>
-        <label className={labelClass} style={{ color: "#3B3C3E" }}>お問い合わせ内容</label>
-        <select name="category" value={form.category} onChange={handleChange} className={inputClass} style={{ color: "#3B3C3E" }} required>
-          <option value="">選択してください</option>
-          <option value="スタートアップ会員について">スタートアップ会員について</option>
-          <option value="サポート会員について">サポート会員について</option>
-          <option value="イベントについて">イベントについて</option>
-          <option value="その他">その他</option>
-        </select>
       </div>
 
       {/* お問い合わせ内容（その他） */}
