@@ -130,21 +130,6 @@ export default async function Home() {
                   一人で抱え込まず、「何をやりたいか」「何に困っているか」を言葉にして、
                   参加してみてください。
                 </p>
-                <div className="mt-6 space-y-3">
-                  <p className="font-semibold" style={{ color: "#3B3C3E" }}>役割：</p>
-                  <ul className="space-y-1 list-disc list-inside" style={{ color: "#585858" }}>
-                    <li>事業や課題をオープンにし、挑戦を可視化</li>
-                    <li>神田の場を実験フィールドとして活用</li>
-                    <li>次の挑戦者への知見共有・応援</li>
-                  </ul>
-                  <p className="font-semibold mt-4" style={{ color: "#3B3C3E" }}>主な権利：</p>
-                  <ul className="space-y-1 list-disc list-inside" style={{ color: "#585858" }}>
-                    <li>Open Day・会員限定イベントへの参加</li>
-                    <li>サポート会員との壁打ち・マッチング機会</li>
-                    <li>Commons公式メディア・登壇などの発信機会</li>
-                    <li>テーマや場づくりへの意見参加</li>
-                  </ul>
-                </div>
               </RevealSection>
               <RevealSection delay="reveal-delay-2" className="rounded-2xl aspect-[4/5] flex items-center justify-center" style={{ backgroundColor: "#D6D3CD", color: "#767676" }}>
                 <span>画像</span>
