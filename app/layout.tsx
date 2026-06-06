@@ -49,7 +49,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col antialiased">
         <Header />
-        <div className="flex-1 pt-20">{children}</div>
+        <div className="flex-1">{children}</div>
         <Footer />
       </body>
     </html>
