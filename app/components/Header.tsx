@@ -15,14 +15,14 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: "#E3E0DA" }}>
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-[117px] h-[72px] lg:h-[147px] flex items-center">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-[117px] h-[72px] flex items-center">
         {/* ロゴ */}
         <Link href="/" className="shrink-0 font-bold text-base lg:text-2xl tracking-wide" style={{ color: "#3B3C3E" }}>
           KANDA startup Commons
         </Link>
 
         {/* セパレーター */}
-        <div className="hidden lg:block" style={{ width: "1px", backgroundColor: "#3B3C3E", margin: "24px 40px", alignSelf: "stretch" }} />
+        <div className="hidden lg:block" style={{ width: "1px", backgroundColor: "#3B3C3E", margin: "16px 40px", alignSelf: "stretch" }} />
 
         {/* デスクトップナビ */}
         <nav className="hidden lg:flex items-center justify-end gap-6 xl:gap-8 text-sm flex-1">
