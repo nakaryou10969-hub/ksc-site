@@ -43,7 +43,7 @@ export default async function Home() {
         {/* コンテンツ（前面） */}
         <div className="relative z-10 flex flex-col items-center">
           {/* ロゴ画像 */}
-          <div className="relative" style={{ width: "clamp(120px, 22vw, 280px)", height: "clamp(120px, 22vw, 280px)" }}>
+          <div className="relative" style={{ width: "clamp(160px, 28vw, 340px)", height: "clamp(160px, 28vw, 340px)" }}>
             <Image
               src="/images/events/ksc_logo_縁あり (1).png"
               alt="KANDA Startup Commons ロゴ"
