@@ -41,7 +41,7 @@ export default async function Home() {
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(255,255,255,0.45)" }} />
 
         {/* コンテンツ（前面） */}
-        <div className="relative z-10 flex flex-col items-center">
+        <div className="relative z-10 flex flex-col items-center pt-12 sm:pt-0">
           {/* ロゴ画像 */}
           <div className="relative" style={{ width: "clamp(160px, 28vw, 340px)", height: "clamp(160px, 28vw, 340px)" }}>
             <Image
