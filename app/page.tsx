@@ -23,30 +23,47 @@ export default async function Home() {
   const events = await getLatestEvents();
 
   return (
-    <main className="pt-[72px] lg:pt-[147px]">
+    <main className="pt-[72px]">
       {/* ヒーローセクション */}
-      <section className="relative w-full overflow-hidden flex flex-col items-center justify-center" style={{ backgroundColor: "#ffffff", minHeight: "clamp(400px, 60vw, 754px)" }}>
-        {/* ロゴ画像 */}
-        <div className="relative" style={{ width: "clamp(160px, 30vw, 360px)", height: "clamp(160px, 30vw, 360px)" }}>
-          <Image
-            src="/images/events/ksc_logo_縁あり (1).png"
-            alt="KANDA Startup Commons ロゴ"
-            fill
-            className="object-contain"
-            priority
-          />
+      <section
+        className="relative w-full overflow-hidden flex flex-col items-center justify-center"
+        style={{ minHeight: "clamp(300px, 50vw, 640px)" }}
+      >
+        {/* 背景画像 */}
+        <Image
+          src="/images/hero/hero1.png"
+          alt="KANDA Startup Commons ヒーロー背景"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        {/* オーバーレイ（文字を読みやすくするため薄い白） */}
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(255,255,255,0.45)" }} />
+
+        {/* コンテンツ（前面） */}
+        <div className="relative z-10 flex flex-col items-center">
+          {/* ロゴ画像 */}
+          <div className="relative" style={{ width: "clamp(120px, 22vw, 280px)", height: "clamp(120px, 22vw, 280px)" }}>
+            <Image
+              src="/images/events/ksc_logo_縁あり (1).png"
+              alt="KANDA Startup Commons ロゴ"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+          {/* サイト名テキスト */}
+          <p
+            className="mt-4 text-center font-bold tracking-widest"
+            style={{
+              color: "#3B3C3E",
+              fontSize: "clamp(14px, 2.2vw, 28px)",
+              letterSpacing: "0.15em",
+            }}
+          >
+            KANDA Startup Commons
+          </p>
         </div>
-        {/* サイト名テキスト */}
-        <p
-          className="mt-6 text-center font-bold tracking-widest"
-          style={{
-            color: "#3B3C3E",
-            fontSize: "clamp(16px, 2.5vw, 32px)",
-            letterSpacing: "0.15em",
-          }}
-        >
-          KANDA Startup Commons
-        </p>
       </section>
 
       {/* KSCとはセクション */}
