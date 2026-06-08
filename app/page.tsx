@@ -199,11 +199,9 @@ export default async function Home() {
                   <div className="flex flex-col justify-center px-4 py-4 flex-1" style={{ color: "#3B3C3E" }}>
                     <p className="leading-relaxed text-sm">
                       <span style={{ color: "#D94C0B" }}>資金・人材面などでのバックアップ</span>をいただきながら、<br />
-                      KANDA Startup Commons運営のコアメンバーとして<br />
-                      活動していただく方たち。<br />
-                      単なる支援にとどまらず、<span style={{ color: "#D94C0B" }}>運営サイドとして</span><br />
-                      スタートアップ支援及びCommons(共有地)の仕組みを<br />
-                      デザインし、次世代のイノベーションを支えていきます。
+                      KANDA Startup Commons運営のコアメンバーとして活動していただく方たち。<br />
+                      単なる支援にとどまらず、<span style={{ color: "#D94C0B" }}>運営サイドとして</span>スタートアップ支援及びCommons(共有地)の<br />
+                      仕組みをデザインし、次世代のイノベーションを支えていきます。
                     </p>
                   </div>
                   {/* 右：画像エリア */}
@@ -245,12 +243,10 @@ export default async function Home() {
                   {/* 右：テキスト */}
                   <div className="flex flex-col justify-center px-4 py-4 flex-1" style={{ color: "#3B3C3E" }}>
                     <p className="leading-relaxed text-sm">
-                      登壇者となる方の紹介や対外的な宣伝など、<br />
-                      <span style={{ color: "#D94C0B" }}>コミュニティの熱量を最大化</span>させる方たち。<br />
+                      登壇者となる方の紹介や対外的な宣伝など、<span style={{ color: "#D94C0B" }}>コミュニティの熱量を最大化</span>させる方たち。<br />
                       「KANDA Startup Commonsを紹介したい！」<br />
                       「この挑戦と持ち寄りの輪をもっと広げていきたい！」<br />
-                      という情熱を持ち、<span style={{ color: "#D94C0B" }}>人と人をつなぐ懸け橋として</span><br />
-                      イベント活性化にご尽力いただいております。
+                      という情熱を持ち、<span style={{ color: "#D94C0B" }}>人と人をつなぐ懸け橋として</span>イベント活性化にご尽力いただいております。
                     </p>
                   </div>
                 </div>
@@ -270,11 +266,9 @@ export default async function Home() {
                   {/* 左：テキスト */}
                   <div className="flex flex-col justify-center px-4 py-4 flex-1" style={{ color: "#3B3C3E" }}>
                     <p className="leading-relaxed text-sm">
-                      自らの持つスキルやプロダクト、<br />
-                      アセットなどでコミュニティ運営を支えていただく方たち。<br />
+                      自らの持つスキルやプロダクト、アセットなどでコミュニティ運営を支えていただく方たち。<br />
                       プロダクト、コンテンツを提供し、<span style={{ color: "#D94C0B" }}>裏側から強く支えるパートナー。</span><br />
-                      あなたのテクノロジー・プロダクトが、<br />
-                      KANDA Startup Commonsの円滑な運営を支えます。
+                      あなたのテクノロジー・プロダクトが、KANDA Startup Commonsの円滑な運営を支えます。
                     </p>
                   </div>
                   {/* 右：画像エリア */}
