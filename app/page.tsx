@@ -131,7 +131,7 @@ export default async function Home() {
           </RevealSection>
 
           <RevealSection>
-            <h3>こんな人たちを募集しています</h3>
+            <h3 className="no-marker">こんな人たちを募集しています</h3>
           </RevealSection>
 
           {/* 挑戦者 */}
@@ -150,7 +150,7 @@ export default async function Home() {
             <RevealSection>
               <div
                 className="relative w-full rounded-sm overflow-visible flex flex-col md:flex-row items-stretch"
-                style={{ border: "2px solid #001597", aspectRatio: "1083/315", maxHeight: "315px" }}
+                style={{ border: "2px solid #001597", aspectRatio: "1083/315", maxHeight: "315px", backgroundColor: "#ffffff" }}
               >
                 {/* 左：画像エリア（challenger-nameとchallenger-1の重ね） */}
                 <div className="relative shrink-0" style={{ width: "38%" }}>
@@ -164,7 +164,7 @@ export default async function Home() {
                     />
                   </div>
                   {/* challenger-name.png（縦テキスト装飾）*/}
-                  <div className="absolute" style={{ left: "4%", bottom: 0, width: "14%", aspectRatio: "92/241" }}>
+                  <div className="absolute" style={{ left: "4%", top: "50%", transform: "translateY(-50%)", width: "14%", aspectRatio: "92/241" }}>
                     <Image
                       src="/images/common/challenger-name.png"
                       alt="challenger"
@@ -175,8 +175,8 @@ export default async function Home() {
                 </div>
 
                 {/* 右：テキストエリア */}
-                <div className="flex flex-col justify-center px-6 py-6 flex-1" style={{ color: "#3B3C3E" }}>
-                  <p className="leading-relaxed">
+                <div className="flex flex-col justify-center px-6 py-6 flex-1">
+                  <p className="leading-relaxed" style={{ color: "#C79500" }}>
                     自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。<br />
                     KANDA Startup Commonsの主役であり、<br />
                     自らの意思で世界を変えようと挑み続ける、熱い起業家たちです。
