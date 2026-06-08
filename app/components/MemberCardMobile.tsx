@@ -27,13 +27,15 @@ export default function MemberCardMobile({
   const pentagonClip = "polygon(0 0, 100% 0, 100% 82%, 50% 100%, 0 82%)";
 
   return (
-    <div className="w-full">
+    <div className="w-full relative">
       {/* 五角形エリア（枠線なし・白背景） */}
       <div
         style={{
           clipPath: pentagonClip,
           backgroundColor: "#ffffff",
           borderRadius: "8px 8px 0 0",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         {/* 画像エリア */}
@@ -72,17 +74,36 @@ export default function MemberCardMobile({
             </button>
           </div>
         )}
-        {/* 開いた状態：五角形の底部を白で埋めて展開エリアと繋げる */}
-        {open && <div style={{ height: "32px", backgroundColor: "#ffffff" }} />}
+        {/* 開いた状態：ボタン分の高さを確保 */}
+        {open && <div style={{ height: "40px" }} />}
       </div>
+
+      {/* 展開時：五角形のV字カット部分（両脇の三角の欠け）を白で塞ぐオーバーレイ */}
+      {open && (
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            /* 五角形の高さ全体（280px画像 + 40pxボタン = 320px）の
+               下18%（V字部分）をカバーする高さ */
+            height: "calc(320px * 0.18 + 2px)",
+            backgroundColor: "#ffffff",
+            zIndex: 2,
+          }}
+        />
+      )}
 
       {/* 展開エリア（枠線なし・白背景・五角形と連続） */}
       {open && (
         <div
-          className="px-6 pb-6 pt-0"
+          className="px-6 pb-6 pt-4"
           style={{
             backgroundColor: "#ffffff",
             borderRadius: "0 0 8px 8px",
+            position: "relative",
+            zIndex: 3,
           }}
         >
           <div style={{ color: "#3B3C3E" }}>{children}</div>
