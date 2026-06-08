@@ -159,7 +159,7 @@ export default async function Home() {
               <h3>挑戦者</h3>
             </RevealSection>
             <RevealSection className="space-y-4 leading-relaxed mb-8" style={{ color: "#3B3C3E" }}>
-              <p>
+              <p style={{ fontSize: "14px" }}>
                 スタートアップの立ち上げ、<br className="md:hidden" />
                 新規事業、社会課題への挑戦。<br />
                 まだ途中で、<br className="md:hidden" />
@@ -206,7 +206,7 @@ export default async function Home() {
                 alt="挑戦者"
                 borderColor="#001597"
               >
-                <p className="leading-relaxed text-base">
+                <p className="leading-relaxed text-[13px]">
                   自ら旗を掲げて起業し、情熱をもって<br />
                   事業を推進するチャレンジャー。<br />
                   KANDA Startup Commonsの主役であり、<br />
@@ -262,7 +262,7 @@ export default async function Home() {
                   borderColor="#C79500"
                   buttonColor="#C79500"
                 >
-                  <p className="leading-relaxed text-base" style={{ color: "#3B3C3E" }}>
+                  <p className="leading-relaxed text-[13px]" style={{ color: "#3B3C3E" }}>
                     <span style={{ color: "#D94C0B" }}>資金・人材面などでのバックアップを</span><br />
                     <span style={{ color: "#D94C0B" }}>いただきながら、</span>KANDA Startup Commons運営の<br />
                     コアメンバーとして活動していただく方たち。<br />
@@ -315,7 +315,7 @@ export default async function Home() {
                   borderColor="#C79500"
                   buttonColor="#C79500"
                 >
-                  <p className="leading-relaxed text-base" style={{ color: "#3B3C3E" }}>
+                  <p className="leading-relaxed text-[13px]" style={{ color: "#3B3C3E" }}>
                     登壇者となる方の紹介や対外的な宣伝など、<br />
                     <span style={{ color: "#D94C0B" }}>コミュニティの熱量を最大化</span>させる方たち。<br />
                     「KANDA Startup Commonsを紹介したい！」<br />
@@ -367,7 +367,7 @@ export default async function Home() {
                   borderColor="#C79500"
                   buttonColor="#C79500"
                 >
-                  <p className="leading-relaxed text-base" style={{ color: "#3B3C3E" }}>
+                  <p className="leading-relaxed text-[13px]" style={{ color: "#3B3C3E" }}>
                     自らの持つスキルやプロダクト、アセットなどで<br />
                     コミュニティ運営を支えていただく方たち。<br />
                     プロダクト、コンテンツを提供し、<br />
