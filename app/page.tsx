@@ -153,7 +153,7 @@ export default async function Home() {
             {/* 挑戦者カード W:1083 H:315 比率 */}
             <RevealSection>
               <div
-                className="relative w-[96%] mx-auto rounded-sm overflow-visible flex flex-col md:flex-row items-stretch justify-center"
+                className="relative w-[96%] mx-auto rounded-sm overflow-visible flex flex-col md:flex-row items-stretch justify-start pl-[3%]"
                 style={{ border: "2px solid #001597", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
               >
                 {/* 左：画像エリア（challenger-nameとchallenger-1の重ね） */}
