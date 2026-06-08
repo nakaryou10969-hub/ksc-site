@@ -124,7 +124,7 @@ export default async function Home() {
       </section>
 
       {/* 役割セクション */}
-      <section id="roles" className="py-24 px-8" style={{ backgroundColor: "#ffffff" }}>
+      <section id="roles" className="py-24 px-8" style={{ backgroundColor: "#D6D3CD" }}>
         <div className="max-w-[1440px] mx-auto px-6 lg:px-[117px]">
           <RevealSection>
             <h3 className="no-marker">こんな人たちを募集しています</h3>
