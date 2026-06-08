@@ -194,7 +194,7 @@ export default async function Home() {
                   </div>
                 </div>
                 {/* 右：テキストエリア */}
-                <div className="flex flex-col justify-center px-4 py-4" style={{ width: "40%" }}>
+                <div className="flex flex-col justify-center px-4 py-4 flex-1">
                   <p className="leading-relaxed text-sm" style={{ color: "#C79500", lineHeight: "1.8" }}>
                     自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。<br />
                     KANDA Startup Commonsの主役であり、自らの意思で世界を変えようと挑み続ける、<br />
