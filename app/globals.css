@@ -120,6 +120,11 @@ main p {
   }
 }
 
+/* h2-banner PC版：ダーク文字色（通常h2のオレンジを上書き） */
+main h2.h2-banner {
+  color: #3B3C3E;
+}
+
 /* button: NotoSans JP Bold（DNP代替）, 22px, 背面#767676, 文字#FFFFFF, 左右44px 上下16px（文字に対して）, 行間なし, 中央揃え */
 .ksc-btn {
   font-family: "Noto Sans JP", sans-serif;
