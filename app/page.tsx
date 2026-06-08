@@ -153,7 +153,7 @@ export default async function Home() {
             {/* 挑戦者カード W:1083 H:315 比率 */}
             <RevealSection>
               <div
-                className="relative w-[96%] mx-auto rounded-sm overflow-visible flex flex-col md:flex-row items-stretch"
+                className="relative w-[96%] mx-auto rounded-sm overflow-visible flex flex-col md:flex-row items-stretch justify-center"
                 style={{ border: "2px solid #001597", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
               >
                 {/* 左：画像エリア（challenger-nameとchallenger-1の重ね） */}
@@ -162,13 +162,13 @@ export default async function Home() {
                   <div className="absolute" style={{ left: "22%", bottom: 0, width: "75%", aspectRatio: "413/395" }}>
                     <Image src="/images/common/challenger-1.png" alt="挑戦者" fill className="object-contain object-bottom" />
                   </div>
-                  {/* challenger-name.png（縦テキスト装飾）*/}
-                  <div className="absolute" style={{ left: "4%", top: "50%", transform: "translateY(-50%)", width: "14%", aspectRatio: "92/241" }}>
+                {/* challenger-name.png（縦テキスト装飾）*/}
+                  <div className="absolute" style={{ left: "4%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
                     <Image src="/images/common/challenger-name.png" alt="challenger" fill className="object-contain object-bottom" />
                   </div>
                 </div>
                 {/* 右：テキストエリア */}
-                <div className="flex flex-col justify-center px-4 py-4 flex-1">
+                <div className="flex flex-col justify-center px-4 py-4" style={{ width: "40%" }}>
                   <p className="leading-relaxed text-sm" style={{ color: "#C79500" }}>
                     自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。<br />
                     KANDA Startup Commonsの主役であり、<br />
@@ -232,7 +232,7 @@ export default async function Home() {
                   {/* 左：画像エリア */}
                   <div className="relative shrink-0" style={{ width: "32%" }}>
                     {/* moriagetai-name.png */}
-                    <div className="absolute" style={{ left: "4%", top: "50%", transform: "translateY(-50%)", width: "14%", aspectRatio: "93/244" }}>
+                    <div className="absolute" style={{ left: "4%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
                       <Image src="/images/common/moriagetai-name.png" alt="盛り上げ隊" fill className="object-contain" />
                     </div>
                     {/* moriagetai.png */}
@@ -278,7 +278,7 @@ export default async function Home() {
                       <Image src="/images/common/suketto.png" alt="助っ人団" fill className="object-contain object-bottom" />
                     </div>
                     {/* suketto-name.png */}
-                    <div className="absolute" style={{ right: "68%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "91/239" }}>
+                    <div className="absolute" style={{ right: "68%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
                       <Image src="/images/common/suketto-name.png" alt="助っ人団" fill className="object-contain" />
                     </div>
                   </div>
