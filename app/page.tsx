@@ -128,12 +128,8 @@ export default async function Home() {
       </section>
 
       {/* 役割セクション */}
-      <section id="roles" className="py-24 px-8" style={{ backgroundColor: "#D6D3CD" }}>
+      <section id="roles" className="py-24 px-8" style={{ backgroundColor: "#ffffff" }}>
         <div className="max-w-[1440px] mx-auto px-6 lg:px-[117px]">
-          <RevealSection>
-            <h2>KANDA Startup Commons 内の役割</h2>
-          </RevealSection>
-
           <RevealSection>
             <h3 className="no-marker">こんな人たちを募集しています</h3>
           </RevealSection>
