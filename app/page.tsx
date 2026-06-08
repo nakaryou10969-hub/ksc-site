@@ -24,35 +24,35 @@ export default async function Home() {
 
   return (
     <main className="pt-[72px]">
-      {/* ヒ�Eローセクション */}
+      {/* ヒーローセクション */}
       <section
         className="relative w-full overflow-hidden flex flex-col items-center justify-center"
         style={{ minHeight: "clamp(300px, 50vw, 640px)" }}
       >
-        {/* 背景画僁E*/}
+        {/* 背景画像 */}
         <Image
           src="/images/hero/hero1.png"
-          alt="KANDA Startup Commons ヒ�Eロー背景"
+          alt="KANDA Startup Commons ヒーロー背景"
           fill
           className="object-cover object-center"
           priority
         />
-        {/* オーバ�Eレイ�E�文字を読みめE��くするため薄ぁE���E�E*/}
+        {/* オーバーレイ（文字を読みやすくするため薄い白） */}
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(255,255,255,0.45)" }} />
 
-        {/* コンチE��チE��前面�E�E*/}
+        {/* コンテンツ（前面） */}
         <div className="relative z-10 flex flex-col items-center pt-12 sm:pt-0">
-          {/* ロゴ画僁E*/}
+          {/* ロゴ画像 */}
           <div className="relative" style={{ width: "clamp(160px, 28vw, 340px)", height: "clamp(160px, 28vw, 340px)" }}>
             <Image
-              src="/images/events/ksc_logo_縁あめE(1).png"
+              src="/images/events/ksc_logo_縁あり (1).png"
               alt="KANDA Startup Commons ロゴ"
               fill
               className="object-contain"
               priority
             />
           </div>
-          {/* サイト名チE��スチE*/}
+          {/* サイト名テキスト */}
           <p
             className="mt-4 text-center font-bold tracking-widest"
             style={{
@@ -70,50 +70,50 @@ export default async function Home() {
       <section id="about" className="pt-0 pb-24 md:py-24 px-8 max-w-7xl mx-auto">
         <RevealSection>
           <h2 className="h2-banner">KANDA<br className="md:hidden" />Startup<br className="md:hidden" />Commons とは</h2>
-          <h3 className="no-marker" style={{ color: "#3B3C3E" }}>社会課題から、Ebr className="md:hidden" />次世代の豊かさへ</h3>
+          <h3 className="no-marker" style={{ color: "#3B3C3E" }}>社会課題から、<br className="md:hidden" />次世代の豊かさへ</h3>
         </RevealSection>
         <div style={{ height: "1.5em" }} />
         <div className="grid grid-cols-1 gap-16 items-start">
           <RevealSection className="space-y-6 leading-relaxed text-left" style={{ color: "#3B3C3E" }}>
             <p>
-              KANDA Startup Commons(通称"神スタ")ぁEbr className="md:hidden" />
-              応援したぁE�Eは、Ebr />
-              一人ひとりから湧き上がる想ぁE��<br className="md:hidden" />
-              社会課題�E解決を�E発点にしながら、Ebr />
-              そ�E先にある次世代の豊かさを<br className="md:hidden" />
-              生み出そうとする挑戦です、E
+              KANDA Startup Commons(通称"神スタ")が<br className="md:hidden" />
+              応援したいのは、<br />
+              一人ひとりから湧き上がる想いや<br className="md:hidden" />
+              社会課題の解決を出発点にしながら、<br />
+              その先にある次世代の豊かさを<br className="md:hidden" />
+              生み出そうとする挑戦です。
             </p>
             <p>
-              「できなかったことを、できるようにする、Ebr className="md:hidden" />
-              だけでなく、Ebr />
-              、Espan style={{ color: "#D94C0B" }}>すでにある価値を、もっと面白く、Ebr className="md:hidden" />もっと豊かにする</span>」、Ebr />
-              そ�E両方に向き合い、Ebr className="md:hidden" />
-              事業として継続してぁE��意志と<br className="md:hidden" />
-              可能性を持つ挑戦を、Ebr className="md:hidden" />
-              私たちは大刁E��してぁE��す、E
+              「できなかったことを、できるようにする」<br className="md:hidden" />
+              だけでなく、<br />
+              「<span style={{ color: "#D94C0B" }}>すでにある価値を、もっと面白く、<br className="md:hidden" />もっと豊かにする</span>」。<br />
+              その両方に向き合い、<br className="md:hidden" />
+              事業として継続していく意志と<br className="md:hidden" />
+              可能性を持つ挑戦を、<br className="md:hidden" />
+              私たちは大切にしています。
             </p>
             <p>
-              社会性と事業性、Ebr className="md:hidden" />
-              琁E��と現実�Eあいだを行き来しながら、Ebr />
-              <span style={{ color: "#D94C0B" }}>試し、学び、前に進もうとする人たちぁEbr className="md:hidden" />雁E��る場を、神田から</span>つくってぁE��ます、E
+              社会性と事業性、<br className="md:hidden" />
+              理想と現実のあいだを行き来しながら、<br />
+              <span style={{ color: "#D94C0B" }}>試し、学び、前に進もうとする人たちが<br className="md:hidden" />集まる場を、神田から</span>つくっていきます。
             </p>
           </RevealSection>
         </div>
       </section>
 
-      {/* 役割を持って持ち寁E��セクション */}
+      {/* 役割を持って持ち寄るセクション */}
       <section className="py-24 px-8 max-w-7xl mx-auto" style={{ backgroundColor: "#D6D3CD" }}>
           <RevealSection delay="reveal-delay-2" className="space-y-6 leading-relaxed">
             <h3 className="no-marker">役割を持って関わる</h3>
             <p>
-              KANDA Startup Commonsは、Ebr className="md:hidden" />
-              参画する一人ひとりが、Ebr className="md:hidden" />
-              <span style={{ color: "#D94C0B" }}>自刁E��り�E役割を持って関わることめE/span><br className="md:hidden" />
-              <span style={{ color: "#D94C0B" }}>大刁E��してぁE��す、E/span>
+              KANDA Startup Commonsは、<br className="md:hidden" />
+              参画する一人ひとりが、<br className="md:hidden" />
+              <span style={{ color: "#D94C0B" }}>自分なりの役割を持って関わることを</span><br className="md:hidden" />
+              <span style={{ color: "#D94C0B" }}>大切にしています。</span>
             </p>
 
-            {/* 画僁EW:311 H:624�E�スマ�Eのみ�E�E*/}
-            <div className="md:hidden relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "311/624" }}>
+            {/* 画像 W:311 H:624 */}
+            <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "311/624" }}>
               <Image
                 src="/images/events/fixedinsert.png"
                 alt="役割を持って関わる"
@@ -123,25 +123,25 @@ export default async function Home() {
             </div>
 
             <p>
-              持ち寁E��ことで<br className="md:hidden" />
-              一人ではできなかったことが、Ebr className="md:hidden" />
-              少しずつ動き出す、Ebr />
-              それぞれができることめEbr className="md:hidden" />
-              少しずつ出し合え�E、Ebr className="md:hidden" />
-              もっと大きな挑戦ができる、E
+              持ち寄ることで<br className="md:hidden" />
+              一人ではできなかったことが、<br className="md:hidden" />
+              少しずつ動き出す。<br />
+              それぞれができることを<br className="md:hidden" />
+              少しずつ出し合えば、<br className="md:hidden" />
+              もっと大きな挑戦ができる。
             </p>
             <p>
-              支援する・される、民間・行政、Ebr className="md:hidden" />
-              住�E人・働く人、Ebr className="md:hidden" />
-              そうした垣根をこえて、Ebr />
-              一人ひとり�EめE��めE��な参加を通じて、Ebr className="md:hidden" />
-              共に創り上げてぁE��、E
+              支援する・される、民間・行政、<br className="md:hidden" />
+              住む人・働く人。<br className="md:hidden" />
+              そうした垣根をこえて、<br />
+              一人ひとりのゆるやかな参加を通じて、<br className="md:hidden" />
+              共に創り上げていく。
             </p>
             <p>
-              こ�Eまちに、Ebr className="md:hidden" />
-              そんな豊かな、Espan style={{ color: "#C79500" }}>共�E�Eommons�E�E/span>」�E<br className="md:hidden" />
-              土壌を育んでぁE��たいと、Ebr className="md:hidden" />
-              私たちは老E��てぁE��す、E
+              このまちに、<br className="md:hidden" />
+              そんな豊かな「<span style={{ color: "#C79500" }}>共（Commons）</span>」の<br className="md:hidden" />
+              土壌を育んでいきたいと、<br className="md:hidden" />
+              私たちは考えています。
             </p>
           </RevealSection>
       </section>
@@ -150,79 +150,79 @@ export default async function Home() {
       <section id="roles" className="py-24 px-8" style={{ backgroundColor: "#D6D3CD" }}>
         <div className="max-w-[1440px] mx-auto px-6 lg:px-[117px]">
           <RevealSection>
-            <h3 className="no-marker">こんな人たちを募雁E��てぁE��ぁE/h3>
+            <h3 className="no-marker">こんな人たちを募集しています</h3>
           </RevealSection>
 
-          {/* 挑戦老E*/}
+          {/* 挑戦者 */}
           <div className="mb-20">
             <RevealSection>
-              <h3>挑戦老E/h3>
+              <h3>挑戦者</h3>
             </RevealSection>
             <RevealSection className="space-y-4 leading-relaxed mb-8" style={{ color: "#3B3C3E" }}>
-              <p style={{ fontSize: "14px" }}>
-                スタートアチE�Eの立ち上げ、Ebr className="md:hidden" />
-                新規事業、社会課題への挑戦、Ebr />
-                まだ途中で、Ebr className="md:hidden" />
-                答えが見えてぁE��くても構いません、Ebr className="md:hidden" />
-                未完�EなアイチE��めE��ぁE��大歓迎です、E
+              <p>
+                スタートアップの立ち上げ、<br className="md:hidden" />
+                新規事業、社会課題への挑戦。<br />
+                まだ途中で、<br className="md:hidden" />
+                答えが見えていなくても構いません。<br className="md:hidden" />
+                未完成なアイデアや問いが大歓迎です。
               </p>
             </RevealSection>
 
-            {/* 挑戦老E��ーチEPC用�E�Ed以上！E*/}
+            {/* 挑戦者カード PC用（md以上） */}
             <RevealSection>
               <div
                 className="relative w-[96%] mx-auto rounded-sm overflow-visible hidden md:flex flex-row items-stretch justify-start pl-[3%]"
                 style={{ border: "2px solid #001597", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
               >
-                {/* 左�E�画像エリア�E�Ehallenger-nameとchallenger-1の重�E�E�E*/}
+                {/* 左：画像エリア（challenger-nameとchallenger-1の重ね） */}
                 <div className="relative shrink-0" style={{ width: "32%" }}>
-                  {/* challenger-name.png�E�縦チE��スト裁E���E�E 背面 */}
+                  {/* challenger-name.png（縦テキスト装飾）- 背面 */}
                   <div className="absolute z-0" style={{ left: "2%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
                     <Image src="/images/common/challenger-name.png" alt="challenger" fill className="object-contain object-bottom" />
                   </div>
-                  {/* challenger-1.png�E�メイン画像！E 前面 */}
+                  {/* challenger-1.png（メイン画像）- 前面 */}
                   <div className="absolute z-10" style={{ left: "22%", bottom: 0, width: "85%", aspectRatio: "413/395" }}>
-                    <Image src="/images/common/challenger-1.png" alt="挑戦老E fill className="object-contain object-bottom" />
+                    <Image src="/images/common/challenger-1.png" alt="挑戦者" fill className="object-contain object-bottom" />
                   </div>
                 </div>
-                {/* 右�E�テキストエリア */}
+                {/* 右：テキストエリア */}
                 <div className="flex flex-col justify-center px-4 py-4" style={{ width: "40%" }}>
                   <p className="leading-relaxed text-sm" style={{ color: "#C79500" }}>
-                    自ら旗を掲げて起業し、Ebr />
-                    惁E�Eをもって事業を推進するチャレンジャー、Ebr />
-                    KANDA Startup Commonsの主役であり、Ebr />
-                    自ら�E意思で世界を変えようと挑み続ける、Ebr />
-                    熱ぁE��業家たちです、E
+                    自ら旗を掲げて起業し、<br />
+                    情熱をもって事業を推進するチャレンジャー。<br />
+                    KANDA Startup Commonsの主役であり、<br />
+                    自らの意思で世界を変えようと挑み続ける、<br />
+                    熱い起業家たちです。
                   </p>
                 </div>
               </div>
             </RevealSection>
 
-            {/* 挑戦老E��ーチEスマ�E用�E�Ed未満�E�E*/}
+            {/* 挑戦者カード スマホ用（md未満） */}
             <div className="md:hidden">
               <MemberCardMobile
                 imageSrc="/images/common/challenger-1.png"
                 nameSrc="/images/common/challenger-name.png"
-                alt="挑戦老E
+                alt="挑戦者"
                 borderColor="#001597"
               >
                 <p className="leading-relaxed text-[11px]">
                   自ら旗を掲げて起業し、情熱をもって<br />
-                  事業を推進するチャレンジャー、Ebr />
-                  KANDA Startup Commonsの主役であり、Ebr />
-                  自ら�E意思で世界を変えようと挑み続ける、Ebr />
-                  熱ぁE��業家たちです、E
+                  事業を推進するチャレンジャー。<br />
+                  KANDA Startup Commonsの主役であり、<br />
+                  自らの意思で世界を変えようと挑み続ける、<br />
+                  熱い起業家たちです。
                 </p>
               </MemberCardMobile>            </div>
           </div>
 
-          {/* サポ�Eト会員 */}
+          {/* サポート会員 */}
           <div className="space-y-8">
             <RevealSection>
-              <h3>サポ�Eト会員</h3>
+              <h3>サポート会員</h3>
             </RevealSection>
 
-            {/* 応援団�E�テキスト左・画像右 */}
+            {/* 応援団：テキスト左・画像右 */}
             <div>
               <RevealSection>
                 <h3 className="no-marker">応援団</h3>
@@ -232,16 +232,16 @@ export default async function Home() {
                   className="relative w-[96%] mx-auto hidden md:flex flex-row items-stretch overflow-visible"
                   style={{ border: "2px solid #C79500", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
                 >
-                  {/* 左�E�テキスチE*/}
+                  {/* 左：テキスト */}
                   <div className="flex flex-col justify-center px-4 py-4 flex-1" style={{ color: "#3B3C3E" }}>
                     <p className="leading-relaxed text-sm">
-                      <span style={{ color: "#D94C0B" }}>賁E��・人材面などでのバックアチE�E</span>をいただきながら、Ebr />
-                      KANDA Startup Commons運営のコアメンバ�Eとして活動してぁE��だく方たち、Ebr />
-                      単なる支援にとどまらず、Espan style={{ color: "#D94C0B" }}>運営サイドとして</span>スタートアチE�E支援及�ECommons(共有地)の<br />
-                      仕絁E��をデザインし、次世代のイノ�Eーションを支えてぁE��ます、E
+                      <span style={{ color: "#D94C0B" }}>資金・人材面などでのバックアップ</span>をいただきながら、<br />
+                      KANDA Startup Commons運営のコアメンバーとして活動していただく方たち。<br />
+                      単なる支援にとどまらず、<span style={{ color: "#D94C0B" }}>運営サイドとして</span>スタートアップ支援及びCommons(共有地)の<br />
+                      仕組みをデザインし、次世代のイノベーションを支えていきます。
                     </p>
                   </div>
-                  {/* 右�E�画像エリア */}
+                  {/* 右：画像エリア */}
                   <div className="relative shrink-0" style={{ width: "32%" }}>
                     {/* ouenndann-name.png - 背面 */}
                     <div className="absolute z-0" style={{ right: "76%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
@@ -254,7 +254,7 @@ export default async function Home() {
                   </div>
                 </div>
               </RevealSection>
-              {/* 応援団 スマ�E用 */}
+              {/* 応援団 スマホ用 */}
               <div className="md:hidden">
                 <MemberCardMobile
                   imageSrc="/images/common/ouenndann-mobile.png"
@@ -263,72 +263,72 @@ export default async function Home() {
                   buttonColor="#C79500"
                 >
                   <p className="leading-relaxed text-[11px]" style={{ color: "#3B3C3E" }}>
-                    <span style={{ color: "#D94C0B" }}>賁E��・人材面などでのバックアチE�EめE/span><br />
-                    <span style={{ color: "#D94C0B" }}>ぁE��だきながら、E/span>KANDA Startup Commons運営の<br />
-                    コアメンバ�Eとして活動してぁE��だく方たち、Ebr />
-                    単なる支援にとどまらず、Espan style={{ color: "#D94C0B" }}>運営サイドとして</span><br />
-                    スタートアチE�E支援及�ECommons(共有地)の<br />
-                    仕絁E��をデザインし、Ebr />
-                    次世代のイノ�Eーションを支えてぁE��ます、E
+                    <span style={{ color: "#D94C0B" }}>資金・人材面などでのバックアップを</span><br />
+                    <span style={{ color: "#D94C0B" }}>いただきながら、</span>KANDA Startup Commons運営の<br />
+                    コアメンバーとして活動していただく方たち。<br />
+                    単なる支援にとどまらず、<span style={{ color: "#D94C0B" }}>運営サイドとして</span><br />
+                    スタートアップ支援及びCommons(共有地)の<br />
+                    仕組みをデザインし、<br />
+                    次世代のイノベーションを支えていきます。
                   </p>
                 </MemberCardMobile>
               </div>
             </div>
 
-            {/* 盛り上げ隊：画像左・チE��スト右 */}
+            {/* 盛り上げ隊：画像左・テキスト右 */}
             <div>
               <RevealSection>
-                <h3 className="no-marker">盛り上げ隁E/h3>
+                <h3 className="no-marker">盛り上げ隊</h3>
               </RevealSection>
               <RevealSection>
                 <div
                   className="relative w-[96%] mx-auto hidden md:flex flex-row items-stretch overflow-visible"
                   style={{ border: "2px solid #C79500", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
                 >
-                  {/* 左�E�画像エリア */}
+                  {/* 左：画像エリア */}
                   <div className="relative shrink-0" style={{ width: "32%" }}>
                     {/* moriagetai-name.png */}
                     <div className="absolute" style={{ left: "4%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
-                      <Image src="/images/common/moriagetai-name.png" alt="盛り上げ隁E fill className="object-contain" />
+                      <Image src="/images/common/moriagetai-name.png" alt="盛り上げ隊" fill className="object-contain" />
                     </div>
                     {/* moriagetai.png */}
                     <div className="absolute" style={{ left: "20%", bottom: 0, width: "75%", aspectRatio: "383/357" }}>
-                      <Image src="/images/common/moriagetai.png" alt="盛り上げ隁E fill className="object-contain object-bottom" />
+                      <Image src="/images/common/moriagetai.png" alt="盛り上げ隊" fill className="object-contain object-bottom" />
                     </div>
                   </div>
-                  {/* 右�E�テキスチE*/}
+                  {/* 右：テキスト */}
                   <div className="flex flex-col justify-center px-4 py-4 flex-1" style={{ color: "#3B3C3E" }}>
                     <p className="leading-relaxed text-sm">
-                      登壁E��E��なる方の紹介や対外的な宣伝など、Espan style={{ color: "#D94C0B" }}>コミュニティの熱量を最大匁E/span>させる方たち、Ebr />
-                      「KANDA Startup Commonsを紹介したい�E�、Ebr />
-                      「この挑戦と持ち寁E��の輪をもっと庁E��てぁE��たい�E�、Ebr />
-                      とぁE��惁E�Eを持ち、Espan style={{ color: "#D94C0B" }}>人と人をつなぐ�Eけ橋として</span>イベント活性化にご尽力いただぁE��おります、E
+                      登壇者となる方の紹介や対外的な宣伝など、<span style={{ color: "#D94C0B" }}>コミュニティの熱量を最大化</span>させる方たち。<br />
+                      「KANDA Startup Commonsを紹介したい！」<br />
+                      「この挑戦と持ち寄りの輪をもっと広げていきたい！」<br />
+                      という情熱を持ち、<span style={{ color: "#D94C0B" }}>人と人をつなぐ懸け橋として</span>イベント活性化にご尽力いただいております。
                     </p>
                   </div>
                 </div>
               </RevealSection>
-              {/* 盛り上げ隁Eスマ�E用 */}
+              {/* 盛り上げ隊 スマホ用 */}
               <div className="md:hidden">
                 <MemberCardMobile
                   imageSrc="/images/common/moriagetai-mobile.png"
-                  alt="盛り上げ隁E
+                  alt="盛り上げ隊"
                   borderColor="#C79500"
                   buttonColor="#C79500"
                 >
                   <p className="leading-relaxed text-[11px]" style={{ color: "#3B3C3E" }}>
-                    登壁E��E��なる方の紹介や対外的な宣伝など、Ebr />
-                    <span style={{ color: "#D94C0B" }}>コミュニティの熱量を最大匁E/span>させる方たち、Ebr />
-                    「KANDA Startup Commonsを紹介したい�E�、Ebr />
-                    「この挑戦と持ち寁E��の輪めEbr />
-                    もっと庁E��てぁE��たい�E�、Ebr />
-                    とぁE��惁E�Eを持ち、Espan style={{ color: "#D94C0B" }}>人と人をつなぐ�Eけ橋として</span><br />
-                    イベント活性化にご尽力いただぁE��おります、E
+                    登壇者となる方の紹介や対外的な宣伝など、<br />
+                    <span style={{ color: "#D94C0B" }}>コミュニティの熱量を最大化</span>させる方たち。<br />
+                    「KANDA Startup Commonsを紹介したい！」<br />
+                    「この挑戦と持ち寄りの輪を<br />
+                    もっと広げていきたい！」<br />
+                    という情熱を持ち、<span style={{ color: "#D94C0B" }}>人と人をつなぐ懸け橋として</span><br />
+                    イベント活性化にご尽力いただいております。
                   </p>
                 </MemberCardMobile>
               </div>
             </div>
 
-            {/* 助っ人団�E�テキスト左・画像右 */}
+            {/* 助っ人団：テキスト左・画像右 */}
             <div>
               <RevealSection>
                 <h3 className="no-marker">助っ人団</h3>
@@ -338,15 +338,15 @@ export default async function Home() {
                   className="relative w-[96%] mx-auto hidden md:flex flex-row items-stretch overflow-visible"
                   style={{ border: "2px solid #C79500", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
                 >
-                  {/* 左�E�テキスチE*/}
+                  {/* 左：テキスト */}
                   <div className="flex flex-col justify-center px-4 py-4 flex-1" style={{ color: "#3B3C3E" }}>
                     <p className="leading-relaxed text-sm">
-                      自ら�E持つスキルめE�Eロダクト、アセチE��などでコミュニティ運営を支えてぁE��だく方たち、Ebr />
-                      プロダクト、コンチE��チE��提供し、Espan style={{ color: "#D94C0B" }}>裏�Eから強く支えるパ�Eトナー、E/span><br />
-                      あなた�EチE��ノロジー・プロダクトが、KANDA Startup Commonsの冁E��な運営を支えます、E
+                      自らの持つスキルやプロダクト、アセットなどでコミュニティ運営を支えていただく方たち。<br />
+                      プロダクト、コンテンツを提供し、<span style={{ color: "#D94C0B" }}>裏側から強く支えるパートナー。</span><br />
+                      あなたのテクノロジー・プロダクトが、KANDA Startup Commonsの円滑な運営を支えます。
                     </p>
                   </div>
-                  {/* 右�E�画像エリア */}
+                  {/* 右：画像エリア */}
                   <div className="relative shrink-0" style={{ width: "30%" }}>
                     {/* suketto.png */}
                     <div className="absolute" style={{ right: "8%", bottom: 0, width: "47%", aspectRatio: "210/404", transform: "scaleX(-1)" }}>
@@ -359,7 +359,7 @@ export default async function Home() {
                   </div>
                 </div>
               </RevealSection>
-              {/* 助っ人団 スマ�E用 */}
+              {/* 助っ人団 スマホ用 */}
               <div className="md:hidden">
                 <MemberCardMobile
                   imageSrc="/images/common/suketto-mobile.png"
@@ -368,13 +368,13 @@ export default async function Home() {
                   buttonColor="#C79500"
                 >
                   <p className="leading-relaxed text-[11px]" style={{ color: "#3B3C3E" }}>
-                    自ら�E持つスキルめE�Eロダクト、アセチE��などで<br />
-                    コミュニティ運営を支えてぁE��だく方たち、Ebr />
-                    プロダクト、コンチE��チE��提供し、Ebr />
-                    <span style={{ color: "#D94C0B" }}>裏�Eから強く支えるパ�Eトナー、E/span><br />
-                    あなた�EチE��ノロジー・プロダクトが、Ebr />
+                    自らの持つスキルやプロダクト、アセットなどで<br />
+                    コミュニティ運営を支えていただく方たち。<br />
+                    プロダクト、コンテンツを提供し、<br />
+                    <span style={{ color: "#D94C0B" }}>裏側から強く支えるパートナー。</span><br />
+                    あなたのテクノロジー・プロダクトが、<br />
                     KANDA Startup Commonsの<br />
-                    冁E��な運営を支えます、E
+                    円滑な運営を支えます。
                   </p>
                 </MemberCardMobile>
               </div>
@@ -386,9 +386,9 @@ export default async function Home() {
       {/* 過去のイベント実績セクション */}
       <section id="openday" className="py-24 px-8 max-w-7xl mx-auto">
         <RevealSection>
-          <h2 style={{ color: "#3B3C3E" }}>過去のイベンチE/h2>
+          <h2 style={{ color: "#3B3C3E" }}>過去のイベント</h2>
           <p>
-            多様なプレイヤーが気軽に雁E��、交流できる場として神田町でのイベントを定期皁E��開催してぁE��す、E
+            多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
           </p>
         </RevealSection>
 
@@ -404,11 +404,11 @@ export default async function Home() {
             className="inline-block px-8 py-3 text-sm hover:opacity-70 transition-opacity"
             style={{ backgroundColor: "#D94C0B", color: "#ffffff", borderRadius: "9999px" }}
           >
-            最新のイベント情報を確認すめE
+            最新のイベント情報を確認する
           </a>
         </RevealSection>
 
-        {/* 記事カーチE*/}
+        {/* 記事カード */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {events.length > 0 ? (
             events.map((event, i) => (
@@ -432,14 +432,14 @@ export default async function Home() {
               <ArticleCard
                 href="https://novolba.com/media/event260415/"
                 img="/images/events/leftside.png"
-                title="【イベントレポ�Eト】「KANDA Open Day@神田錦町」第2回を開催しました�E�E
+                title="【イベントレポート】「KANDA Open Day@神田錦町」第2回を開催しました！"
                 date="2026.04.15"
                 external
               />
               <ArticleCard
                 href="https://novolba.com/media/event260303/"
                 img="/images/events/rightside.png"
-                title="【イベントレポ�Eト】「KANDA Open Day@神田錦町」第1回を開催しました�E�E
+                title="【イベントレポート】「KANDA Open Day@神田錦町」第1回を開催しました！"
                 date="2026.03.03"
                 delay="reveal-delay-2"
                 external
@@ -448,24 +448,24 @@ export default async function Home() {
           )}
         </div>
 
-        {/* もっとみる�Eタン�E�封E��皁E��復活予定！E
+        {/* もっとみるボタン（将来的に復活予定）
         <RevealSection className="text-center">
           <a
             href="#"
             className="inline-block px-8 py-3 border text-sm hover:opacity-70 transition-opacity"
             style={{ borderColor: "#3B3C3E", color: "#3B3C3E", borderRadius: "9999px" }}
           >
-            もっとみめE
+            もっとみる
           </a>
         </RevealSection>
         */}
       </section>
 
-      {/* お問ぁE��わせセクション */}
+      {/* お問い合わせセクション */}
       <section id="contact" className="py-24 px-8" style={{ backgroundColor: "#D6D3CD" }}>
         <div className="max-w-3xl mx-auto">
           <RevealSection>
-            <h2>お問ぁE��わせ</h2>
+            <h2>お問い合わせ</h2>
           </RevealSection>
           <RevealSection>
             <ContactForm />
