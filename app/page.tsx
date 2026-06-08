@@ -94,23 +94,29 @@ export default async function Home() {
 
         <div className="mt-24 grid grid-cols-1 gap-16 items-start">
           <RevealSection delay="reveal-delay-2" className="space-y-6 leading-relaxed">
-            <h3>役割を持って持ち寄る</h3>
+            <h3 className="no-marker">役割を持って持ち寄る</h3>
             <p>
               KANDA Startup Commonsは、参画する一人ひとりが、
-              自分なりの役割を持って関わることを大切にしています。
+              <span style={{ color: "#D94C0B" }}>自分なりの役割を持って関わる</span>ことを大切にしています。
             </p>
-            <div className="space-y-2 px-5" style={{ color: "#585858" }}>
-              <p style={{ padding: "0", lineHeight: "40px" }}>「こんな挑戦をしたい」</p>
-              <p style={{ padding: "0", lineHeight: "40px" }}>「こんな応援があれば前に進めそう」</p>
-              <p style={{ padding: "0", lineHeight: "40px" }}>「自分は、こんな形で力を貸せる」</p>
+
+            {/* 画像プレースホルダー W:1200 H:327 */}
+            <div
+              className="w-full rounded-2xl flex items-center justify-center"
+              style={{ aspectRatio: "1200/327", backgroundColor: "#D6D3CD", color: "#767676" }}
+            >
+              <span>画像</span>
             </div>
+
             <p>
-              それを言葉にして持ち寄ることで、一人ではできなかったことが、少しずつ動き出す。
+              持ち寄ることで一人ではできなかったことが、少しずつ動き出す。<br />
               それぞれができることを少しずつ出し合えば、もっと大きな挑戦ができる。
             </p>
             <p>
-              支援する・される、民間・行政、住む人・働く人。そうした垣根をこえて、
+              支援する・される、民間・行政、住む人・働く人。そうした垣根をこえて、<br />
               一人ひとりのゆるやかな参加を通じて、共に創り上げていく。
+            </p>
+            <p>
               このまちに、そんな豊かな「共（Commons）」の土壌を育んでいきたいと、私たちは考えています。
             </p>
           </RevealSection>
