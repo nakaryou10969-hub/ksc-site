@@ -70,11 +70,11 @@ export default async function Home() {
       <section id="about" className="py-24 px-8 max-w-7xl mx-auto">
         <RevealSection>
           <h2>KANDA Startup Commons とは</h2>
-          <p>社会課題から、次世代の豊かさへ</p>
+          <h2>社会課題から、次世代の豊かさへ</h2>
         </RevealSection>
 
-        <div className="grid md:grid-cols-2 gap-16 items-start">
-          <RevealSection className="space-y-6 leading-relaxed" style={{ color: "#3B3C3E" }}>
+        <div className="grid grid-cols-1 gap-16 items-start">
+          <RevealSection className="space-y-6 leading-relaxed text-right" style={{ color: "#3B3C3E" }}>
             <p>
               KANDA Startup Commonsが応援したいのは、
               一人ひとりから湧き上がる想いや社会課題の解決を出発点にしながら、
@@ -82,23 +82,17 @@ export default async function Home() {
             </p>
             <p>
               「できなかったことを、できるようにする」だけでなく、
-              「すでにある価値を、もっと面白く、もっと豊かにする」。
+              「<span style={{ color: "#D94C0B" }}>すでにある価値を、もっと面白く、もっと豊かにする</span>」。
               その両方に向き合い、事業として継続していく意志と可能性を持つ挑戦を、私たちは大切にしています。
             </p>
             <p>
               社会性と事業性、理想と現実のあいだを行き来しながら、
-              試し、学び、前に進もうとする人たちが集まる場を、神田からつくっていきます。
+              <span style={{ color: "#D94C0B" }}>試し、学び、前に進もうとする人たちが集まる場を、神田から</span>つくっていきます。
             </p>
-          </RevealSection>
-          <RevealSection delay="reveal-delay-2" className="rounded-2xl aspect-[5/4] flex items-center justify-center" style={{ backgroundColor: "#D6D3CD", color: "#767676" }}>
-            <span>画像</span>
           </RevealSection>
         </div>
 
-        <div className="mt-24 grid md:grid-cols-2 gap-16 items-start">
-          <RevealSection className="rounded-2xl aspect-[5/4] flex items-center justify-center" style={{ backgroundColor: "#D6D3CD", color: "#767676" }}>
-            <span>画像</span>
-          </RevealSection>
+        <div className="mt-24 grid grid-cols-1 gap-16 items-start">
           <RevealSection delay="reveal-delay-2" className="space-y-6 leading-relaxed">
             <h3>役割を持って持ち寄る</h3>
             <p>
