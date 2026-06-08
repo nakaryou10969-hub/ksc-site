@@ -130,28 +130,60 @@ export default async function Home() {
             <h2>KANDA Startup Commons 内の役割</h2>
           </RevealSection>
 
-          {/* スタートアップ会員 */}
+          <RevealSection>
+            <h3>こんな人たちを募集しています</h3>
+          </RevealSection>
+
+          {/* 挑戦者 */}
           <div className="mb-20">
             <RevealSection>
-              <h3>スタートアップ会員</h3>
-              <p>◾︎ 挑戦者</p>
+              <h3>挑戦者</h3>
             </RevealSection>
-            <div className="grid md:grid-cols-2 gap-12 items-start">
-              <RevealSection className="space-y-4 leading-relaxed" style={{ color: "#3B3C3E" }}>
-                <p>
-                  スタートアップの立ち上げ、新規事業、社会課題への挑戦。
-                  まだ途中で、答えが見えていなくても構いません。
-                  未完成なアイデアや問いが大歓迎です。
-                </p>
-                <p>
-                  一人で抱え込まず、「何をやりたいか」「何に困っているか」を言葉にして、
-                  参加してみてください。
-                </p>
-              </RevealSection>
-              <RevealSection delay="reveal-delay-2" className="rounded-2xl aspect-[4/5] flex items-center justify-center" style={{ backgroundColor: "#D6D3CD", color: "#767676" }}>
-                <span>画像</span>
-              </RevealSection>
-            </div>
+            <RevealSection className="space-y-4 leading-relaxed mb-8" style={{ color: "#3B3C3E" }}>
+              <p>
+                スタートアップの立ち上げ、新規事業、社会課題への挑戦。<br />
+                まだ途中で、答えが見えていなくても構いません。未完成なアイデアや問いが大歓迎です。
+              </p>
+            </RevealSection>
+
+            {/* 挑戦者カード W:1083 H:315 比率 */}
+            <RevealSection>
+              <div
+                className="relative w-full rounded-sm overflow-visible flex flex-col md:flex-row items-stretch"
+                style={{ border: "2px solid #001597", aspectRatio: "1083/315", maxHeight: "315px" }}
+              >
+                {/* 左：画像エリア（challenger-nameとchallenger-1の重ね） */}
+                <div className="relative shrink-0" style={{ width: "38%" }}>
+                  {/* challenger-1.png（メイン画像）- ボックスからはみ出して上に */}
+                  <div className="absolute" style={{ left: "22%", bottom: 0, width: "75%", aspectRatio: "413/395" }}>
+                    <Image
+                      src="/images/common/challenger-1.png"
+                      alt="挑戦者"
+                      fill
+                      className="object-contain object-bottom"
+                    />
+                  </div>
+                  {/* challenger-name.png（縦テキスト装飾）*/}
+                  <div className="absolute" style={{ left: "4%", bottom: 0, width: "14%", aspectRatio: "92/241" }}>
+                    <Image
+                      src="/images/common/challenger-name.png"
+                      alt="challenger"
+                      fill
+                      className="object-contain object-bottom"
+                    />
+                  </div>
+                </div>
+
+                {/* 右：テキストエリア */}
+                <div className="flex flex-col justify-center px-6 py-6 flex-1" style={{ color: "#3B3C3E" }}>
+                  <p className="leading-relaxed">
+                    自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。<br />
+                    KANDA Startup Commonsの主役であり、<br />
+                    自らの意思で世界を変えようと挑み続ける、熱い起業家たちです。
+                  </p>
+                </div>
+              </div>
+            </RevealSection>
           </div>
 
           {/* サポート会員 */}
