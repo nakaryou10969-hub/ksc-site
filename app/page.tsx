@@ -117,7 +117,7 @@ export default async function Home() {
               一人ひとりのゆるやかな参加を通じて、共に創り上げていく。
             </p>
             <p>
-              このまちに、そんな豊かな「共（Commons）」の土壌を育んでいきたいと、私たちは考えています。
+              このまちに、そんな豊かな「<span style={{ color: "#C79500" }}>共（Commons）</span>」の土壌を育んでいきたいと、私たちは考えています。
             </p>
           </RevealSection>
         </div>
