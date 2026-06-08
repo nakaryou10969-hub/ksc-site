@@ -104,7 +104,7 @@ export default async function Home() {
       {/* 役割を持って持ち寄るセクション */}
       <section className="py-24 px-8 max-w-7xl mx-auto" style={{ backgroundColor: "#D6D3CD" }}>
           <RevealSection delay="reveal-delay-2" className="space-y-6 leading-relaxed">
-            <h3 className="no-marker">役割を持って持ち寄る</h3>
+            <h3 className="no-marker">役割を持って関わる</h3>
             <p>
               KANDA Startup Commonsは、<br className="md:hidden" />
               参画する一人ひとりが、<br className="md:hidden" />
@@ -112,11 +112,11 @@ export default async function Home() {
               <span style={{ color: "#D94C0B" }}>大切にしています。</span>
             </p>
 
-            {/* 画像 W:1200 H:327 */}
-            <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "1200/327" }}>
+            {/* 画像 W:311 H:624 */}
+            <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "311/624" }}>
               <Image
-                src="/images/events/insert.png"
-                alt="役割を持って持ち寄る"
+                src="/images/events/fixedinsert.png"
+                alt="役割を持って関わる"
                 fill
                 className="object-cover"
               />
