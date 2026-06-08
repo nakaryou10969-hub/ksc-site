@@ -195,11 +195,9 @@ export default async function Home() {
                 </div>
                 {/* 右：テキストエリア */}
                 <div className="flex flex-col justify-center px-4 py-4" style={{ width: "40%" }}>
-                  <p className="leading-relaxed text-sm" style={{ color: "#C79500" }}>
-                    自ら旗を掲げて起業し、<br />
-                    情熱をもって事業を推進するチャレンジャー。<br />
-                    KANDA Startup Commonsの主役であり、<br />
-                    自らの意思で世界を変えようと挑み続ける、<br />
+                  <p className="leading-relaxed text-sm" style={{ color: "#C79500", lineHeight: "1.8" }}>
+                    自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。<br />
+                    KANDA Startup Commonsの主役であり、自らの意思で世界を変えようと挑み続ける、<br />
                     熱い起業家たちです。
                   </p>
                 </div>
@@ -239,7 +237,7 @@ export default async function Home() {
                 >
                   {/* 左：テキスト */}
                   <div className="flex flex-col justify-center px-4 py-4 flex-1" style={{ color: "#3B3C3E" }}>
-                    <p className="leading-relaxed text-sm">
+                    <p className="leading-relaxed text-sm" style={{ lineHeight: "1.8" }}>
                       <span style={{ color: "#D94C0B" }}>資金・人材面などでのバックアップ</span>をいただきながら、<br />
                       KANDA Startup Commons運営のコアメンバーとして活動していただく方たち。<br />
                       単なる支援にとどまらず、<span style={{ color: "#D94C0B" }}>運営サイドとして</span>スタートアップ支援及びCommons(共有地)の<br />
@@ -300,7 +298,7 @@ export default async function Home() {
                   </div>
                   {/* 右：テキスト */}
                   <div className="flex flex-col justify-center px-4 py-4 flex-1" style={{ color: "#3B3C3E" }}>
-                    <p className="leading-relaxed text-sm">
+                    <p className="leading-relaxed text-sm" style={{ lineHeight: "1.8" }}>
                       登壇者となる方の紹介や対外的な宣伝など、<span style={{ color: "#D94C0B" }}>コミュニティの熱量を最大化</span>させる方たち。<br />
                       「KANDA Startup Commonsを紹介したい！」<br />
                       「この挑戦と持ち寄りの輪をもっと広げていきたい！」<br />
@@ -339,7 +337,7 @@ export default async function Home() {
                 >
                   {/* 左：テキスト */}
                   <div className="flex flex-col justify-center px-4 py-4 flex-1" style={{ color: "#3B3C3E" }}>
-                    <p className="leading-relaxed text-sm">
+                    <p className="leading-relaxed text-sm" style={{ lineHeight: "1.8" }}>
                       自らの持つスキルやプロダクト、アセットなどでコミュニティ運営を支えていただく方たち。<br />
                       プロダクト、コンテンツを提供し、<span style={{ color: "#D94C0B" }}>裏側から強く支えるパートナー。</span><br />
                       あなたのテクノロジー・プロダクトが、KANDA Startup Commonsの円滑な運営を支えます。
@@ -400,7 +398,7 @@ export default async function Home() {
             href="https://peatix.com/group/16534116"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3 text-sm hover:opacity-70 transition-opacity"
+            className="inline-block px-10 py-4 text-base hover:opacity-70 transition-opacity"
             style={{ backgroundColor: "#D94C0B", color: "#ffffff", borderRadius: "9999px" }}
           >
             最新のイベント情報を確認する
