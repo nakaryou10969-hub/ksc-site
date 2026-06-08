@@ -4,7 +4,6 @@ import ContactForm from "./components/ContactForm";
 import EventSlider from "./components/EventSlider";
 import ArticleCard from "./components/ArticleCard";
 import RevealSection from "./components/RevealSection";
-import SupportMemberCarousel from "./components/SupportMemberCarousel";
 import Image from "next/image";
 
 async function getLatestEvents(): Promise<Event[]> {
@@ -187,13 +186,117 @@ export default async function Home() {
           </div>
 
           {/* サポート会員 */}
-          <div>
+          <div className="space-y-16">
             <RevealSection>
               <h3>サポート会員</h3>
             </RevealSection>
-            <RevealSection>
-              <SupportMemberCarousel />
-            </RevealSection>
+
+            {/* 応援団：テキスト左・画像右 */}
+            <div>
+              <RevealSection>
+                <h3>応援団</h3>
+              </RevealSection>
+              <RevealSection>
+                <div
+                  className="relative w-full flex flex-col md:flex-row items-stretch overflow-visible"
+                  style={{ border: "2px solid #C79500", aspectRatio: "1083/315", maxHeight: "315px", backgroundColor: "#ffffff" }}
+                >
+                  {/* 左：テキスト */}
+                  <div className="flex flex-col justify-center px-8 py-6 flex-1" style={{ color: "#3B3C3E" }}>
+                    <p className="leading-relaxed text-sm">
+                      <span style={{ color: "#D94C0B" }}>資金・人材面などでのバックアップ</span>をいただきながら、<br />
+                      KANDA Startup Commons運営のコアメンバーとして<br />
+                      活動していただく方たち。<br />
+                      単なる支援にとどまらず、<span style={{ color: "#D94C0B" }}>運営サイドとして</span><br />
+                      スタートアップ支援及びCommons(共有地)の仕組みを<br />
+                      デザインし、次世代のイノベーションを支えていきます。
+                    </p>
+                  </div>
+                  {/* 右：画像エリア */}
+                  <div className="relative shrink-0" style={{ width: "35%" }}>
+                    {/* ouenndann.png */}
+                    <div className="absolute" style={{ right: "8%", bottom: 0, width: "72%", aspectRatio: "304/385" }}>
+                      <Image src="/images/common/ouenndann.png" alt="応援団" fill className="object-contain object-bottom" />
+                    </div>
+                    {/* ouenndann-name.png */}
+                    <div className="absolute" style={{ right: "76%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
+                      <Image src="/images/common/ouenndann-name.png" alt="応援団" fill className="object-contain" />
+                    </div>
+                  </div>
+                </div>
+              </RevealSection>
+            </div>
+
+            {/* 盛り上げ隊：画像左・テキスト右 */}
+            <div>
+              <RevealSection>
+                <h3>盛り上げ隊</h3>
+              </RevealSection>
+              <RevealSection>
+                <div
+                  className="relative w-full flex flex-col md:flex-row items-stretch overflow-visible"
+                  style={{ border: "2px solid #C79500", aspectRatio: "1083/315", maxHeight: "315px", backgroundColor: "#ffffff" }}
+                >
+                  {/* 左：画像エリア */}
+                  <div className="relative shrink-0" style={{ width: "38%" }}>
+                    {/* moriagetai-name.png */}
+                    <div className="absolute" style={{ left: "4%", top: "50%", transform: "translateY(-50%)", width: "14%", aspectRatio: "93/244" }}>
+                      <Image src="/images/common/moriagetai-name.png" alt="盛り上げ隊" fill className="object-contain" />
+                    </div>
+                    {/* moriagetai.png */}
+                    <div className="absolute" style={{ left: "20%", bottom: 0, width: "75%", aspectRatio: "383/357" }}>
+                      <Image src="/images/common/moriagetai.png" alt="盛り上げ隊" fill className="object-contain object-bottom" />
+                    </div>
+                  </div>
+                  {/* 右：テキスト */}
+                  <div className="flex flex-col justify-center px-8 py-6 flex-1" style={{ color: "#3B3C3E" }}>
+                    <p className="leading-relaxed text-sm">
+                      登壇者となる方の紹介や対外的な宣伝など、<br />
+                      <span style={{ color: "#D94C0B" }}>コミュニティの熱量を最大化</span>させる方たち。<br />
+                      「KANDA Startup Commonsを紹介したい！」<br />
+                      「この挑戦と持ち寄りの輪をもっと広げていきたい！」<br />
+                      という情熱を持ち、<span style={{ color: "#D94C0B" }}>人と人をつなぐ懸け橋として</span><br />
+                      イベント活性化にご尽力いただいております。
+                    </p>
+                  </div>
+                </div>
+              </RevealSection>
+            </div>
+
+            {/* 助っ人団：テキスト左・画像右 */}
+            <div>
+              <RevealSection>
+                <h3>助っ人団</h3>
+              </RevealSection>
+              <RevealSection>
+                <div
+                  className="relative w-full flex flex-col md:flex-row items-stretch overflow-visible"
+                  style={{ border: "2px solid #C79500", aspectRatio: "1083/315", maxHeight: "315px", backgroundColor: "#ffffff" }}
+                >
+                  {/* 左：テキスト */}
+                  <div className="flex flex-col justify-center px-8 py-6 flex-1" style={{ color: "#3B3C3E" }}>
+                    <p className="leading-relaxed text-sm">
+                      自らの持つスキルやプロダクト、<br />
+                      アセットなどでコミュニティ運営を支えていただく方たち。<br />
+                      プロダクト、コンテンツを提供し、<span style={{ color: "#D94C0B" }}>裏側から強く支えるパートナー。</span><br />
+                      あなたのテクノロジー・プロダクトが、<br />
+                      KANDA Startup Commonsの円滑な運営を支えます。
+                    </p>
+                  </div>
+                  {/* 右：画像エリア */}
+                  <div className="relative shrink-0" style={{ width: "30%" }}>
+                    {/* suketto.png（180°回転） */}
+                    <div className="absolute" style={{ right: "8%", bottom: 0, width: "65%", aspectRatio: "210/404", transform: "rotate(180deg)", transformOrigin: "center bottom" }}>
+                      <Image src="/images/common/suketto.png" alt="助っ人団" fill className="object-contain object-bottom" />
+                    </div>
+                    {/* suketto-name.png */}
+                    <div className="absolute" style={{ right: "68%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "91/239" }}>
+                      <Image src="/images/common/suketto-name.png" alt="助っ人団" fill className="object-contain" />
+                    </div>
+                  </div>
+                </div>
+              </RevealSection>
+            </div>
           </div>
         </div>
       </section>
