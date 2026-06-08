@@ -85,6 +85,14 @@ main h3::before {
   flex-shrink: 0;
 }
 
+/* ■なしh3（サブタイトル用） */
+main h3.no-marker::before {
+  display: none;
+}
+main h3.no-marker {
+  display: block;
+}
+
 /* p（本文）: NotoSans JP Black, 16px（SP:15px）, 行間40px, padding左右20px 上下12px */
 main p {
   font-family: "Noto Sans JP", sans-serif;

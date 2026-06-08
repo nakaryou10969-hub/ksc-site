@@ -70,23 +70,23 @@ export default async function Home() {
       <section id="about" className="py-24 px-8 max-w-7xl mx-auto">
         <RevealSection>
           <h2>KANDA Startup Commons とは</h2>
-          <h2>社会課題から、次世代の豊かさへ</h2>
+          <h3 className="no-marker" style={{ color: "#3B3C3E" }}>社会課題から、次世代の豊かさへ</h3>
         </RevealSection>
 
         <div className="grid grid-cols-1 gap-16 items-start">
           <RevealSection className="space-y-6 leading-relaxed text-left" style={{ color: "#3B3C3E" }}>
             <p>
-              KANDA Startup Commonsが応援したいのは、
+              KANDA Startup Commonsが応援したいのは、<br />
               一人ひとりから湧き上がる想いや社会課題の解決を出発点にしながら、
               その先にある次世代の豊かさを生み出そうとする挑戦です。
             </p>
             <p>
               「できなかったことを、できるようにする」だけでなく、
-              「<span style={{ color: "#D94C0B" }}>すでにある価値を、もっと面白く、もっと豊かにする</span>」。
+              「<span style={{ color: "#D94C0B" }}>すでにある価値を、もっと面白く、もっと豊かにする</span>」。<br />
               その両方に向き合い、事業として継続していく意志と可能性を持つ挑戦を、私たちは大切にしています。
             </p>
+            <p>社会性と事業性、理想と現実のあいだを行き来しながら、</p>
             <p>
-              社会性と事業性、理想と現実のあいだを行き来しながら、
               <span style={{ color: "#D94C0B" }}>試し、学び、前に進もうとする人たちが集まる場を、神田から</span>つくっていきます。
             </p>
           </RevealSection>
