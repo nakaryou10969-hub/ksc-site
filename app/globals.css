@@ -106,6 +106,18 @@ main p {
   main p {
     font-size: 15px;
   }
+
+  /* h2 スマホ版：全幅ダークグレー背景帯・白文字・大きめサイズ */
+  main h2.h2-banner {
+    font-size: 28px;
+    line-height: 1.4;
+    color: #ffffff;
+    background-color: #3B3C3E;
+    padding: 20px 24px;
+    /* section の px-8 を打ち消して全幅に */
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
 }
 
 /* button: NotoSans JP Bold（DNP代替）, 22px, 背面#767676, 文字#FFFFFF, 左右44px 上下16px（文字に対して）, 行間なし, 中央揃え */
