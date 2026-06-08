@@ -154,7 +154,7 @@ export default async function Home() {
             <RevealSection>
               <div
                 className="relative w-[96%] mx-auto rounded-sm overflow-visible flex flex-col md:flex-row items-stretch"
-                style={{ border: "2px solid #001597", aspectRatio: "1083/315", maxHeight: "315px", backgroundColor: "#ffffff" }}
+                style={{ border: "2px solid #001597", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
               >
                 {/* 左：画像エリア（challenger-nameとchallenger-1の重ね） */}
                 <div className="relative shrink-0" style={{ width: "32%" }}>
@@ -193,7 +193,7 @@ export default async function Home() {
               <RevealSection>
                 <div
                   className="relative w-[96%] mx-auto flex flex-col md:flex-row items-stretch overflow-visible"
-                  style={{ border: "2px solid #C79500", aspectRatio: "1083/315", maxHeight: "315px", backgroundColor: "#ffffff" }}
+                  style={{ border: "2px solid #C79500", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
                 >
                   {/* 左：テキスト */}
                   <div className="flex flex-col justify-center px-4 py-4 flex-1" style={{ color: "#3B3C3E" }}>
@@ -227,7 +227,7 @@ export default async function Home() {
               <RevealSection>
                 <div
                   className="relative w-[96%] mx-auto flex flex-col md:flex-row items-stretch overflow-visible"
-                  style={{ border: "2px solid #C79500", aspectRatio: "1083/315", maxHeight: "315px", backgroundColor: "#ffffff" }}
+                  style={{ border: "2px solid #C79500", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
                 >
                   {/* 左：画像エリア */}
                   <div className="relative shrink-0" style={{ width: "32%" }}>
@@ -261,7 +261,7 @@ export default async function Home() {
               <RevealSection>
                 <div
                   className="relative w-[96%] mx-auto flex flex-col md:flex-row items-stretch overflow-visible"
-                  style={{ border: "2px solid #C79500", aspectRatio: "1083/315", maxHeight: "315px", backgroundColor: "#ffffff" }}
+                  style={{ border: "2px solid #C79500", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
                 >
                   {/* 左：テキスト */}
                   <div className="flex flex-col justify-center px-4 py-4 flex-1" style={{ color: "#3B3C3E" }}>
