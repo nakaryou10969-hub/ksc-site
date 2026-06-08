@@ -408,7 +408,7 @@ export default async function Home() {
       </section>
 
       {/* 過去のイベント実績セクション */}
-      <section id="openday" className="py-24 px-8 max-w-7xl mx-auto">        <RevealSection>
+      <section id="openday" className="py-24 pb-8 md:pb-24 px-8 max-w-7xl mx-auto">        <RevealSection>
           <h2 style={{ color: "#3B3C3E" }}>過去のイベント</h2>
           <p>
             多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
@@ -485,7 +485,7 @@ export default async function Home() {
       </section>
 
       {/* お問い合わせセクション */}
-      <section id="contact" className="pt-8 pb-24 md:py-24 px-8" style={{ backgroundColor: "#D6D3CD" }}>
+      <section id="contact" className="pt-4 pb-24 md:py-24 px-8" style={{ backgroundColor: "#D6D3CD" }}>
         <div className="max-w-3xl mx-auto">
           <RevealSection>
             <h2>お問い合わせ</h2>
