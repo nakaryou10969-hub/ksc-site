@@ -205,7 +205,7 @@ export default async function Home() {
               </RevealSection>
               <RevealSection>
                 <div
-                  className="relative w-[96%] mx-auto flex flex-col md:flex-row items-stretch overflow-visible"
+                  className="relative w-[96%] mx-auto hidden md:flex flex-row items-stretch overflow-visible"
                   style={{ border: "2px solid #C79500", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
                 >
                   {/* 左：テキスト */}
@@ -230,6 +230,22 @@ export default async function Home() {
                   </div>
                 </div>
               </RevealSection>
+              {/* 応援団 スマホ用 */}
+              <div className="md:hidden">
+                <MemberCardMobile
+                  imageSrc="/images/common/ouenndann-mobile.png"
+                  alt="応援団"
+                  borderColor="#C79500"
+                  buttonColor="#C79500"
+                >
+                  <p className="leading-relaxed text-base" style={{ color: "#3B3C3E" }}>
+                    <span style={{ color: "#D94C0B" }}>資金・人材面などでのバックアップ</span>をいただきながら、<br />
+                    KANDA Startup Commons運営のコアメンバーとして活動していただく方たち。<br />
+                    単なる支援にとどまらず、<span style={{ color: "#D94C0B" }}>運営サイドとして</span>スタートアップ支援及びCommons(共有地)の<br />
+                    仕組みをデザインし、次世代のイノベーションを支えていきます。
+                  </p>
+                </MemberCardMobile>
+              </div>
             </div>
 
             {/* 盛り上げ隊：画像左・テキスト右 */}
@@ -239,7 +255,7 @@ export default async function Home() {
               </RevealSection>
               <RevealSection>
                 <div
-                  className="relative w-[96%] mx-auto flex flex-col md:flex-row items-stretch overflow-visible"
+                  className="relative w-[96%] mx-auto hidden md:flex flex-row items-stretch overflow-visible"
                   style={{ border: "2px solid #C79500", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
                 >
                   {/* 左：画像エリア */}
@@ -264,6 +280,22 @@ export default async function Home() {
                   </div>
                 </div>
               </RevealSection>
+              {/* 盛り上げ隊 スマホ用 */}
+              <div className="md:hidden">
+                <MemberCardMobile
+                  imageSrc="/images/common/moriagetai-mobile.png"
+                  alt="盛り上げ隊"
+                  borderColor="#C79500"
+                  buttonColor="#C79500"
+                >
+                  <p className="leading-relaxed text-base" style={{ color: "#3B3C3E" }}>
+                    登壇者となる方の紹介や対外的な宣伝など、<span style={{ color: "#D94C0B" }}>コミュニティの熱量を最大化</span>させる方たち。<br />
+                    「KANDA Startup Commonsを紹介したい！」<br />
+                    「この挑戦と持ち寄りの輪をもっと広げていきたい！」<br />
+                    という情熱を持ち、<span style={{ color: "#D94C0B" }}>人と人をつなぐ懸け橋として</span>イベント活性化にご尽力いただいております。
+                  </p>
+                </MemberCardMobile>
+              </div>
             </div>
 
             {/* 助っ人団：テキスト左・画像右 */}
@@ -273,7 +305,7 @@ export default async function Home() {
               </RevealSection>
               <RevealSection>
                 <div
-                  className="relative w-[96%] mx-auto flex flex-col md:flex-row items-stretch overflow-visible"
+                  className="relative w-[96%] mx-auto hidden md:flex flex-row items-stretch overflow-visible"
                   style={{ border: "2px solid #C79500", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
                 >
                   {/* 左：テキスト */}
@@ -297,6 +329,21 @@ export default async function Home() {
                   </div>
                 </div>
               </RevealSection>
+              {/* 助っ人団 スマホ用 */}
+              <div className="md:hidden">
+                <MemberCardMobile
+                  imageSrc="/images/common/suketto-mobile.png"
+                  alt="助っ人団"
+                  borderColor="#C79500"
+                  buttonColor="#C79500"
+                >
+                  <p className="leading-relaxed text-base" style={{ color: "#3B3C3E" }}>
+                    自らの持つスキルやプロダクト、アセットなどでコミュニティ運営を支えていただく方たち。<br />
+                    プロダクト、コンテンツを提供し、<span style={{ color: "#D94C0B" }}>裏側から強く支えるパートナー。</span><br />
+                    あなたのテクノロジー・プロダクトが、KANDA Startup Commonsの円滑な運営を支えます。
+                  </p>
+                </MemberCardMobile>
+              </div>
             </div>
           </div>
         </div>
