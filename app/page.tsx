@@ -206,7 +206,7 @@ export default async function Home() {
                 alt="挑戦者"
                 borderColor="#001597"
               >
-                <p className="leading-relaxed text-[11px]" style={{ fontSize: "11px" }}>
+                <p className="leading-relaxed text-[10px]" style={{ fontSize: "10px" }}>
                   自ら旗を掲げて起業し、情熱をもって<br />
                   事業を推進するチャレンジャー。<br />
                   KANDA Startup Commonsの主役であり、<br />
@@ -259,7 +259,7 @@ export default async function Home() {
                   borderColor="#C79500"
                   buttonColor="#C79500"
                 >
-                  <p className="leading-relaxed text-[11px]" style={{ color: "#3B3C3E", fontSize: "11px" }}>
+                  <p className="leading-relaxed text-[10px]" style={{ color: "#3B3C3E", fontSize: "10px" }}>
                     <span style={{ color: "#D94C0B" }}>資金・人材面などでのバックアップを</span><br />
                     <span style={{ color: "#D94C0B" }}>いただきながら、</span>KANDA Startup Commons運営の<br />
                     コアメンバーとして活動していただく方たち。<br />
@@ -309,7 +309,7 @@ export default async function Home() {
                   borderColor="#C79500"
                   buttonColor="#C79500"
                 >
-                  <p className="leading-relaxed text-[11px]" style={{ color: "#3B3C3E", fontSize: "11px" }}>
+                  <p className="leading-relaxed text-[10px]" style={{ color: "#3B3C3E", fontSize: "10px" }}>
                     登壇者となる方の紹介や対外的な宣伝など、<br />
                     <span style={{ color: "#D94C0B" }}>コミュニティの熱量を最大化</span>させる方たち。<br />
                     「KANDA Startup Commonsを紹介したい！」<br />
@@ -358,7 +358,7 @@ export default async function Home() {
                   borderColor="#C79500"
                   buttonColor="#C79500"
                 >
-                  <p className="leading-relaxed text-[11px]" style={{ color: "#3B3C3E", fontSize: "11px" }}>
+                  <p className="leading-relaxed text-[10px]" style={{ color: "#3B3C3E", fontSize: "10px" }}>
                     自らの持つスキルやプロダクト、アセットなどで<br />
                     コミュニティ運営を支えていただく方たち。<br />
                     プロダクト、コンテンツを提供し、<br />
