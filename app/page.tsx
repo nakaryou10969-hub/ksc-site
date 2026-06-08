@@ -5,6 +5,7 @@ import EventSlider from "./components/EventSlider";
 import ArticleCard from "./components/ArticleCard";
 import RevealSection from "./components/RevealSection";
 import Image from "next/image";
+import MemberCardMobile from "./components/MemberCardMobile";
 
 async function getLatestEvents(): Promise<Event[]> {
   try {
@@ -142,10 +143,10 @@ export default async function Home() {
               </p>
             </RevealSection>
 
-            {/* 挑戦者カード W:1083 H:315 比率 */}
+            {/* 挑戦者カード PC用（md以上） */}
             <RevealSection>
               <div
-                className="relative w-[96%] mx-auto rounded-sm overflow-visible flex flex-col md:flex-row items-stretch justify-start pl-[3%]"
+                className="relative w-[96%] mx-auto rounded-sm overflow-visible hidden md:flex flex-row items-stretch justify-start pl-[3%]"
                 style={{ border: "2px solid #001597", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
               >
                 {/* 左：画像エリア（challenger-nameとchallenger-1の重ね） */}
@@ -171,6 +172,24 @@ export default async function Home() {
                 </div>
               </div>
             </RevealSection>
+
+            {/* 挑戦者カード スマホ用（md未満） */}
+            <div className="md:hidden">
+              <MemberCardMobile
+                imageSrc="/images/common/challenger-1.png"
+                nameSrc="/images/common/challenger-name.png"
+                alt="挑戦者"
+                borderColor="#001597"
+              >
+                <p className="leading-relaxed text-base">
+                  自ら旗を掲げて起業し、情熱をもって<br />
+                  事業を推進するチャレンジャー。<br />
+                  KANDA Startup Commonsの主役であり、<br />
+                  自らの意思で世界を変えようと挑み続ける、<br />
+                  熱い起業家たちです。
+                </p>
+              </MemberCardMobile>
+            </div>
           </div>
 
           {/* サポート会員 */}
