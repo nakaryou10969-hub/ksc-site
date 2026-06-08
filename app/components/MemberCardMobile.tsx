@@ -10,6 +10,7 @@ type Props = {
   children: React.ReactNode;
   borderColor?: string;
   buttonColor?: string;
+  bgColor?: string;
 };
 
 export default function MemberCardMobile({
@@ -19,23 +20,20 @@ export default function MemberCardMobile({
   children,
   borderColor = "#001597",
   buttonColor,
+  bgColor = "#D6D3CD",
 }: Props) {
   const [open, setOpen] = useState(false);
   const btnColor = buttonColor ?? borderColor;
 
-  // 逆五角形のclip-path（上部長方形＋下部V字）
-  const pentagonClip = "polygon(0 0, 100% 0, 100% 82%, 50% 100%, 0 82%)";
-
   return (
-    <div className="w-full relative">
-      {/* 五角形エリア（枠線なし・白背景） */}
+    <div className="w-full">
+      {/* カード全体：白背景の矩形 */}
       <div
         style={{
-          clipPath: pentagonClip,
           backgroundColor: "#ffffff",
-          borderRadius: "8px 8px 0 0",
+          borderRadius: open ? "8px 8px 0 0" : "8px",
+          overflow: "hidden",
           position: "relative",
-          zIndex: 1,
         }}
       >
         {/* 画像エリア */}
@@ -62,48 +60,57 @@ export default function MemberCardMobile({
           </div>
         </div>
 
-        {/* 詳しく見る ボタン（五角形内・閉じている時のみ） */}
+        {/* 閉じている時のみ：V字のくびれ（背景色の三角で下部を切り取り見せる） */}
         {!open && (
-          <div className="flex justify-center pb-10 pt-2">
-            <button
-              onClick={() => setOpen(true)}
-              className="text-sm font-bold"
-              style={{ color: btnColor }}
-            >
-              詳しく見る
-            </button>
-          </div>
+          <>
+            {/* 左三角 */}
+            <div
+              style={{
+                position: "absolute",
+                bottom: 0,
+                left: 0,
+                width: "50%",
+                height: "18%",
+                backgroundColor: bgColor,
+                clipPath: "polygon(0 100%, 100% 100%, 0 0)",
+              }}
+            />
+            {/* 右三角 */}
+            <div
+              style={{
+                position: "absolute",
+                bottom: 0,
+                right: 0,
+                width: "50%",
+                height: "18%",
+                backgroundColor: bgColor,
+                clipPath: "polygon(100% 100%, 0 100%, 100% 0)",
+              }}
+            />
+            {/* 詳しく見るボタン（三角の手前） */}
+            <div className="relative flex justify-center pb-3 pt-2" style={{ zIndex: 10 }}>
+              <button
+                onClick={() => setOpen(true)}
+                className="text-sm font-bold"
+                style={{ color: btnColor }}
+              >
+                詳しく見る
+              </button>
+            </div>
+          </>
         )}
-        {/* 開いた状態：ボタン分の高さを確保 */}
-        {open && <div style={{ height: "40px" }} />}
+
+        {/* 開いている時：ボタンなし・三角なし（矩形のまま） */}
+        {open && <div style={{ height: "8px" }} />}
       </div>
 
-      {/* 展開時：五角形のV字カット部分（両脇の三角の欠け）を白で塞ぐオーバーレイ */}
-      {open && (
-        <div
-          style={{
-            position: "absolute",
-            bottom: 0,
-            left: 0,
-            right: 0,
-            /* 五角形の高さ全体（280px画像 + 40pxボタン = 320px）の
-               下18%（V字部分）をカバーする高さ */
-            height: "calc(320px * 0.18 + 2px)",
-            backgroundColor: "#ffffff",
-            zIndex: 2,
-          }}
-        />
-      )}
-
-      {/* 展開エリア（枠線なし・白背景・五角形と連続） */}
+      {/* 展開エリア */}
       {open && (
         <div
           className="px-6 pb-6 pt-4"
           style={{
             backgroundColor: "#ffffff",
             borderRadius: "0 0 8px 8px",
-            position: "relative",
-            zIndex: 3,
           }}
         >
           <div style={{ color: "#3B3C3E" }}>{children}</div>
