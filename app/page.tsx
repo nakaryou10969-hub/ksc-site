@@ -25,8 +25,9 @@ export default async function Home() {
   return (
     <main className="pt-[72px]">
       {/* ヒーローセクション */}
+      {/* PC版 */}
       <section
-        className="relative w-full overflow-hidden flex flex-col items-center justify-center"
+        className="relative w-full overflow-hidden hidden md:flex flex-col items-center justify-center"
         style={{ minHeight: "clamp(300px, 50vw, 640px)" }}
       >
         {/* 背景画像 */}
@@ -37,12 +38,10 @@ export default async function Home() {
           className="object-cover object-center"
           priority
         />
-        {/* オーバーレイ（文字を読みやすくするため薄い白） */}
+        {/* オーバーレイ */}
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(255,255,255,0.45)" }} />
-
         {/* コンテンツ（前面） */}
         <div className="relative z-10 flex flex-col items-center pt-12 sm:pt-0">
-          {/* ロゴ画像 */}
           <div className="relative" style={{ width: "clamp(160px, 28vw, 340px)", height: "clamp(160px, 28vw, 340px)" }}>
             <Image
               src="/images/events/ksc_logo_縁あり (1).png"
@@ -52,14 +51,38 @@ export default async function Home() {
               priority
             />
           </div>
-          {/* サイト名テキスト */}
           <p
             className="mt-4 text-center font-bold tracking-widest"
-            style={{
-              color: "#3B3C3E",
-              fontSize: "clamp(14px, 2.2vw, 28px)",
-              letterSpacing: "0.15em",
-            }}
+            style={{ color: "#3B3C3E", fontSize: "clamp(14px, 2.2vw, 28px)", letterSpacing: "0.15em" }}
+          >
+            KANDA Startup Commons
+          </p>
+        </div>
+      </section>
+
+      {/* スマホ版ヒーロー */}
+      <section className="relative w-full md:hidden" style={{ aspectRatio: "1562/2605" }}>
+        <Image
+          src="/images/events/phone_hero.png"
+          alt="KANDA Startup Commons スマホヒーロー"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        {/* ロゴをオーバーレイ */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <div className="relative" style={{ width: "55vw", height: "55vw", maxWidth: "260px", maxHeight: "260px" }}>
+            <Image
+              src="/images/events/ksc_logo_縁あり (1).png"
+              alt="KANDA Startup Commons ロゴ"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+          <p
+            className="mt-3 text-center font-bold tracking-widest"
+            style={{ color: "#ffffff", fontSize: "clamp(12px, 4vw, 20px)", letterSpacing: "0.1em", textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}
           >
             KANDA Startup Commons
           </p>
@@ -157,6 +180,10 @@ export default async function Home() {
       {/* 役割セクション */}
       <section id="roles" className="py-24 px-8" style={{ backgroundColor: "#D6D3CD" }}>
         <div className="max-w-[1440px] mx-auto px-6 lg:px-[117px]">
+          {/* スマホのみ：神スタ内の役割 見出し */}
+          <div className="md:hidden mb-6" style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}>
+            <h2 className="h2-banner" style={{ marginLeft: 0, marginRight: 0, width: "100%" }}>神スタ内の役割</h2>
+          </div>
           <RevealSection>
             <h3 className="no-marker">こんな人たちを募集しています</h3>
           </RevealSection>
@@ -381,8 +408,7 @@ export default async function Home() {
       </section>
 
       {/* 過去のイベント実績セクション */}
-      <section id="openday" className="py-24 px-8 max-w-7xl mx-auto">
-        <RevealSection>
+      <section id="openday" className="py-24 px-8 max-w-7xl mx-auto">        <RevealSection>
           <h2 style={{ color: "#3B3C3E" }}>過去のイベント</h2>
           <p>
             多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
@@ -459,7 +485,7 @@ export default async function Home() {
       </section>
 
       {/* お問い合わせセクション */}
-      <section id="contact" className="py-24 px-8" style={{ backgroundColor: "#D6D3CD" }}>
+      <section id="contact" className="pt-8 pb-24 md:py-24 px-8" style={{ backgroundColor: "#D6D3CD" }}>
         <div className="max-w-3xl mx-auto">
           <RevealSection>
             <h2>お問い合わせ</h2>
