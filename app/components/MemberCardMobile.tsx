@@ -26,18 +26,22 @@ export default function MemberCardMobile({
   const btnColor = buttonColor ?? borderColor;
 
   return (
-    <div className="w-full">
-      {/* カード全体：白背景の矩形 */}
+    /* 上にはみ出す分のパディングを確保 */
+    <div className="w-full" style={{ paddingTop: "60px" }}>
+      {/* カード全体：白背景の矩形・上方向にoverflowさせる */}
       <div
         style={{
           backgroundColor: "#ffffff",
           borderRadius: open ? "8px 8px 0 0" : "8px",
-          overflow: "hidden",
+          overflow: "visible",
           position: "relative",
         }}
       >
-        {/* 画像エリア */}
-        <div className="relative w-full flex justify-center" style={{ height: "280px" }}>
+        {/* 画像エリア：上にはみ出す */}
+        <div
+          className="relative w-full flex justify-center"
+          style={{ height: "260px", marginTop: "-60px" }}
+        >
           {nameSrc && (
             <div
               className="absolute z-0"
@@ -52,7 +56,7 @@ export default function MemberCardMobile({
               left: nameSrc ? "20%" : "50%",
               transform: nameSrc ? "none" : "translateX(-50%)",
               bottom: 0,
-              width: nameSrc ? "72%" : "80%",
+              width: nameSrc ? "85%" : "90%",
               aspectRatio: "1/1",
             }}
           >
