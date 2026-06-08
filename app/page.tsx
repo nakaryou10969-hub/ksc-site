@@ -112,8 +112,16 @@ export default async function Home() {
               <span style={{ color: "#D94C0B" }}>大切にしています。</span>
             </p>
 
-            {/* 画像 W:311 H:624 */}
-            <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "311/624" }}>
+            {/* 画像 PC: insert.png W:1200 H:327 / スマホ: fixedinsert.png W:311 H:624 */}
+            <div className="hidden md:block relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "1200/327" }}>
+              <Image
+                src="/images/events/insert.png"
+                alt="役割を持って関わる"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="md:hidden relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "311/624" }}>
               <Image
                 src="/images/events/fixedinsert.png"
                 alt="役割を持って関わる"
