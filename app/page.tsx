@@ -170,9 +170,11 @@ export default async function Home() {
                 {/* 右：テキストエリア */}
                 <div className="flex flex-col justify-center px-4 py-4" style={{ width: "40%" }}>
                   <p className="leading-relaxed text-sm" style={{ color: "#C79500" }}>
-                    自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。<br />
+                    自ら旗を掲げて起業し、<br />
+                    情熱をもって事業を推進するチャレンジャー。<br />
                     KANDA Startup Commonsの主役であり、<br />
-                    自らの意思で世界を変えようと挑み続ける、熱い起業家たちです。
+                    自らの意思で世界を変えようと挑み続ける、<br />
+                    熱い起業家たちです。
                   </p>
                 </div>
               </div>
