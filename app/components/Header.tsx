@@ -40,13 +40,31 @@ export default function Header() {
 
         {/* ハンバーガーメニュー（モバイル） */}
         <button
-          className="lg:hidden ml-auto p-2 flex flex-col gap-1.5"
+          className="lg:hidden ml-auto p-2 relative w-8 h-8 flex items-center justify-center"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="メニューを開く"
         >
-          <span className="block w-6 h-0.5 transition-transform" style={{ backgroundColor: "#3B3C3E", transform: menuOpen ? "rotate(45deg) translateY(8px)" : "none" }} />
-          <span className="block w-6 h-0.5 transition-opacity" style={{ backgroundColor: "#3B3C3E", opacity: menuOpen ? 0 : 1 }} />
-          <span className="block w-6 h-0.5 transition-transform" style={{ backgroundColor: "#3B3C3E", transform: menuOpen ? "rotate(-45deg) translateY(-8px)" : "none" }} />
+          <span
+            className="absolute block w-6 h-0.5 transition-all duration-300"
+            style={{
+              backgroundColor: "#3B3C3E",
+              transform: menuOpen ? "rotate(45deg)" : "translateY(-7px)",
+            }}
+          />
+          <span
+            className="absolute block w-6 h-0.5 transition-all duration-300"
+            style={{
+              backgroundColor: "#3B3C3E",
+              opacity: menuOpen ? 0 : 1,
+            }}
+          />
+          <span
+            className="absolute block w-6 h-0.5 transition-all duration-300"
+            style={{
+              backgroundColor: "#3B3C3E",
+              transform: menuOpen ? "rotate(-45deg)" : "translateY(7px)",
+            }}
+          />
         </button>
       </div>
 
