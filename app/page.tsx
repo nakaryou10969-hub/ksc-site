@@ -102,12 +102,14 @@ export default async function Home() {
               <span style={{ color: "#D94C0B" }}>自分なりの役割を持って関わる</span>ことを大切にしています。
             </p>
 
-            {/* 画像プレースホルダー W:1200 H:327 */}
-            <div
-              className="w-full rounded-2xl flex items-center justify-center"
-              style={{ aspectRatio: "1200/327", backgroundColor: "#C8C5BF", color: "#767676" }}
-            >
-              <span>画像</span>
+            {/* 画像 W:1200 H:327 */}
+            <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "1200/327" }}>
+              <Image
+                src="/images/events/insert.png"
+                alt="役割を持って持ち寄る"
+                fill
+                className="object-cover"
+              />
             </div>
 
             <p>
