@@ -194,7 +194,7 @@ export default async function Home() {
             {/* 応援団：テキスト左・画像右 */}
             <div>
               <RevealSection>
-                <h3>応援団</h3>
+                <h3 className="no-marker">応援団</h3>
               </RevealSection>
               <RevealSection>
                 <div
@@ -230,7 +230,7 @@ export default async function Home() {
             {/* 盛り上げ隊：画像左・テキスト右 */}
             <div>
               <RevealSection>
-                <h3>盛り上げ隊</h3>
+                <h3 className="no-marker">盛り上げ隊</h3>
               </RevealSection>
               <RevealSection>
                 <div
@@ -266,7 +266,7 @@ export default async function Home() {
             {/* 助っ人団：テキスト左・画像右 */}
             <div>
               <RevealSection>
-                <h3>助っ人団</h3>
+                <h3 className="no-marker">助っ人団</h3>
               </RevealSection>
               <RevealSection>
                 <div
@@ -304,8 +304,7 @@ export default async function Home() {
       {/* 過去のイベント実績セクション */}
       <section id="openday" className="py-24 px-8 max-w-7xl mx-auto">
         <RevealSection>
-          <h2>過去のイベント</h2>
-          <h3 style={{ color: "#D94C0B" }}>KANDA Open Day</h3>
+          <h2 style={{ color: "#3B3C3E" }}>過去のイベント</h2>
           <p>
             多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
           </p>
