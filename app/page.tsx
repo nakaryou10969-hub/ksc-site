@@ -74,7 +74,7 @@ export default async function Home() {
         </RevealSection>
 
         <div className="grid grid-cols-1 gap-16 items-start">
-          <RevealSection className="space-y-6 leading-relaxed text-right" style={{ color: "#3B3C3E" }}>
+          <RevealSection className="space-y-6 leading-relaxed text-left" style={{ color: "#3B3C3E" }}>
             <p>
               KANDA Startup Commonsが応援したいのは、
               一人ひとりから湧き上がる想いや社会課題の解決を出発点にしながら、
