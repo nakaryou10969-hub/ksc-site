@@ -163,7 +163,7 @@ export default async function Home() {
                     <Image src="/images/common/challenger-name.png" alt="challenger" fill className="object-contain object-bottom" />
                   </div>
                   {/* challenger-1.png（メイン画像）- 前面 */}
-                  <div className="absolute z-10" style={{ left: "10%", bottom: 0, width: "85%", aspectRatio: "413/395" }}>
+                  <div className="absolute z-10" style={{ left: "22%", bottom: 0, width: "85%", aspectRatio: "413/395" }}>
                     <Image src="/images/common/challenger-1.png" alt="挑戦者" fill className="object-contain object-bottom" />
                   </div>
                 </div>
@@ -180,7 +180,7 @@ export default async function Home() {
           </div>
 
           {/* サポート会員 */}
-          <div className="space-y-16">
+          <div className="space-y-8">
             <RevealSection>
               <h3>サポート会員</h3>
             </RevealSection>
