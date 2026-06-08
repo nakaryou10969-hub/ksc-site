@@ -158,13 +158,13 @@ export default async function Home() {
               >
                 {/* 左：画像エリア（challenger-nameとchallenger-1の重ね） */}
                 <div className="relative shrink-0" style={{ width: "32%" }}>
-                  {/* challenger-1.png（メイン画像）- ボックスからはみ出して上に */}
-                  <div className="absolute" style={{ left: "22%", bottom: 0, width: "75%", aspectRatio: "413/395" }}>
-                    <Image src="/images/common/challenger-1.png" alt="挑戦者" fill className="object-contain object-bottom" />
-                  </div>
-                {/* challenger-name.png（縦テキスト装飾）*/}
-                  <div className="absolute" style={{ left: "4%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
+                  {/* challenger-name.png（縦テキスト装飾）- 背面 */}
+                  <div className="absolute z-0" style={{ left: "2%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
                     <Image src="/images/common/challenger-name.png" alt="challenger" fill className="object-contain object-bottom" />
+                  </div>
+                  {/* challenger-1.png（メイン画像）- 前面 */}
+                  <div className="absolute z-10" style={{ left: "10%", bottom: 0, width: "85%", aspectRatio: "413/395" }}>
+                    <Image src="/images/common/challenger-1.png" alt="挑戦者" fill className="object-contain object-bottom" />
                   </div>
                 </div>
                 {/* 右：テキストエリア */}
@@ -206,13 +206,13 @@ export default async function Home() {
                   </div>
                   {/* 右：画像エリア */}
                   <div className="relative shrink-0" style={{ width: "32%" }}>
-                    {/* ouenndann.png */}
-                    <div className="absolute" style={{ right: "8%", bottom: 0, width: "72%", aspectRatio: "304/385" }}>
-                      <Image src="/images/common/ouenndann.png" alt="応援団" fill className="object-contain object-bottom" />
-                    </div>
-                    {/* ouenndann-name.png */}
-                    <div className="absolute" style={{ right: "76%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
+                    {/* ouenndann-name.png - 背面 */}
+                    <div className="absolute z-0" style={{ right: "76%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
                       <Image src="/images/common/ouenndann-name.png" alt="応援団" fill className="object-contain" />
+                    </div>
+                    {/* ouenndann.png - 前面 */}
+                    <div className="absolute z-10" style={{ right: "8%", bottom: 0, width: "72%", aspectRatio: "304/385" }}>
+                      <Image src="/images/common/ouenndann.png" alt="応援団" fill className="object-contain object-bottom" />
                     </div>
                   </div>
                 </div>
