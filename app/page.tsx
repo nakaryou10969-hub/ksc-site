@@ -90,8 +90,12 @@ export default async function Home() {
             </p>
           </RevealSection>
         </div>
+      </section>
 
-        <div className="mt-24 grid grid-cols-1 gap-16 items-start">
+      {/* 役割を持って持ち寄るセクション */}
+      <section className="py-24 px-8" style={{ backgroundColor: "#D6D3CD" }}>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 gap-16 items-start">
           <RevealSection delay="reveal-delay-2" className="space-y-6 leading-relaxed">
             <h3 className="no-marker">役割を持って持ち寄る</h3>
             <p>
@@ -102,7 +106,7 @@ export default async function Home() {
             {/* 画像プレースホルダー W:1200 H:327 */}
             <div
               className="w-full rounded-2xl flex items-center justify-center"
-              style={{ aspectRatio: "1200/327", backgroundColor: "#D6D3CD", color: "#767676" }}
+              style={{ aspectRatio: "1200/327", backgroundColor: "#C8C5BF", color: "#767676" }}
             >
               <span>画像</span>
             </div>
@@ -119,6 +123,7 @@ export default async function Home() {
               このまちに、そんな豊かな「<span style={{ color: "#C79500" }}>共（Commons）</span>」の土壌を育んでいきたいと、私たちは考えています。
             </p>
           </RevealSection>
+        </div>
         </div>
       </section>
 
