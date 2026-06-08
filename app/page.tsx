@@ -71,7 +71,7 @@ export default async function Home() {
           <h2 style={{ color: "#3B3C3E" }}>KANDA Startup Commons とは</h2>
           <h3 className="no-marker" style={{ color: "#3B3C3E" }}>社会課題から、次世代の豊かさへ</h3>
         </RevealSection>
-
+        <div style={{ height: "1.5em" }} />
         <div className="grid grid-cols-1 gap-16 items-start">
           <RevealSection className="space-y-6 leading-relaxed text-left" style={{ color: "#3B3C3E" }}>
             <p>
@@ -93,9 +93,7 @@ export default async function Home() {
       </section>
 
       {/* 役割を持って持ち寄るセクション */}
-      <section className="py-24 px-8" style={{ backgroundColor: "#D6D3CD" }}>
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 gap-16 items-start">
+      <section className="py-24 px-8 max-w-7xl mx-auto" style={{ backgroundColor: "#D6D3CD" }}>
           <RevealSection delay="reveal-delay-2" className="space-y-6 leading-relaxed">
             <h3 className="no-marker">役割を持って持ち寄る</h3>
             <p>
@@ -123,8 +121,6 @@ export default async function Home() {
               このまちに、そんな豊かな「<span style={{ color: "#C79500" }}>共（Commons）</span>」の土壌を育んでいきたいと、私たちは考えています。
             </p>
           </RevealSection>
-        </div>
-        </div>
       </section>
 
       {/* 役割セクション */}
