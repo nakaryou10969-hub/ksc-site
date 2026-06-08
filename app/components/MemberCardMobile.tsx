@@ -28,76 +28,65 @@ export default function MemberCardMobile({
 
   return (
     <div className="w-full">
-      {/* 枠線用レイヤー（borderColor背景 + 逆五角形 clip-path） */}
+      {/* 五角形エリア（枠線なし・白背景） */}
       <div
         style={{
           clipPath: pentagonClip,
-          backgroundColor: borderColor,
-          padding: "2px",
+          backgroundColor: "#ffffff",
           borderRadius: "8px 8px 0 0",
         }}
       >
-        {/* 白背景の内側 */}
-        <div
-          style={{
-            clipPath: pentagonClip,
-            backgroundColor: "#ffffff",
-            borderRadius: "6px 6px 0 0",
-          }}
-        >
-          {/* 画像エリア */}
-          <div className="relative w-full flex justify-center" style={{ height: "280px" }}>
-            {nameSrc && (
-              <div
-                className="absolute z-0"
-                style={{ left: "8%", top: "20%", width: "18%", aspectRatio: "92/241" }}
-              >
-                <Image src={nameSrc} alt={alt} fill className="object-contain" />
-              </div>
-            )}
+        {/* 画像エリア */}
+        <div className="relative w-full flex justify-center" style={{ height: "280px" }}>
+          {nameSrc && (
             <div
-              className="absolute z-10"
-              style={{
-                left: nameSrc ? "20%" : "50%",
-                transform: nameSrc ? "none" : "translateX(-50%)",
-                bottom: 0,
-                width: nameSrc ? "72%" : "80%",
-                aspectRatio: "1/1",
-              }}
+              className="absolute z-0"
+              style={{ left: "8%", top: "20%", width: "18%", aspectRatio: "92/241" }}
             >
-              <Image src={imageSrc} alt={alt} fill className="object-contain object-bottom" />
-            </div>
-          </div>
-
-          {/* 詳しく見る ボタン（五角形内） */}
-          {!open && (
-            <div className="flex justify-center pb-10 pt-2">
-              <button
-                onClick={() => setOpen(true)}
-                className="text-sm font-bold"
-                style={{ color: btnColor }}
-              >
-                詳しく見る
-              </button>
+              <Image src={nameSrc} alt={alt} fill className="object-contain" />
             </div>
           )}
-          {/* 開いた状態では閉じるボタンだけ五角形内に残す */}
-          {open && <div style={{ height: "32px" }} />}
+          <div
+            className="absolute z-10"
+            style={{
+              left: nameSrc ? "20%" : "50%",
+              transform: nameSrc ? "none" : "translateX(-50%)",
+              bottom: 0,
+              width: nameSrc ? "72%" : "80%",
+              aspectRatio: "1/1",
+            }}
+          >
+            <Image src={imageSrc} alt={alt} fill className="object-contain object-bottom" />
+          </div>
         </div>
+
+        {/* 詳しく見る ボタン（五角形内・閉じている時のみ） */}
+        {!open && (
+          <div className="flex justify-center pb-10 pt-2">
+            <button
+              onClick={() => setOpen(true)}
+              className="text-sm font-bold"
+              style={{ color: btnColor }}
+            >
+              詳しく見る
+            </button>
+          </div>
+        )}
+        {/* 開いた状態：五角形の底部を白で埋めて展開エリアと繋げる */}
+        {open && <div style={{ height: "32px", backgroundColor: "#ffffff" }} />}
       </div>
 
-      {/* 展開エリア（五角形の外・通常の矩形） */}
+      {/* 展開エリア（枠線なし・白背景・五角形と連続） */}
       {open && (
         <div
-          className="px-6 pb-4 pt-4"
+          className="px-6 pb-6 pt-0"
           style={{
-            border: `2px solid ${borderColor}`,
-            borderTop: "none",
+            backgroundColor: "#ffffff",
             borderRadius: "0 0 8px 8px",
           }}
         >
           <div style={{ color: "#3B3C3E" }}>{children}</div>
-          <div className="flex justify-center pt-3">
+          <div className="flex justify-center pt-4">
             <button
               onClick={() => setOpen(false)}
               className="text-gray-400 text-xl"
