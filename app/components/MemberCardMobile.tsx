@@ -111,7 +111,7 @@ export default function MemberCardMobile({
       {/* 展開エリア */}
       {open && (
         <div
-          className="px-6 pb-6 pt-4"
+          className="px-3 pb-6 pt-4"
           style={{
             backgroundColor: "#ffffff",
             borderRadius: "0 0 8px 8px",
