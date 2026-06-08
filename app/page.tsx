@@ -160,8 +160,11 @@ export default async function Home() {
             </RevealSection>
             <RevealSection className="space-y-4 leading-relaxed mb-8" style={{ color: "#3B3C3E" }}>
               <p>
-                スタートアップの立ち上げ、新規事業、社会課題への挑戦。<br />
-                まだ途中で、答えが見えていなくても構いません。未完成なアイデアや問いが大歓迎です。
+                スタートアップの立ち上げ、<br className="md:hidden" />
+                新規事業、社会課題への挑戦。<br />
+                まだ途中で、<br className="md:hidden" />
+                答えが見えていなくても構いません。<br className="md:hidden" />
+                未完成なアイデアや問いが大歓迎です。
               </p>
             </RevealSection>
 
@@ -210,8 +213,7 @@ export default async function Home() {
                   自らの意思で世界を変えようと挑み続ける、<br />
                   熱い起業家たちです。
                 </p>
-              </MemberCardMobile>
-            </div>
+              </MemberCardMobile>            </div>
           </div>
 
           {/* サポート会員 */}
@@ -261,10 +263,13 @@ export default async function Home() {
                   buttonColor="#C79500"
                 >
                   <p className="leading-relaxed text-base" style={{ color: "#3B3C3E" }}>
-                    <span style={{ color: "#D94C0B" }}>資金・人材面などでのバックアップ</span>をいただきながら、<br />
-                    KANDA Startup Commons運営のコアメンバーとして活動していただく方たち。<br />
-                    単なる支援にとどまらず、<span style={{ color: "#D94C0B" }}>運営サイドとして</span>スタートアップ支援及びCommons(共有地)の<br />
-                    仕組みをデザインし、次世代のイノベーションを支えていきます。
+                    <span style={{ color: "#D94C0B" }}>資金・人材面などでのバックアップを</span><br />
+                    <span style={{ color: "#D94C0B" }}>いただきながら、</span>KANDA Startup Commons運営の<br />
+                    コアメンバーとして活動していただく方たち。<br />
+                    単なる支援にとどまらず、<span style={{ color: "#D94C0B" }}>運営サイドとして</span><br />
+                    スタートアップ支援及びCommons(共有地)の<br />
+                    仕組みをデザインし、<br />
+                    次世代のイノベーションを支えていきます。
                   </p>
                 </MemberCardMobile>
               </div>
@@ -311,10 +316,13 @@ export default async function Home() {
                   buttonColor="#C79500"
                 >
                   <p className="leading-relaxed text-base" style={{ color: "#3B3C3E" }}>
-                    登壇者となる方の紹介や対外的な宣伝など、<span style={{ color: "#D94C0B" }}>コミュニティの熱量を最大化</span>させる方たち。<br />
+                    登壇者となる方の紹介や対外的な宣伝など、<br />
+                    <span style={{ color: "#D94C0B" }}>コミュニティの熱量を最大化</span>させる方たち。<br />
                     「KANDA Startup Commonsを紹介したい！」<br />
-                    「この挑戦と持ち寄りの輪をもっと広げていきたい！」<br />
-                    という情熱を持ち、<span style={{ color: "#D94C0B" }}>人と人をつなぐ懸け橋として</span>イベント活性化にご尽力いただいております。
+                    「この挑戦と持ち寄りの輪を<br />
+                    もっと広げていきたい！」<br />
+                    という情熱を持ち、<span style={{ color: "#D94C0B" }}>人と人をつなぐ懸け橋として</span><br />
+                    イベント活性化にご尽力いただいております。
                   </p>
                 </MemberCardMobile>
               </div>
@@ -360,9 +368,13 @@ export default async function Home() {
                   buttonColor="#C79500"
                 >
                   <p className="leading-relaxed text-base" style={{ color: "#3B3C3E" }}>
-                    自らの持つスキルやプロダクト、アセットなどでコミュニティ運営を支えていただく方たち。<br />
-                    プロダクト、コンテンツを提供し、<span style={{ color: "#D94C0B" }}>裏側から強く支えるパートナー。</span><br />
-                    あなたのテクノロジー・プロダクトが、KANDA Startup Commonsの円滑な運営を支えます。
+                    自らの持つスキルやプロダクト、アセットなどで<br />
+                    コミュニティ運営を支えていただく方たち。<br />
+                    プロダクト、コンテンツを提供し、<br />
+                    <span style={{ color: "#D94C0B" }}>裏側から強く支えるパートナー。</span><br />
+                    あなたのテクノロジー・プロダクトが、<br />
+                    KANDA Startup Commonsの<br />
+                    円滑な運営を支えます。
                   </p>
                 </MemberCardMobile>
               </div>
