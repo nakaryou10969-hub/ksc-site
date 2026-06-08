@@ -68,7 +68,7 @@ export default async function Home() {
       {/* KSCとはセクション */}
       <section id="about" className="py-24 px-8 max-w-7xl mx-auto">
         <RevealSection>
-          <h2>KANDA Startup Commons とは</h2>
+          <h2 style={{ color: "#3B3C3E" }}>KANDA Startup Commons とは</h2>
           <h3 className="no-marker" style={{ color: "#3B3C3E" }}>社会課題から、次世代の豊かさへ</h3>
         </RevealSection>
 
