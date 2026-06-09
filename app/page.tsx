@@ -280,8 +280,8 @@ export default async function Home() {
                       <Image src="/images/common/ouenndann-name.png" alt="応援団" fill className="object-contain" />
                     </div>
                     {/* ouenndann.png - 前面 */}
-                    <div className="absolute z-10" style={{ left: "28%", bottom: 0, width: "55%", aspectRatio: "304/385" }}>
-                      <Image src="/images/common/ouenndann.png" alt="応援団" fill className="object-contain object-bottom" />
+                    <div className="absolute z-10" style={{ left: "28%", top: "-15%", width: "55%", aspectRatio: "304/385" }}>
+                      <Image src="/images/common/ouenndann.png" alt="応援団" fill className="object-contain" />
                     </div>
                   </div>
                 </div>
@@ -321,8 +321,8 @@ export default async function Home() {
                       <Image src="/images/common/moriagetai-name.png" alt="盛り上げ隊" fill className="object-contain" />
                     </div>
                     {/* moriagetai.png */}
-                    <div className="absolute" style={{ left: "20%", bottom: 0, width: "58%", aspectRatio: "383/357" }}>
-                      <Image src="/images/common/moriagetai.png" alt="盛り上げ隊" fill className="object-contain object-bottom" />
+                    <div className="absolute" style={{ left: "20%", top: "-15%", width: "58%", aspectRatio: "383/357" }}>
+                      <Image src="/images/common/moriagetai.png" alt="盛り上げ隊" fill className="object-contain" />
                     </div>
                   </div>
                   {/* 右：テキスト */}
@@ -375,7 +375,7 @@ export default async function Home() {
                   {/* 右：画像エリア */}
                   <div className="relative shrink-0" style={{ width: "30%", minHeight: "clamp(120px, 15vw, 220px)" }}>
                     {/* suketto.png */}
-                    <div className="absolute z-10" style={{ left: "calc(22% + 38px)", bottom: 0, width: "36%", aspectRatio: "210/404", transform: "scaleX(-1)" }}>
+                    <div className="absolute z-10" style={{ left: "calc(22% + 38px)", top: "-15%", width: "36%", aspectRatio: "210/404", transform: "scaleX(-1)" }}>
                       <Image src="/images/common/suketto.png" alt="助っ人団" fill className="object-contain object-bottom" />
                     </div>
                     {/* suketto-name.png */}
