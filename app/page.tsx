@@ -90,7 +90,8 @@ export default async function Home() {
       </section>
 
       {/* KSCとはセクション */}
-      <section id="about" className="pt-0 pb-8 md:py-24 px-8 max-w-7xl mx-auto">
+      <section id="about" style={{ backgroundColor: "#E3E0DA" }}>
+        <div className="pt-0 pb-8 md:py-24 px-8 max-w-7xl mx-auto">
         <RevealSection>
           <h2 className="h2-banner">KANDA<br className="md:hidden" />Startup<br className="md:hidden" />Commons とは</h2>
           <h3 className="no-marker" style={{ color: "#3B3C3E" }}>社会課題から、<br className="md:hidden" />次世代の豊かさへ</h3>
@@ -122,10 +123,12 @@ export default async function Home() {
             </p>
           </RevealSection>
         </div>
+        </div>
       </section>
 
       {/* 役割を持って持ち寄るセクション */}
-      <section className="pt-8 pb-8 md:py-24 px-8 max-w-7xl mx-auto" style={{ backgroundColor: "#D6D3CD" }}>
+      <section style={{ backgroundColor: "#EBE8E2" }}>
+        <div className="pt-8 pb-8 md:py-24 px-8 max-w-7xl mx-auto">
           <RevealSection delay="reveal-delay-2" className="space-y-6 leading-relaxed">
             <h3 className="no-marker">役割を持って関わる</h3>
             <p>
@@ -175,10 +178,12 @@ export default async function Home() {
               私たちは考えています。
             </p>
           </RevealSection>
+        </div>
       </section>
 
       {/* 役割セクション */}
-      <section id="roles" className="pt-0 pb-24 md:py-24 px-8" style={{ backgroundColor: "#D6D3CD" }}>
+      <section id="roles" style={{ backgroundColor: "#E3E0DA" }}>
+        <div className="pt-0 pb-24 md:py-24 px-8">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-[117px]">
           {/* スマホのみ：神スタ内の役割 見出し */}
           <div className="md:hidden mb-6" style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}>
@@ -405,10 +410,13 @@ export default async function Home() {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* 過去のイベント実績セクション */}
-      <section id="openday" className="pt-8 pb-8 md:py-24 md:pb-24 px-8 max-w-7xl mx-auto">        <RevealSection>
+      <section id="openday" style={{ backgroundColor: "#EBE8E2" }}>
+        <div className="pt-8 pb-8 md:py-24 md:pb-24 px-8 max-w-7xl mx-auto">
+        <RevealSection>
           <h2 style={{ color: "#3B3C3E" }}>過去のイベント</h2>
           <p>
             多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
@@ -482,11 +490,12 @@ export default async function Home() {
           </a>
         </RevealSection>
         */}
+        </div>
       </section>
 
       {/* お問い合わせセクション */}
-      <section id="contact" className="pt-4 pb-24 md:py-24 px-8" style={{ backgroundColor: "#D6D3CD" }}>
-        <div className="max-w-3xl mx-auto">
+      <section id="contact" style={{ backgroundColor: "#E3E0DA" }}>
+        <div className="pt-4 pb-24 md:py-24 px-8 max-w-3xl mx-auto">
           <RevealSection>
             <h2>お問い合わせ</h2>
           </RevealSection>

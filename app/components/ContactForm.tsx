@@ -54,6 +54,7 @@ export default function ContactForm() {
   const labelClass = "block text-sm mb-1" ;
 
   return (
+    <div className="rounded-lg p-6 md:p-8" style={{ backgroundColor: "#D9D9D9" }}>
     <form onSubmit={handleSubmit} className="space-y-6">
       {/* 姓・名 */}
       <div className="grid grid-cols-2 gap-4">
@@ -112,5 +113,6 @@ export default function ContactForm() {
         <p className="text-center text-red-600 text-sm">送信に失敗しました。時間をおいて再度お試しください。</p>
       )}
     </form>
+    </div>
   );
 }
