@@ -212,10 +212,10 @@ export default async function Home() {
             <RevealSection>
               <div
                 className="relative w-[96%] mx-auto rounded-sm overflow-visible hidden md:flex flex-row items-stretch justify-start pl-[3%]"
-                style={{ border: "2px solid #001597", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
+                style={{ border: "2px solid #001597", minHeight: "180px", backgroundColor: "#ffffff" }}
               >
                 {/* 左：画像エリア（challenger-nameとchallenger-1の重ね） */}
-                <div className="relative shrink-0" style={{ width: "32%" }}>
+                <div className="relative shrink-0" style={{ width: "32%", minHeight: "180px" }}>
                   {/* challenger-name.png（縦テキスト装飾）- 背面 */}
                   <div className="absolute z-0" style={{ left: "2%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
                     <Image src="/images/common/challenger-name.png" alt="challenger" fill className="object-contain object-bottom" />
@@ -226,7 +226,7 @@ export default async function Home() {
                   </div>
                 </div>
                 {/* 右：テキストエリア */}
-                <div className="flex flex-col justify-center px-4 py-4 flex-1">
+                <div className="flex flex-col justify-center px-4 py-6 flex-1">
                   <p className="leading-relaxed text-sm" style={{ color: "#C79500", lineHeight: "1.8" }}>
                     自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。<br />
                     KANDA Startup Commonsの主役であり、自らの意思で世界を変えようと挑み続ける、<br />
@@ -265,10 +265,10 @@ export default async function Home() {
               <RevealSection>
                 <div
                   className="relative w-[96%] mx-auto hidden md:flex flex-row items-stretch overflow-visible"
-                  style={{ border: "2px solid #C79500", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
+                  style={{ border: "2px solid #C79500", minHeight: "180px", backgroundColor: "#ffffff" }}
                 >
                   {/* 左：テキスト */}
-                  <div className="flex flex-col justify-center px-4 py-4 flex-1" style={{ color: "#3B3C3E" }}>
+                  <div className="flex flex-col justify-center px-4 py-6 flex-1" style={{ color: "#3B3C3E" }}>
                     <p className="leading-relaxed text-sm" style={{ lineHeight: "1.8" }}>
                       <span style={{ color: "#D94C0B" }}>資金・人材面などでのバックアップ</span>をいただきながら、<br />
                       KANDA Startup Commons運営のコアメンバーとして活動していただく方たち。<br />
@@ -277,7 +277,7 @@ export default async function Home() {
                     </p>
                   </div>
                   {/* 右：画像エリア */}
-                  <div className="relative shrink-0" style={{ width: "32%" }}>
+                  <div className="relative shrink-0" style={{ width: "32%", minHeight: "180px" }}>
                     {/* ouenndann-name.png - 背面 */}
                     <div className="absolute z-0" style={{ right: "76%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
                       <Image src="/images/common/ouenndann-name.png" alt="応援団" fill className="object-contain" />
@@ -315,10 +315,10 @@ export default async function Home() {
               <RevealSection>
                 <div
                   className="relative w-[96%] mx-auto hidden md:flex flex-row items-stretch overflow-visible"
-                  style={{ border: "2px solid #C79500", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
+                  style={{ border: "2px solid #C79500", minHeight: "180px", backgroundColor: "#ffffff" }}
                 >
                   {/* 左：画像エリア */}
-                  <div className="relative shrink-0" style={{ width: "32%" }}>
+                  <div className="relative shrink-0" style={{ width: "32%", minHeight: "180px" }}>
                     {/* moriagetai-name.png */}
                     <div className="absolute" style={{ left: "4%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
                       <Image src="/images/common/moriagetai-name.png" alt="盛り上げ隊" fill className="object-contain" />
@@ -365,10 +365,10 @@ export default async function Home() {
               <RevealSection>
                 <div
                   className="relative w-[96%] mx-auto hidden md:flex flex-row items-stretch overflow-visible"
-                  style={{ border: "2px solid #C79500", aspectRatio: "1083/240", maxHeight: "240px", backgroundColor: "#ffffff" }}
+                  style={{ border: "2px solid #C79500", minHeight: "180px", backgroundColor: "#ffffff" }}
                 >
                   {/* 左：テキスト */}
-                  <div className="flex flex-col justify-center px-4 py-4 flex-1" style={{ color: "#3B3C3E" }}>
+                  <div className="flex flex-col justify-center px-4 py-6 flex-1" style={{ color: "#3B3C3E" }}>
                     <p className="leading-relaxed text-sm" style={{ lineHeight: "1.8" }}>
                       自らの持つスキルやプロダクト、アセットなどでコミュニティ運営を支えていただく方たち。<br />
                       プロダクト、コンテンツを提供し、<span style={{ color: "#D94C0B" }}>裏側から強く支えるパートナー。</span><br />
@@ -376,7 +376,7 @@ export default async function Home() {
                     </p>
                   </div>
                   {/* 右：画像エリア */}
-                  <div className="relative shrink-0" style={{ width: "30%" }}>
+                  <div className="relative shrink-0" style={{ width: "30%", minHeight: "180px" }}>
                     {/* suketto.png */}
                     <div className="absolute" style={{ right: "8%", bottom: 0, width: "47%", aspectRatio: "210/404", transform: "scaleX(-1)" }}>
                       <Image src="/images/common/suketto.png" alt="助っ人団" fill className="object-contain object-bottom" />
