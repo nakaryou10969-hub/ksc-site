@@ -208,7 +208,7 @@ export default async function Home() {
             {/* 挑戦者カード PC用（md以上） */}
             <RevealSection>
               <div
-                className="relative w-[96%] mx-auto rounded-sm overflow-visible hidden md:flex flex-row items-stretch justify-start pl-[3%]"
+                className="relative w-[96%] mx-auto rounded-sm overflow-visible hidden lg:flex flex-row items-stretch justify-start pl-[3%]"
                 style={{ border: "2px solid #001597", minHeight: "clamp(120px, 15vw, 220px)", backgroundColor: "#ffffff" }}
               >
                 {/* 左：画像エリア（challenger-nameとchallenger-1の重ね） */}
@@ -233,8 +233,8 @@ export default async function Home() {
               </div>
             </RevealSection>
 
-            {/* 挑戦者カード スマホ用（md未満） */}
-            <div className="md:hidden">
+            {/* 挑戦者カード スマホ用（lg未満） */}
+            <div className="lg:hidden">
               <MemberCardMobile
                 imageSrc="/images/common/challenger-1.png"
                 nameSrc="/images/common/challenger-name.png"
@@ -261,7 +261,7 @@ export default async function Home() {
             <div>
               <RevealSection>
                 <div
-                  className="relative w-[96%] mx-auto hidden md:flex flex-row items-stretch overflow-visible"
+                  className="relative w-[96%] mx-auto hidden lg:flex flex-row items-stretch overflow-visible"
                   style={{ border: "2px solid #C79500", minHeight: "clamp(120px, 15vw, 220px)", backgroundColor: "#ffffff" }}
                 >
                   {/* 左：テキスト */}
@@ -287,7 +287,7 @@ export default async function Home() {
                 </div>
               </RevealSection>
               {/* 応援団 スマホ用 */}
-              <div className="md:hidden">
+              <div className="lg:hidden">
                 <MemberCardMobile
                   imageSrc="/images/common/ouenndann-mobile.png"
                   alt="応援団"
@@ -311,7 +311,7 @@ export default async function Home() {
             <div>
               <RevealSection>
                 <div
-                  className="relative w-[96%] mx-auto hidden md:flex flex-row items-stretch overflow-visible"
+                  className="relative w-[96%] mx-auto hidden lg:flex flex-row items-stretch overflow-visible"
                   style={{ border: "2px solid #C79500", minHeight: "clamp(120px, 15vw, 220px)", backgroundColor: "#ffffff" }}
                 >
                   {/* 左：画像エリア */}
@@ -337,7 +337,7 @@ export default async function Home() {
                 </div>
               </RevealSection>
               {/* 盛り上げ隊 スマホ用 */}
-              <div className="md:hidden">
+              <div className="lg:hidden">
                 <MemberCardMobile
                   imageSrc="/images/common/moriagetai-mobile.png"
                   alt="盛り上げ隊"
@@ -361,7 +361,7 @@ export default async function Home() {
             <div>
               <RevealSection>
                 <div
-                  className="relative w-[96%] mx-auto hidden md:flex flex-row items-stretch overflow-visible"
+                  className="relative w-[96%] mx-auto hidden lg:flex flex-row items-stretch overflow-visible"
                   style={{ border: "2px solid #C79500", minHeight: "clamp(120px, 15vw, 220px)", backgroundColor: "#ffffff" }}
                 >
                   {/* 左：テキスト */}
@@ -386,7 +386,7 @@ export default async function Home() {
                 </div>
               </RevealSection>
               {/* 助っ人団 スマホ用 */}
-              <div className="md:hidden">
+              <div className="lg:hidden">
                 <MemberCardMobile
                   imageSrc="/images/common/suketto-mobile.png"
                   alt="助っ人団"
