@@ -40,7 +40,7 @@ export default function MemberCardMobile({
         {/* 画像エリア：上にはみ出す */}
         <div
           className="relative w-full flex justify-center"
-          style={{ height: "clamp(180px, 45vw, 280px)", marginTop: "clamp(-20px, -5vw, -50px)" }}
+          style={{ height: "clamp(140px, 35vw, 260px)", marginTop: "clamp(-20px, -5vw, -38px)" }}
         >
           {nameSrc && (
             <div
