@@ -27,12 +27,12 @@ export default function MemberCardMobile({
 
   return (
     /* 上にはみ出す分のパディングを確保 */
-    <div className="w-full" style={{ paddingTop: "40px" }}>
+    <div className="w-full" style={{ paddingTop: "78px" }}>
       {/* カード全体：白背景の矩形・上方向にoverflowさせる */}
       <div
         style={{
           backgroundColor: "#ffffff",
-          borderRadius: open ? "8px 8px 0 0" : "8px",
+          borderRadius: "8px 8px 0 0",
           overflow: "visible",
           position: "relative",
         }}
@@ -120,8 +120,14 @@ export default function MemberCardMobile({
         {open && <div style={{ height: "8px" }} />}
       </div>
 
-      {/* 展開エリア */}
-      {open && (
+      {/* 展開エリア：アニメーション付き */}
+      <div
+        style={{
+          maxHeight: open ? "600px" : "0px",
+          overflow: "hidden",
+          transition: "max-height 0.5s ease-in-out",
+        }}
+      >
         <div
           className="px-3 pb-6 pt-4"
           style={{
@@ -140,7 +146,7 @@ export default function MemberCardMobile({
             </button>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }

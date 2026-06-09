@@ -99,8 +99,8 @@ export default async function Home() {
         <div className="grid grid-cols-1 gap-16 items-start">
           <RevealSection className="space-y-6 leading-relaxed text-left" style={{ color: "#3B3C3E" }}>
             <p>
-              KANDA Startup Commons(通称"神スタ")が<br className="md:hidden" />
-              応援したいのは、<br />
+              KANDA Startup Commons(通称"神スタ")<br className="md:hidden" />
+              が応援したいのは、<br />
               一人ひとりから湧き上がる想いや<br className="md:hidden" />
               社会課題の解決を出発点にしながら、<br />
               その先にある次世代の豊かさを<br className="md:hidden" />
@@ -239,7 +239,7 @@ export default async function Home() {
                 alt="挑戦者"
                 borderColor="#001597"
               >
-                <p className="leading-relaxed text-[10px]" style={{ fontSize: "10px", lineHeight: "1.8" }}>
+                <p className="leading-relaxed text-[10px]" style={{ fontSize: "10px", lineHeight: "1.8", color: "#C79500" }}>
                   自ら旗を掲げて起業し、情熱をもって<br />
                   事業を推進するチャレンジャー。<br />
                   KANDA Startup Commonsの主役であり、<br />
