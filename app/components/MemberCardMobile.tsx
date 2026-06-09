@@ -27,7 +27,7 @@ export default function MemberCardMobile({
 
   return (
     /* 上にはみ出す分のパディングを確保 */
-    <div className="w-[90%] mx-auto" style={{ paddingTop: "clamp(20px, 5vw, 50px)" }}>
+    <div className="w-[90%] mx-auto" style={{ paddingTop: "clamp(20px, 5vw, 50px)", position: "relative", isolation: "isolate" }}>
       {/* カード全体：白背景の矩形・上方向にoverflowさせる */}
       <div
         style={{
@@ -98,7 +98,7 @@ export default function MemberCardMobile({
                 bottom: "6%",
                 left: 0,
                 right: 0,
-                zIndex: 10,
+                zIndex: 20,
                 display: "flex",
                 justifyContent: "center",
               }}
