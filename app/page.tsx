@@ -290,7 +290,7 @@ export default async function Home() {
                   imageSrc="/images/common/ouenndann-mobile.png"
                   alt="応援団"
                   borderColor="#C79500"
-                  buttonColor="#C79500"
+                  buttonColor="#3B3C3E"
                 >
                   <p className="leading-relaxed text-[10px]" style={{ color: "#3B3C3E", fontSize: "10px", lineHeight: "1.8" }}>
                     <span style={{ color: "#D94C0B" }}>資金・人材面などでのバックアップを</span><br />
@@ -340,7 +340,7 @@ export default async function Home() {
                   imageSrc="/images/common/moriagetai-mobile.png"
                   alt="盛り上げ隊"
                   borderColor="#C79500"
-                  buttonColor="#C79500"
+                  buttonColor="#3B3C3E"
                 >
                   <p className="leading-relaxed text-[10px]" style={{ color: "#3B3C3E", fontSize: "10px", lineHeight: "1.8" }}>
                     登壇者となる方の紹介や対外的な宣伝など、<br />
@@ -389,7 +389,7 @@ export default async function Home() {
                   imageSrc="/images/common/suketto-mobile.png"
                   alt="助っ人団"
                   borderColor="#C79500"
-                  buttonColor="#C79500"
+                  buttonColor="#3B3C3E"
                 >
                   <p className="leading-relaxed text-[10px]" style={{ color: "#3B3C3E", fontSize: "10px", lineHeight: "1.8" }}>
                     自らの持つスキルやプロダクト、アセットなどで<br />
