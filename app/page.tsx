@@ -375,7 +375,7 @@ export default async function Home() {
                   {/* 右：画像エリア */}
                   <div className="relative shrink-0" style={{ width: "30%", minHeight: "180px" }}>
                     {/* suketto.png */}
-                    <div className="absolute" style={{ left: "22%", bottom: 0, width: "36%", aspectRatio: "210/404", transform: "scaleX(-1)" }}>
+                    <div className="absolute z-10" style={{ left: "calc(22% + 19px)", bottom: 0, width: "36%", aspectRatio: "210/404", transform: "scaleX(-1)" }}>
                       <Image src="/images/common/suketto.png" alt="助っ人団" fill className="object-contain object-bottom" />
                     </div>
                     {/* suketto-name.png */}
