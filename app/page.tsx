@@ -214,12 +214,12 @@ export default async function Home() {
                 {/* 左：画像エリア（challenger-nameとchallenger-1の重ね） */}
                 <div className="relative shrink-0" style={{ width: "32%", minHeight: "180px" }}>
                   {/* challenger-name.png（縦テキスト装飾）- 背面 */}
-                  <div className="absolute z-0" style={{ left: "2%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
-                    <Image src="/images/common/challenger-name.png" alt="challenger" fill className="object-contain object-bottom" />
+                  <div className="absolute z-0" style={{ left: "2%", top: "50%", transform: "translateY(-50%)", width: "16%", aspectRatio: "92/241" }}>
+                    <Image src="/images/common/challenger-name.png" alt="challenger" fill className="object-contain" />
                   </div>
-                  {/* challenger-1.png（メイン画像）- 前面 */}
-                  <div className="absolute z-10" style={{ left: "22%", bottom: 0, width: "65%", aspectRatio: "413/395" }}>
-                    <Image src="/images/common/challenger-1.png" alt="挑戦者" fill className="object-contain object-bottom" />
+                  {/* challenger-1.png（メイン画像）- 前面・中央配置 */}
+                  <div className="absolute z-10" style={{ left: "22%", top: "50%", transform: "translateY(-50%)", width: "65%", aspectRatio: "413/395" }}>
+                    <Image src="/images/common/challenger-1.png" alt="挑戦者" fill className="object-contain" />
                   </div>
                 </div>
                 {/* 右：テキストエリア */}
@@ -276,7 +276,7 @@ export default async function Home() {
                   {/* 右：画像エリア */}
                   <div className="relative shrink-0" style={{ width: "32%", minHeight: "180px" }}>
                     {/* ouenndann-name.png - 背面 */}
-                    <div className="absolute z-0" style={{ right: "76%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
+                    <div className="absolute z-0" style={{ right: "76%", top: "50%", transform: "translateY(-50%)", width: "16%", aspectRatio: "92/241" }}>
                       <Image src="/images/common/ouenndann-name.png" alt="応援団" fill className="object-contain" />
                     </div>
                     {/* ouenndann.png - 前面 */}
@@ -317,7 +317,7 @@ export default async function Home() {
                   {/* 左：画像エリア */}
                   <div className="relative shrink-0" style={{ width: "32%", minHeight: "180px" }}>
                     {/* moriagetai-name.png */}
-                    <div className="absolute" style={{ left: "4%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
+                    <div className="absolute" style={{ left: "4%", top: "50%", transform: "translateY(-50%)", width: "16%", aspectRatio: "92/241" }}>
                       <Image src="/images/common/moriagetai-name.png" alt="盛り上げ隊" fill className="object-contain" />
                     </div>
                     {/* moriagetai.png */}
@@ -379,7 +379,7 @@ export default async function Home() {
                       <Image src="/images/common/suketto.png" alt="助っ人団" fill className="object-contain object-bottom" />
                     </div>
                     {/* suketto-name.png */}
-                    <div className="absolute" style={{ right: "68%", top: "50%", transform: "translateY(-50%)", width: "22%", aspectRatio: "92/241" }}>
+                    <div className="absolute" style={{ right: "68%", top: "50%", transform: "translateY(-50%)", width: "16%", aspectRatio: "92/241" }}>
                       <Image src="/images/common/suketto-name.png" alt="助っ人団" fill className="object-contain" />
                     </div>
                   </div>
