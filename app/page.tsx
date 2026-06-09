@@ -208,7 +208,7 @@ export default async function Home() {
             {/* 挑戦者カード PC用（md以上） */}
             <RevealSection>
               <div
-                className="relative w-[96%] mx-auto rounded-sm overflow-visible hidden md:flex flex-row items-stretch justify-start pl-[3%]"
+                className="relative w-[96%] mx-auto rounded-sm overflow-visible hidden lg:flex flex-row items-stretch justify-start pl-[3%]"
                 style={{ border: "2px solid #001597", minHeight: "clamp(120px, 15vw, 220px)", backgroundColor: "#ffffff" }}
               >
                 {/* 左：画像エリア（challenger-nameとchallenger-1の重ね） */}
@@ -233,8 +233,8 @@ export default async function Home() {
               </div>
             </RevealSection>
 
-            {/* 挑戦者カード スマホ用（md未満） */}
-            <div className="md:hidden w-[90%] mx-auto">
+            {/* 挑戦者カード スマホ用（lg未満） */}
+            <div className="lg:hidden">
               <MemberCardMobile
                 imageSrc="/images/common/challenger-1.png"
                 nameSrc="/images/common/challenger-name.png"
@@ -256,64 +256,6 @@ export default async function Home() {
             <RevealSection>
               <h3>サポート会員</h3>
             </RevealSection>
-
-            {/* サポート会員 中間レイアウト（md〜lg: 530〜1100px）：530-950は縦並び、950-1100は横3列 */}
-            <div className="hidden md:grid lg:hidden grid-cols-1 xl:grid-cols-3 gap-4">
-              <div className="xl:w-full w-[90%] mx-auto">
-              <MemberCardMobile
-                imageSrc="/images/common/ouenndann-mobile.png"
-                alt="応援団"
-                borderColor="#C79500"
-                buttonColor="#3B3C3E"
-                bgColor="#E3E0DA"
-              >
-                <p className="leading-relaxed text-[11px]" style={{ color: "#3B3C3E", fontSize: "11px", lineHeight: "1.8", wordBreak: "keep-all", overflowWrap: "anywhere" }}>
-                  <span style={{ color: "#D94C0B" }}>資金・人材面などでのバックアップを</span><br />
-                  いただきながら KANDA Startup Commons運営の<br />
-                  コアメンバーとして活動していただく方たち。<br />
-                  単なる支援にとどまらず、<span style={{ color: "#D94C0B" }}>運営サイドとして</span><br />
-                  スタートアップ支援及びCommons(共有地)の<br />
-                  仕組みをデザインし、次世代のイノベーションを支えていきます。
-                </p>
-              </MemberCardMobile>
-              </div>
-              <div className="xl:w-full w-[90%] mx-auto">
-              <MemberCardMobile
-                imageSrc="/images/common/moriagetai-mobile.png"
-                alt="盛り上げ隊"
-                borderColor="#C79500"
-                buttonColor="#3B3C3E"
-                bgColor="#E3E0DA"
-              >
-                <p className="leading-relaxed text-[11px]" style={{ color: "#3B3C3E", fontSize: "11px", lineHeight: "1.8", wordBreak: "keep-all", overflowWrap: "anywhere" }}>
-                  登壇者となる方の紹介や対外的な宣伝など、<br />
-                  <span style={{ color: "#D94C0B" }}>コミュニティの熱量を最大化</span>させる方たち。<br />
-                  「KANDA Startup Commonsを紹介したい！」<br />
-                  「この挑戦と持ち寄りの輪をもっと広げていきたい！」<br />
-                  という情熱を持ち、<span style={{ color: "#D94C0B" }}>人と人をつなぐ懸け橋として</span><br />
-                  イベント活性化にご尽力いただいております。
-                </p>
-              </MemberCardMobile>
-              </div>
-              <div className="xl:w-full w-[90%] mx-auto">
-              <MemberCardMobile
-                imageSrc="/images/common/suketto-mobile.png"
-                alt="助っ人団"
-                borderColor="#C79500"
-                buttonColor="#3B3C3E"
-                bgColor="#E3E0DA"
-              >
-                <p className="leading-relaxed text-[11px]" style={{ color: "#3B3C3E", fontSize: "11px", lineHeight: "1.8", wordBreak: "keep-all", overflowWrap: "anywhere" }}>
-                  自らの持つスキルやプロダクト、アセットなどで<br />
-                  コミュニティ運営を支えていただく方たち。<br />
-                  プロダクト、コンテンツを提供し、<br />
-                  <span style={{ color: "#D94C0B" }}>裏側から強く支えるパートナー。</span><br />
-                  あなたのテクノロジー・プロダクトが、<br />
-                  KANDA Startup Commonsの円滑な運営を支えます。
-                </p>
-              </MemberCardMobile>
-              </div>
-            </div>
 
             {/* 応援団：テキスト左・画像右 */}
             <div>
@@ -344,8 +286,8 @@ export default async function Home() {
                   </div>
                 </div>
               </RevealSection>
-              {/* 応援団 スマホ用（md未満のみ） */}
-              <div className="md:hidden w-[90%] mx-auto">
+              {/* 応援団 スマホ用 */}
+              <div className="lg:hidden">
                 <MemberCardMobile
                   imageSrc="/images/common/ouenndann-mobile.png"
                   alt="応援団"
@@ -394,8 +336,8 @@ export default async function Home() {
                   </div>
                 </div>
               </RevealSection>
-              {/* 盛り上げ隊 スマホ用（md未満のみ） */}
-              <div className="md:hidden w-[90%] mx-auto">
+              {/* 盛り上げ隊 スマホ用 */}
+              <div className="lg:hidden">
                 <MemberCardMobile
                   imageSrc="/images/common/moriagetai-mobile.png"
                   alt="盛り上げ隊"
@@ -443,8 +385,8 @@ export default async function Home() {
                   </div>
                 </div>
               </RevealSection>
-              {/* 助っ人団 スマホ用（md未満のみ） */}
-              <div className="md:hidden w-[90%] mx-auto">
+              {/* 助っ人団 スマホ用 */}
+              <div className="lg:hidden">
                 <MemberCardMobile
                   imageSrc="/images/common/suketto-mobile.png"
                   alt="助っ人団"
