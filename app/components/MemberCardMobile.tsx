@@ -27,7 +27,7 @@ export default function MemberCardMobile({
 
   return (
     /* 上にはみ出す分のパディングを確保 */
-    <div className="w-[90%] mx-auto" style={{ paddingTop: "clamp(20px, 8vw, 78px)" }}>
+    <div className="w-[90%] mx-auto" style={{ paddingTop: "clamp(20px, 5vw, 50px)" }}>
       {/* カード全体：白背景の矩形・上方向にoverflowさせる */}
       <div
         style={{
@@ -40,7 +40,7 @@ export default function MemberCardMobile({
         {/* 画像エリア：上にはみ出す */}
         <div
           className="relative w-full flex justify-center"
-          style={{ height: "clamp(160px, 55vw, 260px)", marginTop: "clamp(-20px, -8vw, -40px)" }}
+          style={{ height: "clamp(180px, 45vw, 280px)", marginTop: "clamp(-20px, -5vw, -50px)" }}
         >
           {nameSrc && (
             <div
