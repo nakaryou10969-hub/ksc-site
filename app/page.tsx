@@ -281,7 +281,7 @@ export default async function Home() {
                     </div>
                     {/* ouenndann.png - 前面 */}
                     <div className="absolute z-10" style={{ left: "28%", bottom: 0, width: "55%", aspectRatio: "304/385" }}>
-                      <Image src="/images/common/ouenndann.png" alt="応援団" fill className="object-contain object-bottom" />
+                      <Image src="/images/common/ouenndann-mobile.png" alt="応援団" fill className="object-contain object-bottom" />
                     </div>
                   </div>
                 </div>
@@ -322,7 +322,7 @@ export default async function Home() {
                     </div>
                     {/* moriagetai.png */}
                     <div className="absolute" style={{ left: "20%", bottom: 0, width: "58%", aspectRatio: "383/357" }}>
-                      <Image src="/images/common/moriagetai.png" alt="盛り上げ隊" fill className="object-contain object-bottom" />
+                      <Image src="/images/common/moriagetai-mobile.png" alt="盛り上げ隊" fill className="object-contain object-bottom" />
                     </div>
                   </div>
                   {/* 右：テキスト */}
@@ -376,7 +376,7 @@ export default async function Home() {
                   <div className="relative shrink-0" style={{ width: "30%", minHeight: "clamp(120px, 15vw, 220px)" }}>
                     {/* suketto.png */}
                     <div className="absolute z-10" style={{ left: "calc(22% + 38px)", bottom: 0, width: "36%", aspectRatio: "210/404", transform: "scaleX(-1)" }}>
-                      <Image src="/images/common/suketto.png" alt="助っ人団" fill className="object-contain object-bottom" />
+                      <Image src="/images/common/suketto-mobile.png" alt="助っ人団" fill className="object-contain object-bottom" />
                     </div>
                     {/* suketto-name.png */}
                     <div className="absolute" style={{ right: "68%", top: "50%", transform: "translateY(-50%)", width: "16%", aspectRatio: "92/241" }}>
