@@ -26,8 +26,8 @@ export default function MemberCardMobile({
   const btnColor = buttonColor ?? borderColor;
 
   return (
-    /* 上にはみ出す分のパディングを確保（1cm = 38px） */
-    <div className="w-[90%] mx-auto" style={{ paddingTop: "38px" }}>
+    /* 上にはみ出す分のパディングを確保 */
+    <div className="w-[90%] mx-auto" style={{ paddingTop: "clamp(20px, 5vw, 50px)" }}>
       {/* カード全体：白背景の矩形・上方向にoverflowさせる */}
       <div
         style={{
@@ -37,10 +37,10 @@ export default function MemberCardMobile({
           position: "relative",
         }}
       >
-        {/* 画像エリア：上に38pxはみ出す */}
+        {/* 画像エリア：上にはみ出す */}
         <div
           className="relative w-full flex justify-center"
-          style={{ height: "clamp(140px, 35vw, 220px)", marginTop: "-38px" }}
+          style={{ height: "clamp(180px, 45vw, 280px)", marginTop: "clamp(-20px, -5vw, -50px)" }}
         >
           {nameSrc && (
             <div

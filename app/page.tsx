@@ -209,10 +209,10 @@ export default async function Home() {
             <RevealSection>
               <div
                 className="relative w-[96%] mx-auto rounded-sm overflow-visible hidden md:flex flex-row items-stretch justify-start pl-[3%]"
-                style={{ border: "2px solid #001597", minHeight: "180px", backgroundColor: "#ffffff" }}
+                style={{ border: "2px solid #001597", minHeight: "clamp(120px, 15vw, 220px)", backgroundColor: "#ffffff" }}
               >
                 {/* 左：画像エリア（challenger-nameとchallenger-1の重ね） */}
-                <div className="relative shrink-0" style={{ width: "32%", minHeight: "180px" }}>
+                <div className="relative shrink-0" style={{ width: "32%", minHeight: "clamp(120px, 15vw, 220px)" }}>
                   {/* challenger-name.png（縦テキスト装飾）- 背面 */}
                   <div className="absolute z-0" style={{ left: "2%", top: "50%", transform: "translateY(-50%)", width: "16%", aspectRatio: "92/241" }}>
                     <Image src="/images/common/challenger-name.png" alt="challenger" fill className="object-contain" />
@@ -262,7 +262,7 @@ export default async function Home() {
               <RevealSection>
                 <div
                   className="relative w-[96%] mx-auto hidden md:flex flex-row items-stretch overflow-visible"
-                  style={{ border: "2px solid #C79500", minHeight: "180px", backgroundColor: "#ffffff" }}
+                  style={{ border: "2px solid #C79500", minHeight: "clamp(120px, 15vw, 220px)", backgroundColor: "#ffffff" }}
                 >
                   {/* 左：テキスト */}
                   <div className="flex flex-col justify-center px-4 py-6 flex-1" style={{ color: "#3B3C3E" }}>
@@ -274,7 +274,7 @@ export default async function Home() {
                     </p>
                   </div>
                   {/* 右：画像エリア */}
-                  <div className="relative shrink-0" style={{ width: "32%", minHeight: "180px" }}>
+                  <div className="relative shrink-0" style={{ width: "32%", minHeight: "clamp(120px, 15vw, 220px)" }}>
                     {/* ouenndann-name.png - 背面 */}
                     <div className="absolute z-0" style={{ right: "76%", top: "50%", transform: "translateY(-50%)", width: "16%", aspectRatio: "92/241" }}>
                       <Image src="/images/common/ouenndann-name.png" alt="応援団" fill className="object-contain" />
@@ -312,10 +312,10 @@ export default async function Home() {
               <RevealSection>
                 <div
                   className="relative w-[96%] mx-auto hidden md:flex flex-row items-stretch overflow-visible"
-                  style={{ border: "2px solid #C79500", minHeight: "180px", backgroundColor: "#ffffff" }}
+                  style={{ border: "2px solid #C79500", minHeight: "clamp(120px, 15vw, 220px)", backgroundColor: "#ffffff" }}
                 >
                   {/* 左：画像エリア */}
-                  <div className="relative shrink-0" style={{ width: "32%", minHeight: "180px" }}>
+                  <div className="relative shrink-0" style={{ width: "32%", minHeight: "clamp(120px, 15vw, 220px)" }}>
                     {/* moriagetai-name.png */}
                     <div className="absolute" style={{ left: "4%", top: "50%", transform: "translateY(-50%)", width: "16%", aspectRatio: "92/241" }}>
                       <Image src="/images/common/moriagetai-name.png" alt="盛り上げ隊" fill className="object-contain" />
@@ -362,7 +362,7 @@ export default async function Home() {
               <RevealSection>
                 <div
                   className="relative w-[96%] mx-auto hidden md:flex flex-row items-stretch overflow-visible"
-                  style={{ border: "2px solid #C79500", minHeight: "180px", backgroundColor: "#ffffff" }}
+                  style={{ border: "2px solid #C79500", minHeight: "clamp(120px, 15vw, 220px)", backgroundColor: "#ffffff" }}
                 >
                   {/* 左：テキスト */}
                   <div className="flex flex-col justify-center px-4 py-6 flex-1" style={{ color: "#3B3C3E" }}>
@@ -373,7 +373,7 @@ export default async function Home() {
                     </p>
                   </div>
                   {/* 右：画像エリア */}
-                  <div className="relative shrink-0" style={{ width: "30%", minHeight: "180px" }}>
+                  <div className="relative shrink-0" style={{ width: "30%", minHeight: "clamp(120px, 15vw, 220px)" }}>
                     {/* suketto.png */}
                     <div className="absolute z-10" style={{ left: "calc(22% + 38px)", bottom: 0, width: "36%", aspectRatio: "210/404", transform: "scaleX(-1)" }}>
                       <Image src="/images/common/suketto.png" alt="助っ人団" fill className="object-contain object-bottom" />
