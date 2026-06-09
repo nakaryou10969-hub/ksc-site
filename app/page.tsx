@@ -276,7 +276,7 @@ export default async function Home() {
                   {/* 右：画像エリア */}
                   <div className="relative shrink-0" style={{ width: "32%", minHeight: "clamp(120px, 15vw, 220px)" }}>
                     <div className="absolute inset-0">
-                      <Image src="/images/common/ouenndann-mobile.png" alt="応援団" fill className="object-contain object-bottom" />
+                      <Image src="/images/common/ouenndann-mobile.png" alt="応援団" fill className="object-contain object-center" />
                     </div>
                   </div>
                 </div>
@@ -312,7 +312,7 @@ export default async function Home() {
                   {/* 左：画像エリア */}
                   <div className="relative shrink-0" style={{ width: "32%", minHeight: "clamp(120px, 15vw, 220px)" }}>
                     <div className="absolute inset-0">
-                      <Image src="/images/common/moriagetai-mobile.png" alt="盛り上げ隊" fill className="object-contain object-bottom" />
+                      <Image src="/images/common/moriagetai-mobile.png" alt="盛り上げ隊" fill className="object-contain object-center" />
                     </div>
                   </div>
                   {/* 右：テキスト */}
@@ -365,7 +365,7 @@ export default async function Home() {
                   {/* 右：画像エリア */}
                   <div className="relative shrink-0" style={{ width: "30%", minHeight: "clamp(120px, 15vw, 220px)" }}>
                     <div className="absolute inset-0">
-                      <Image src="/images/common/suketto-mobile.png" alt="助っ人団" fill className="object-contain object-bottom" />
+                      <Image src="/images/common/suketto-mobile.png" alt="助っ人団" fill className="object-contain object-center" />
                     </div>
                   </div>
                 </div>
