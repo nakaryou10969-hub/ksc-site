@@ -90,7 +90,7 @@ export default async function Home() {
       </section>
 
       {/* KSCとはセクション */}
-      <section id="about" className="pt-0 pb-24 md:py-24 px-8 max-w-7xl mx-auto">
+      <section id="about" className="pt-0 pb-8 md:py-24 px-8 max-w-7xl mx-auto">
         <RevealSection>
           <h2 className="h2-banner">KANDA<br className="md:hidden" />Startup<br className="md:hidden" />Commons とは</h2>
           <h3 className="no-marker" style={{ color: "#3B3C3E" }}>社会課題から、<br className="md:hidden" />次世代の豊かさへ</h3>
@@ -118,21 +118,21 @@ export default async function Home() {
             <p>
               社会性と事業性、<br className="md:hidden" />
               理想と現実のあいだを行き来しながら、<br />
-              <span style={{ color: "#D94C0B" }}>試し、学び、前に進もうとする人たちが<br className="md:hidden" />集まる場を、神田から</span>つくっていきます。
+              <span style={{ color: "#D94C0B" }}>試し、学び、前に進もうとする人たちが<br className="md:hidden" />集まる場を、神田からつくっていきます。</span>
             </p>
           </RevealSection>
         </div>
       </section>
 
       {/* 役割を持って持ち寄るセクション */}
-      <section className="py-24 px-8 max-w-7xl mx-auto" style={{ backgroundColor: "#D6D3CD" }}>
+      <section className="pt-8 pb-8 md:py-24 px-8 max-w-7xl mx-auto" style={{ backgroundColor: "#D6D3CD" }}>
           <RevealSection delay="reveal-delay-2" className="space-y-6 leading-relaxed">
             <h3 className="no-marker">役割を持って関わる</h3>
             <p>
               KANDA Startup Commonsは、<br className="md:hidden" />
               参画する一人ひとりが、<br className="md:hidden" />
               <span style={{ color: "#D94C0B" }}>自分なりの役割を持って関わることを</span><br className="md:hidden" />
-              <span style={{ color: "#D94C0B" }}>大切にしています。</span>
+              大切にしています。
             </p>
 
             {/* 画像 PC: insert.png W:1200 H:327 / スマホ: fixedinsert.png W:311 H:624 */}
@@ -178,7 +178,7 @@ export default async function Home() {
       </section>
 
       {/* 役割セクション */}
-      <section id="roles" className="py-24 px-8" style={{ backgroundColor: "#D6D3CD" }}>
+      <section id="roles" className="pt-0 pb-24 md:py-24 px-8" style={{ backgroundColor: "#D6D3CD" }}>
         <div className="max-w-[1440px] mx-auto px-6 lg:px-[117px]">
           {/* スマホのみ：神スタ内の役割 見出し */}
           <div className="md:hidden mb-6" style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}>
@@ -408,7 +408,7 @@ export default async function Home() {
       </section>
 
       {/* 過去のイベント実績セクション */}
-      <section id="openday" className="py-24 pb-8 md:pb-24 px-8 max-w-7xl mx-auto">        <RevealSection>
+      <section id="openday" className="pt-8 pb-8 md:py-24 md:pb-24 px-8 max-w-7xl mx-auto">        <RevealSection>
           <h2 style={{ color: "#3B3C3E" }}>過去のイベント</h2>
           <p>
             多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
