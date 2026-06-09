@@ -2,10 +2,10 @@
 
 :root {
   --background: #E3E0DA;
-  --foreground: #171717;
+  --foreground: #3B3C3E;
   /* KSCカラー */
   --color-h1: #3B3C3E;
-  --color-h2: #D94C0B;
+  --color-h2: #767676;
   --color-h3: #585858;
   --color-btn-bg: #767676;
   --color-btn-text: #FFFFFF;
@@ -31,15 +31,15 @@ img:not([data-nimg]) {
 
 /* ===== タイポグラフィ（記事ページ除く） ===== */
 
-/* h1: NotoSans JP Bold, 40px, 行間32px, 色#3B3C3E, padding上下40px, FVとのマージン40px */
+/* h1: NotoSans JP Bold, 40px, 行間32px, 色#3B3C3E, padding上下40px */
 main h1 {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
   font-size: 40px;
-  line-height: 1.5;
+  line-height: 32px;
   color: var(--color-h1);
-  padding: 8px 0;
-  margin-top: 8px;
+  padding: 40px 0;
+  margin-top: 0;
 }
 
 /* ヒーローセクション専用h1（白文字・大サイズ） */
@@ -53,7 +53,7 @@ main h1 {
   margin: 0;
 }
 
-/* h2: NotoSans JP Bold（DNP代替）, 32px, 行間30px, 色#D94C0B, padding左右12px 上下20px */
+/* h2: NotoSans JP Bold（DNP代替）, 32px, 行間30px, 色#767676, padding左右12px 上下20px */
 main h2 {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;

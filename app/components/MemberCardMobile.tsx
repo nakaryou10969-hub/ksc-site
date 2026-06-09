@@ -27,7 +27,7 @@ export default function MemberCardMobile({
 
   return (
     /* 上にはみ出す分のパディングを確保 */
-    <div className="w-full" style={{ paddingTop: "78px" }}>
+    <div className="w-[90%] mx-auto" style={{ paddingTop: "78px" }}>
       {/* カード全体：白背景の矩形・上方向にoverflowさせる */}
       <div
         style={{
@@ -135,8 +135,7 @@ export default function MemberCardMobile({
             borderRadius: "0 0 8px 8px",
           }}
         >
-          <div style={{ color: "#3B3C3E" }}>{children}</div>
-          <div className="flex justify-center pt-4">
+          <div style={{ color: "#3B3C3E" }}>{children}</div>          <div className="flex justify-center pt-4">
             <button
               onClick={() => setOpen(false)}
               className="text-gray-400 text-xl"
