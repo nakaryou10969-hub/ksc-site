@@ -147,9 +147,9 @@ export default async function Home() {
                 className="object-cover"
               />
             </div>
-            <div className="md:hidden relative w-full rounded-2xl overflow-hidden mx-auto" style={{ aspectRatio: "311/624", maxWidth: "60%" }}>
+            <div className="md:hidden relative w-full rounded-2xl overflow-hidden mx-auto" style={{ aspectRatio: "558/1088", maxWidth: "60%" }}>
               <Image
-                src="/images/events/fixedinsert.png"
+                src="/images/events/neo-insert-mobile.png"
                 alt="役割を持って関わる"
                 fill
                 className="object-cover"
