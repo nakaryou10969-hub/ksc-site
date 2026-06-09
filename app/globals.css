@@ -3,7 +3,6 @@
 /* PC/スマホ切り替えを530pxに変更 */
 @theme {
   --breakpoint-md: 530px;
-  --breakpoint-lg: 1100px;
 }
 
 :root {
