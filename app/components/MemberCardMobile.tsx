@@ -77,6 +77,9 @@ export default function MemberCardMobile({
             preserveAspectRatio="none"
             style={{ width: "100%", height: "clamp(36px, 10vw, 60px)", display: "block" }}
           >
+            {/* 背景色の四角で塗りつぶし */}
+            <rect width="100" height="30" fill={bgColor} />
+            {/* 白い三角を上に重ねて五角形に見せる */}
             <polygon points="0,0 100,0 50,100" fill="#ffffff" />
           </svg>
           {/* ボタン：三角の下・背景色の上 */}
