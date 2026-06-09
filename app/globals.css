@@ -4,6 +4,7 @@
 @theme {
   --breakpoint-md: 530px;
   --breakpoint-lg: 1100px;
+  --breakpoint-xl: 950px;
 }
 
 :root {

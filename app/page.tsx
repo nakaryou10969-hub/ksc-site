@@ -257,8 +257,9 @@ export default async function Home() {
               <h3>サポート会員</h3>
             </RevealSection>
 
-            {/* サポート会員 中間レイアウト（md〜lg: 530〜1100px）：3枚横並び */}
-            <div className="hidden md:grid lg:hidden grid-cols-3 gap-4">
+            {/* サポート会員 中間レイアウト（md〜lg: 530〜1100px）：530-950は縦並び、950-1100は横3列 */}
+            <div className="hidden md:grid lg:hidden grid-cols-1 xl:grid-cols-3 gap-4">
+              <div className="xl:w-full w-[90%] mx-auto">
               <MemberCardMobile
                 imageSrc="/images/common/ouenndann-mobile.png"
                 alt="応援団"
@@ -275,6 +276,8 @@ export default async function Home() {
                   仕組みをデザインし、次世代のイノベーションを支えていきます。
                 </p>
               </MemberCardMobile>
+              </div>
+              <div className="xl:w-full w-[90%] mx-auto">
               <MemberCardMobile
                 imageSrc="/images/common/moriagetai-mobile.png"
                 alt="盛り上げ隊"
@@ -291,6 +294,8 @@ export default async function Home() {
                   イベント活性化にご尽力いただいております。
                 </p>
               </MemberCardMobile>
+              </div>
+              <div className="xl:w-full w-[90%] mx-auto">
               <MemberCardMobile
                 imageSrc="/images/common/suketto-mobile.png"
                 alt="助っ人団"
@@ -307,6 +312,7 @@ export default async function Home() {
                   KANDA Startup Commonsの円滑な運営を支えます。
                 </p>
               </MemberCardMobile>
+              </div>
             </div>
 
             {/* 応援団：テキスト左・画像右 */}
