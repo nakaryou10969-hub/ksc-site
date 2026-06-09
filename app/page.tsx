@@ -234,7 +234,7 @@ export default async function Home() {
             </RevealSection>
 
             {/* 挑戦者カード スマホ用（md未満） */}
-            <div className="md:hidden">
+            <div className="md:hidden w-[90%] mx-auto">
               <MemberCardMobile
                 imageSrc="/images/common/challenger-1.png"
                 nameSrc="/images/common/challenger-name.png"
@@ -339,7 +339,7 @@ export default async function Home() {
                 </div>
               </RevealSection>
               {/* 応援団 スマホ用（md未満のみ） */}
-              <div className="md:hidden">
+              <div className="md:hidden w-[90%] mx-auto">
                 <MemberCardMobile
                   imageSrc="/images/common/ouenndann-mobile.png"
                   alt="応援団"
@@ -389,7 +389,7 @@ export default async function Home() {
                 </div>
               </RevealSection>
               {/* 盛り上げ隊 スマホ用（md未満のみ） */}
-              <div className="md:hidden">
+              <div className="md:hidden w-[90%] mx-auto">
                 <MemberCardMobile
                   imageSrc="/images/common/moriagetai-mobile.png"
                   alt="盛り上げ隊"
@@ -438,7 +438,7 @@ export default async function Home() {
                 </div>
               </RevealSection>
               {/* 助っ人団 スマホ用（md未満のみ） */}
-              <div className="md:hidden">
+              <div className="md:hidden w-[90%] mx-auto">
                 <MemberCardMobile
                   imageSrc="/images/common/suketto-mobile.png"
                   alt="助っ人団"
