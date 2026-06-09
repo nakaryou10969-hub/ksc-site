@@ -190,7 +190,7 @@ export default async function Home() {
             <h2 className="h2-banner" style={{ marginLeft: 0, marginRight: 0, width: "100%" }}>神スタ内の役割</h2>
           </div>
           <RevealSection>
-            <h3 className="no-marker">こんな人たちを募集しています</h3>
+            <h3 className="no-marker" style={{ paddingLeft: "0" }}>こんな人たちを<br className="md:hidden" />募集しています</h3>
           </RevealSection>
 
           {/* 挑戦者 */}
