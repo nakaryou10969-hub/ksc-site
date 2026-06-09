@@ -208,7 +208,7 @@ export default async function Home() {
             {/* 挑戦者カード PC用（md以上） */}
             <RevealSection>
               <div
-                className="relative w-[96%] mx-auto rounded-sm overflow-visible hidden md:flex flex-row items-stretch justify-start pl-[3%]"
+                className="relative w-[96%] mx-auto rounded-sm overflow-hidden hidden md:flex flex-row items-stretch justify-start pl-[3%]"
                 style={{ border: "2px solid #001597", minHeight: "180px", backgroundColor: "#ffffff" }}
               >
                 {/* 左：画像エリア（challenger-nameとchallenger-1の重ね） */}
