@@ -26,26 +26,25 @@ export default function MemberCardMobile({
   const btnColor = buttonColor ?? borderColor;
 
   return (
-    /* 上にはみ出す分のパディングを確保 */
-    <div className="w-[90%] mx-auto" style={{ paddingTop: "clamp(20px, 5vw, 50px)", position: "relative", isolation: "isolate" }}>
-      {/* カード全体：白背景の矩形・上方向にoverflowさせる */}
+    <div className="w-[90%] mx-auto" style={{ isolation: "isolate" }}>
+      {/* カード全体：白背景の矩形・画像は枠内に収める */}
       <div
         style={{
           backgroundColor: "#ffffff",
           borderRadius: "8px 8px 0 0",
-          overflow: "visible",
+          overflow: "hidden",
           position: "relative",
         }}
       >
-        {/* 画像エリア：上にはみ出す */}
+        {/* 画像エリア：枠内に収める */}
         <div
-          className="relative w-full flex justify-center"
-          style={{ height: "clamp(180px, 45vw, 280px)", marginTop: "clamp(-20px, -5vw, -50px)" }}
+          className="relative w-full"
+          style={{ height: "clamp(180px, 45vw, 280px)" }}
         >
           {nameSrc && (
             <div
               className="absolute z-0"
-              style={{ left: "8%", top: "20%", width: "18%", aspectRatio: "92/241" }}
+              style={{ left: "8%", top: "10%", width: "18%", aspectRatio: "92/241" }}
             >
               <Image src={nameSrc} alt={alt} fill className="object-contain" />
             </div>
@@ -55,16 +54,16 @@ export default function MemberCardMobile({
             style={{
               left: nameSrc ? "20%" : "50%",
               transform: nameSrc ? "none" : "translateX(-50%)",
+              top: 0,
               bottom: 0,
               width: nameSrc ? "85%" : "90%",
-              aspectRatio: "1/1",
             }}
           >
-            <Image src={imageSrc} alt={alt} fill className="object-contain object-bottom" />
+            <Image src={imageSrc} alt={alt} fill className="object-contain object-center" />
           </div>
         </div>
 
-        {/* 閉じている時のみ：V字のくびれ */}
+        {/* 閉じている時のみ：V字のくびれ（背景色の三角） */}
         {!open && (
           <>
             {/* 左三角 */}
