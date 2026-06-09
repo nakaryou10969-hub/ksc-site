@@ -26,21 +26,24 @@ export default function MemberCardMobile({
   const btnColor = buttonColor ?? borderColor;
 
   return (
-    /* 上にはみ出す分のパディングを確保 */
-    <div className="w-[90%] mx-auto" style={{ paddingTop: "clamp(20px, 8vw, 78px)" }}>
-      {/* カード全体：白背景の矩形・上方向にoverflowさせる */}
+    <div className="w-[90%] mx-auto">
+
+      {/* ① 四角エリア：overflow:hidden で画像の上はみ出しをクリップ */}
       <div
         style={{
           backgroundColor: "#ffffff",
           borderRadius: "8px 8px 0 0",
-          overflow: "visible",
+          overflow: "hidden",
           position: "relative",
         }}
       >
-        {/* 画像エリア：上にはみ出す */}
+        {/* 画像エリア：上端より少し上から始めてクリップ */}
         <div
-          className="relative w-full flex justify-center"
-          style={{ height: "clamp(160px, 55vw, 260px)", marginTop: "clamp(-20px, -8vw, -40px)" }}
+          className="relative w-full"
+          style={{
+            height: "clamp(200px, 65vw, 300px)",
+            marginTop: "clamp(-24px, -8vw, -48px)",
+          }}
         >
           {nameSrc && (
             <div
@@ -63,64 +66,36 @@ export default function MemberCardMobile({
             <Image src={imageSrc} alt={alt} fill className="object-contain object-bottom" />
           </div>
         </div>
-
-        {/* 閉じている時のみ：V字のくびれ */}
-        {!open && (
-          <>
-            {/* 左三角 */}
-            <div
-              style={{
-                position: "absolute",
-                bottom: 0,
-                left: 0,
-                width: "50%",
-                height: "18%",
-                backgroundColor: bgColor,
-                clipPath: "polygon(0 100%, 100% 100%, 0 0)",
-              }}
-            />
-            {/* 右三角 */}
-            <div
-              style={{
-                position: "absolute",
-                bottom: 0,
-                right: 0,
-                width: "50%",
-                height: "18%",
-                backgroundColor: bgColor,
-                clipPath: "polygon(100% 100%, 0 100%, 100% 0)",
-              }}
-            />
-            {/* 詳しく見るボタン */}
-            <div
-              style={{
-                position: "absolute",
-                bottom: "6%",
-                left: 0,
-                right: 0,
-                zIndex: 10,
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <button
-                onClick={() => setOpen(true)}
-                className="text-sm font-bold"
-                style={{ color: btnColor }}
-              >
-                詳しく見る
-              </button>
-            </div>
-            {/* スペーサー */}
-            <div style={{ height: "40px" }} />
-          </>
-        )}
-
-        {/* 開いている時 */}
-        {open && <div style={{ height: "8px" }} />}
       </div>
 
-      {/* 展開エリア：アニメーション付き */}
+      {/* ② 三角エリア（閉じている時のみ）：四角の直下に接続する下向き三角 */}
+      {!open && (
+        <div style={{ lineHeight: 0 }}>
+          {/* SVGで正確な下向き三角を描画（四角の幅に合わせてレスポンシブ） */}
+          <svg
+            viewBox="0 0 100 30"
+            preserveAspectRatio="none"
+            style={{ width: "100%", height: "clamp(36px, 10vw, 60px)", display: "block" }}
+          >
+            <polygon points="0,0 100,0 50,100" fill="#ffffff" />
+          </svg>
+          {/* ボタン：三角の下・背景色の上 */}
+          <div
+            className="flex justify-center py-2"
+            style={{ backgroundColor: bgColor }}
+          >
+            <button
+              onClick={() => setOpen(true)}
+              className="text-sm font-bold"
+              style={{ color: btnColor }}
+            >
+              詳しく見る
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* ③ 展開エリア：アニメーション付き */}
       <div
         style={{
           maxHeight: open ? "600px" : "0px",
