@@ -26,8 +26,9 @@ export default function MemberCardMobile({
   const btnColor = buttonColor ?? borderColor;
 
   return (
-    <div className="w-[90%] mx-auto">
-      {/* カード全体：白背景の矩形 */}
+    /* 上にはみ出す分のパディングを確保 */
+    <div className="w-[90%] mx-auto" style={{ paddingTop: "clamp(20px, 8vw, 78px)" }}>
+      {/* カード全体：白背景の矩形・上方向にoverflowさせる */}
       <div
         style={{
           backgroundColor: "#ffffff",
@@ -36,15 +37,15 @@ export default function MemberCardMobile({
           position: "relative",
         }}
       >
-        {/* 画像エリア：カード内に収める・高さはvw比率で自動調整 */}
+        {/* 画像エリア：上にはみ出す */}
         <div
-          className="relative w-full"
-          style={{ height: "clamp(200px, 70vw, 320px)" }}
+          className="relative w-full flex justify-center"
+          style={{ height: "clamp(160px, 55vw, 260px)", marginTop: "clamp(-20px, -8vw, -40px)" }}
         >
           {nameSrc && (
             <div
               className="absolute z-0"
-              style={{ left: "8%", top: "10%", width: "18%", aspectRatio: "92/241" }}
+              style={{ left: "8%", top: "20%", width: "18%", aspectRatio: "92/241" }}
             >
               <Image src={nameSrc} alt={alt} fill className="object-contain" />
             </div>
@@ -54,12 +55,12 @@ export default function MemberCardMobile({
             style={{
               left: nameSrc ? "20%" : "50%",
               transform: nameSrc ? "none" : "translateX(-50%)",
-              top: 0,
               bottom: 0,
               width: nameSrc ? "85%" : "90%",
+              aspectRatio: "1/1",
             }}
           >
-            <Image src={imageSrc} alt={alt} fill className="object-contain object-center" />
+            <Image src={imageSrc} alt={alt} fill className="object-contain object-bottom" />
           </div>
         </div>
 
