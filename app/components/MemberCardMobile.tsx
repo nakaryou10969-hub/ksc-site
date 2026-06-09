@@ -91,8 +91,18 @@ export default function MemberCardMobile({
                 clipPath: "polygon(100% 100%, 0 100%, 100% 0)",
               }}
             />
-            {/* 詳しく見るボタン（三角の手前） */}
-            <div className="relative flex justify-center pb-3 pt-2" style={{ zIndex: 10 }}>
+            {/* 詳しく見るボタン：三角より手前・V字の頂点付近に絶対配置 */}
+            <div
+              style={{
+                position: "absolute",
+                bottom: "6%",
+                left: 0,
+                right: 0,
+                zIndex: 10,
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
               <button
                 onClick={() => setOpen(true)}
                 className="text-sm font-bold"
@@ -101,6 +111,8 @@ export default function MemberCardMobile({
                 詳しく見る
               </button>
             </div>
+            {/* ボタン分の高さを確保（フローレイアウト用スペーサー） */}
+            <div style={{ height: "40px" }} />
           </>
         )}
 
