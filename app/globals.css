@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* PC/スマホ切り替えを530pxに変更 */
+@theme {
+  --breakpoint-md: 530px;
+}
+
 :root {
   --background: #E3E0DA;
   --foreground: #3B3C3E;

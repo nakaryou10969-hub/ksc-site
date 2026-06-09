@@ -20,7 +20,7 @@ export default function MemberCardMobile({
   children,
   borderColor = "#001597",
   buttonColor,
-  bgColor = "#D6D3CD",
+  bgColor = "#E3E0DA",
 }: Props) {
   const [open, setOpen] = useState(false);
   const btnColor = buttonColor ?? borderColor;

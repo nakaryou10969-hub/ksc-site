@@ -147,7 +147,7 @@ export default async function Home() {
                 className="object-cover"
               />
             </div>
-            <div className="md:hidden relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "311/624" }}>
+            <div className="md:hidden relative w-full rounded-2xl overflow-hidden mx-auto" style={{ aspectRatio: "311/624", maxWidth: "60%" }}>
               <Image
                 src="/images/events/fixedinsert.png"
                 alt="役割を持って関わる"
@@ -185,12 +185,9 @@ export default async function Home() {
       <section id="roles" style={{ backgroundColor: "#E3E0DA" }}>
         <div className="pt-0 pb-24 md:py-24 px-8">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-[117px]">
-          {/* スマホのみ：神スタ内の役割 見出し */}
-          <div className="md:hidden mb-6" style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}>
-            <h2 className="h2-banner" style={{ marginLeft: 0, marginRight: 0, width: "100%" }}>神スタ内の役割</h2>
-          </div>
+          {/* スマホのみ：神スタ内の役割 見出し → 削除済み */}
           <RevealSection>
-            <h3 className="no-marker" style={{ paddingLeft: "0" }}>こんな人たちを<br className="md:hidden" />募集しています</h3>
+            <h1 style={{ paddingLeft: "0" }}>こんな人たちを<br className="md:hidden" />募集しています</h1>
           </RevealSection>
 
           {/* 挑戦者 */}
