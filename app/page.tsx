@@ -294,7 +294,7 @@ export default async function Home() {
                 >
                   <p className="leading-relaxed text-[10px]" style={{ color: "#3B3C3E", fontSize: "10px", lineHeight: "1.8" }}>
                     <span style={{ color: "#D94C0B" }}>資金・人材面などでのバックアップを</span><br />
-                    <span style={{ color: "#D94C0B" }}>いただきながら、</span>KANDA Startup Commons運営の<br />
+                    いただきながら KANDA Startup Commons運営の<br />
                     コアメンバーとして活動していただく方たち。<br />
                     単なる支援にとどまらず、<span style={{ color: "#D94C0B" }}>運営サイドとして</span><br />
                     スタートアップ支援及びCommons(共有地)の<br />
