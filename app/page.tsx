@@ -208,18 +208,13 @@ export default async function Home() {
             {/* 挑戦者カード PC用（md以上） */}
             <RevealSection>
               <div
-                className="relative w-[96%] mx-auto rounded-sm overflow-visible hidden md:flex flex-row items-stretch justify-start pl-[3%]"
+                className="relative w-[96%] mx-auto rounded-sm overflow-hidden hidden md:flex flex-row items-stretch justify-start pl-[3%]"
                 style={{ border: "2px solid #001597", minHeight: "clamp(120px, 15vw, 220px)", backgroundColor: "#ffffff" }}
               >
-                {/* 左：画像エリア（challenger-nameとchallenger-1の重ね） */}
+                {/* 左：画像エリア */}
                 <div className="relative shrink-0" style={{ width: "32%", minHeight: "clamp(120px, 15vw, 220px)" }}>
-                  {/* challenger-name.png（縦テキスト装飾）- 背面 */}
-                  <div className="absolute z-0" style={{ left: "2%", top: "50%", transform: "translateY(-50%)", width: "16%", aspectRatio: "92/241" }}>
-                    <Image src="/images/common/challenger-name.png" alt="challenger" fill className="object-contain" />
-                  </div>
-                  {/* challenger-1.png（メイン画像）- 前面・中央配置 */}
-                  <div className="absolute z-10" style={{ left: "22%", top: "50%", transform: "translateY(-50%)", width: "65%", aspectRatio: "413/395" }}>
-                    <Image src="/images/common/challenger-1.png" alt="挑戦者" fill className="object-contain" />
+                  <div className="absolute inset-0">
+                    <Image src="/images/common/challenger-1.png" alt="挑戦者" fill className="object-contain object-center" />
                   </div>
                 </div>
                 {/* 右：テキストエリア */}
