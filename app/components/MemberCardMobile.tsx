@@ -26,9 +26,8 @@ export default function MemberCardMobile({
   const btnColor = buttonColor ?? borderColor;
 
   return (
-    /* 上にはみ出す分のパディングを確保 */
-    <div className="w-[90%] mx-auto" style={{ paddingTop: "clamp(20px, 8vw, 78px)" }}>
-      {/* カード全体：白背景の矩形・上方向にoverflowさせる */}
+    <div className="w-[90%] mx-auto">
+      {/* カード全体：白背景の矩形 */}
       <div
         style={{
           backgroundColor: "#ffffff",
@@ -37,15 +36,15 @@ export default function MemberCardMobile({
           position: "relative",
         }}
       >
-        {/* 画像エリア：上にはみ出す */}
+        {/* 画像エリア：カード内に収める・高さはvw比率で自動調整 */}
         <div
-          className="relative w-full flex justify-center"
-          style={{ height: "clamp(160px, 55vw, 260px)", marginTop: "clamp(-20px, -8vw, -40px)" }}
+          className="relative w-full"
+          style={{ height: "clamp(200px, 70vw, 320px)" }}
         >
           {nameSrc && (
             <div
               className="absolute z-0"
-              style={{ left: "8%", top: "20%", width: "18%", aspectRatio: "92/241" }}
+              style={{ left: "8%", top: "10%", width: "18%", aspectRatio: "92/241" }}
             >
               <Image src={nameSrc} alt={alt} fill className="object-contain" />
             </div>
@@ -55,16 +54,16 @@ export default function MemberCardMobile({
             style={{
               left: nameSrc ? "20%" : "50%",
               transform: nameSrc ? "none" : "translateX(-50%)",
+              top: 0,
               bottom: 0,
               width: nameSrc ? "85%" : "90%",
-              aspectRatio: "1/1",
             }}
           >
-            <Image src={imageSrc} alt={alt} fill className="object-contain object-bottom" />
+            <Image src={imageSrc} alt={alt} fill className="object-contain object-center" />
           </div>
         </div>
 
-        {/* 閉じている時のみ：V字のくびれ（背景色の三角で下部を切り取り見せる） */}
+        {/* 閉じている時のみ：V字のくびれ */}
         {!open && (
           <>
             {/* 左三角 */}
@@ -91,7 +90,7 @@ export default function MemberCardMobile({
                 clipPath: "polygon(100% 100%, 0 100%, 100% 0)",
               }}
             />
-            {/* 詳しく見るボタン：三角より手前・V字の頂点付近に絶対配置 */}
+            {/* 詳しく見るボタン */}
             <div
               style={{
                 position: "absolute",
@@ -111,12 +110,12 @@ export default function MemberCardMobile({
                 詳しく見る
               </button>
             </div>
-            {/* ボタン分の高さを確保（フローレイアウト用スペーサー） */}
+            {/* スペーサー */}
             <div style={{ height: "40px" }} />
           </>
         )}
 
-        {/* 開いている時：ボタンなし・三角なし（矩形のまま） */}
+        {/* 開いている時 */}
         {open && <div style={{ height: "8px" }} />}
       </div>
 
@@ -135,7 +134,8 @@ export default function MemberCardMobile({
             borderRadius: "0 0 8px 8px",
           }}
         >
-          <div style={{ color: "#3B3C3E" }}>{children}</div>          <div className="flex justify-center pt-4">
+          <div style={{ color: "#3B3C3E" }}>{children}</div>
+          <div className="flex justify-center pt-4">
             <button
               onClick={() => setOpen(false)}
               className="text-gray-400 text-xl"
