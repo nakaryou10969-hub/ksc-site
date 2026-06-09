@@ -41,7 +41,7 @@ main h1 {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
   font-size: 40px;
-  line-height: 32px;
+  line-height: 1.4;
   color: var(--color-h1);
   padding: 40px 0;
   margin-top: 0;
