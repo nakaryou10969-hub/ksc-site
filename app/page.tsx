@@ -205,8 +205,7 @@ export default async function Home() {
                 <div className="flex flex-col justify-center px-4 py-6 flex-1">
                   <p className="leading-relaxed text-sm" style={{ color: "#C79500", lineHeight: "1.8" }}>
                     自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。<br />
-                    KANDA Startup Commonsの主役であり、自らの意思で世界を変えようと挑み続ける、<br />
-                    熱い起業家たちです。
+                    KANDA Startup Commonsの主役であり、自らの意思で世界を変えようと挑み続ける、熱い起業家たちです。
                   </p>
                 </div>
               </div>
@@ -220,7 +219,8 @@ export default async function Home() {
                 borderColor="#001597"
               >
                 <p className="leading-relaxed text-[13px]" style={{ fontSize: "13px", lineHeight: "1.8", color: "#C79500", wordBreak: "keep-all", overflowWrap: "anywhere" }}>
-                  自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。KANDA Startup Commonsの主役であり、自らの意思で世界を変えようと挑み続ける、熱い起業家たちです。
+                  自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。<br />
+                  KANDA Startup Commonsの主役であり、自らの意思で世界を変えようと挑み続ける、熱い起業家たちです。
                 </p>
               </MemberCardMobile>            </div>
           </div>
@@ -283,7 +283,8 @@ export default async function Home() {
                   {/* 右：テキスト */}
                   <div className="flex flex-col justify-center px-4 py-4 flex-1" style={{ color: "#3B3C3E" }}>
                     <p className="leading-relaxed text-sm" style={{ lineHeight: "1.8" }}>
-                      登壇者となる方の紹介や対外的な宣伝など、<span style={{ color: "#D94C0B" }}>コミュニティの熱量を最大化</span>させる方たち。「KANDA Startup Commonsを紹介したい！」<br />
+                      登壇者となる方の紹介や対外的な宣伝など、<span style={{ color: "#D94C0B" }}>コミュニティの熱量を最大化</span>させる方たち。<br />
+                      「KANDA Startup Commonsを紹介したい！」<br />
                       「この挑戦と持ち寄りの輪をもっと広げていきたい！」<br />
                       という情熱を持ち、<span style={{ color: "#D94C0B" }}>人と人をつなぐ懸け橋として</span>イベント活性化にご尽力いただいております。
                     </p>
@@ -299,7 +300,8 @@ export default async function Home() {
                   buttonColor="#3B3C3E"
                 >
                   <p className="leading-relaxed text-[13px]" style={{ color: "#3B3C3E", fontSize: "13px", lineHeight: "1.8", wordBreak: "keep-all", overflowWrap: "anywhere" }}>
-                    登壇者となる方の紹介や対外的な宣伝など、<span style={{ color: "#D94C0B" }}>コミュニティの熱量を最大化</span>させる方たち。「KANDA Startup Commonsを紹介したい！」<br />
+                    登壇者となる方の紹介や対外的な宣伝など、<span style={{ color: "#D94C0B" }}>コミュニティの熱量を最大化</span>させる方たち。<br />
+                    「KANDA Startup Commonsを紹介したい！」<br />
                     「この挑戦と持ち寄りの輪をもっと広げていきたい！」<br />
                     という情熱を持ち、<span style={{ color: "#D94C0B" }}>人と人をつなぐ懸け橋として</span>イベント活性化にご尽力いただいております。
                   </p>
