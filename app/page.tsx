@@ -214,7 +214,6 @@ export default async function Home() {
             <div className="lg:hidden w-[90%] mx-auto">
               <MemberCardMobile
                 imageSrc="/images/common/challenger-mobile.png"
-                nameSrc="/images/common/challenger-name.png"
                 alt="挑戦者"
                 borderColor="#001597"
               >
