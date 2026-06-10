@@ -138,24 +138,6 @@ export default async function Home() {
               大切にしています。
             </p>
 
-            {/* 画像 PC: neo-insert.png W:1201 H:189 / スマホ: fixedinsert.png W:311 H:624 */}
-            <div className="hidden md:block relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "1201/189" }}>
-              <Image
-                src="/images/events/neo-insert.png"
-                alt="役割を持って関わる"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="md:hidden relative w-full rounded-2xl overflow-hidden mx-auto" style={{ aspectRatio: "558/1088", maxWidth: "60%" }}>
-              <Image
-                src="/images/events/neo-insert-mobile.png"
-                alt="役割を持って関わる"
-                fill
-                className="object-cover"
-              />
-            </div>
-
             <p>
               持ち寄ることで<br className="md:hidden" />
               一人ではできなかったことが、<br className="md:hidden" />
