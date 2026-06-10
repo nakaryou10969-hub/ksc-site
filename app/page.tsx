@@ -166,11 +166,13 @@ export default async function Home() {
       {/* 役割セクション */}
       <section id="roles" style={{ backgroundColor: "#E3E0DA" }}>
         <div className="pt-0 pb-24 md:py-24 px-8">
+          {/* こんな人たちを募集しています：役割を持って関わると左端を揃える */}
+          <div className="max-w-7xl mx-auto">
+            <RevealSection>
+              <h2>こんな人たちを<br className="md:hidden" />募集しています</h2>
+            </RevealSection>
+          </div>
         <div className="max-w-[1440px] mx-auto px-6 lg:px-[117px]">
-          {/* スマホのみ：神スタ内の役割 見出し → 削除済み */}
-          <RevealSection>
-            <h1 style={{ paddingLeft: "0" }}>こんな人たちを<br className="md:hidden" />募集しています</h1>
-          </RevealSection>
 
           {/* 挑戦者 */}
           <div className="mb-20">

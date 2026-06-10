@@ -22,10 +22,10 @@ export default function Header() {
         </Link>
 
         {/* セパレーター */}
-        <div className="hidden lg:block" style={{ width: "1px", backgroundColor: "#3B3C3E", margin: "16px 40px", alignSelf: "stretch" }} />
+        <div className="hidden min-[1100px]:block" style={{ width: "1px", backgroundColor: "#3B3C3E", margin: "16px 40px", alignSelf: "stretch" }} />
 
         {/* デスクトップナビ */}
-        <nav className="hidden lg:flex items-center justify-end gap-6 xl:gap-8 text-sm flex-1">
+        <nav className="hidden min-[1100px]:flex items-center justify-end gap-6 xl:gap-8 text-sm flex-1">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -40,7 +40,7 @@ export default function Header() {
 
         {/* ハンバーガーメニュー（モバイル） */}
         <button
-          className="lg:hidden ml-auto p-2 relative w-8 h-8 flex items-center justify-center"
+          className="min-[1100px]:hidden ml-auto p-2 relative w-8 h-8 flex items-center justify-center"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="メニューを開く"
         >
@@ -70,7 +70,7 @@ export default function Header() {
 
       {/* モバイルメニュー */}
       {menuOpen && (
-        <nav className="lg:hidden border-t px-6 py-6 flex flex-col gap-5 text-sm" style={{ backgroundColor: "#E3E0DA", borderColor: "#3B3C3E" }}>
+        <nav className="min-[1100px]:hidden border-t px-6 py-6 flex flex-col gap-5 text-sm" style={{ backgroundColor: "#E3E0DA", borderColor: "#3B3C3E" }}>
           {navItems.map((item) => (
             <Link
               key={item.href}
