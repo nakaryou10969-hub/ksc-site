@@ -190,7 +190,7 @@ export default async function Home() {
             {/* 挑戦者カード PC用（md以上） */}
             <RevealSection>
               <div
-                className="relative w-[96%] mx-auto rounded-sm overflow-hidden hidden md:flex flex-row items-stretch justify-start pl-[3%]"
+                className="relative w-[96%] mx-auto rounded-sm overflow-hidden hidden lg:flex flex-row items-stretch justify-start pl-[3%]"
                 style={{ border: "2px solid #001597", minHeight: "clamp(120px, 15vw, 220px)", backgroundColor: "#ffffff" }}
               >
                 {/* 左：画像エリア */}
@@ -211,7 +211,7 @@ export default async function Home() {
             </RevealSection>
 
             {/* 挑戦者カード スマホ用（md未満） */}
-            <div className="md:hidden w-[90%] mx-auto">
+            <div className="lg:hidden w-[90%] mx-auto">
               <MemberCardMobile
                 imageSrc="/images/common/challenger-1.png"
                 nameSrc="/images/common/challenger-name.png"
