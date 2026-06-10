@@ -196,7 +196,7 @@ export default async function Home() {
                 {/* 左：画像エリア */}
                 <div className="relative shrink-0" style={{ width: "32%", minHeight: "clamp(120px, 15vw, 220px)" }}>
                   <div className="absolute inset-0">
-                    <Image src="/images/common/challenger-1.png" alt="挑戦者" fill className="object-contain object-center" />
+                    <Image src="/images/common/challenger-mobile.png" alt="挑戦者" fill className="object-contain object-center" />
                   </div>
                 </div>
                 {/* 右：テキストエリア */}
@@ -213,7 +213,7 @@ export default async function Home() {
             {/* 挑戦者カード スマホ用（md未満） */}
             <div className="lg:hidden w-[90%] mx-auto">
               <MemberCardMobile
-                imageSrc="/images/common/challenger-1.png"
+                imageSrc="/images/common/challenger-mobile.png"
                 nameSrc="/images/common/challenger-name.png"
                 alt="挑戦者"
                 borderColor="#001597"
