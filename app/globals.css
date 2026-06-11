@@ -116,7 +116,7 @@ main p {
 
 /* h2-banner：全幅ダークグレー背景帯・白文字（PC/スマホ共通） */
 main h2.h2-banner {
-  font-size: clamp(20px, 3vw, 28px);
+  font-size: 40px;
   line-height: 1.4;
   color: #ffffff;
   background-color: #3B3C3E;
