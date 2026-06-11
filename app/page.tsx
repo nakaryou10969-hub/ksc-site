@@ -91,7 +91,7 @@ export default async function Home() {
 
       {/* KSCとはセクション */}
       <section id="about" style={{ backgroundColor: "#E3E0DA" }}>
-        <div className="pt-0 pb-8 md:pt-12 md:pb-24 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
+        <div className="pt-0 pb-8 md:pt-2 md:pb-16 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
         <RevealSection>
           <h2 className="h2-banner">KANDA<br className="md:hidden" />Startup<br className="md:hidden" />Commons とは</h2>
           <h3 className="no-marker mt-4" style={{ color: "#3B3C3E" }}>社会課題から、<br className="md:hidden" />次世代の豊かさへ</h3>
@@ -128,7 +128,7 @@ export default async function Home() {
 
       {/* 役割を持って持ち寄るセクション */}
       <section style={{ backgroundColor: "#EBE8E2" }}>
-        <div className="pt-8 pb-8 md:py-24 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
+        <div className="pt-8 pb-8 md:py-16 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
           <RevealSection delay="reveal-delay-2" className="space-y-6 leading-relaxed">
             <h3 className="no-marker">役割を持って関わる</h3>
             <p>
@@ -165,7 +165,7 @@ export default async function Home() {
 
       {/* 役割セクション */}
       <section id="roles" style={{ backgroundColor: "#E3E0DA" }}>
-        <div className="pt-0 pb-24 md:py-24 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
+        <div className="pt-0 pb-24 md:py-16 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
           {/* こんな人たちを募集しています */}
           <div>
             <RevealSection>
@@ -351,7 +351,7 @@ export default async function Home() {
 
       {/* 過去のイベント実績セクション */}
       <section id="openday" style={{ backgroundColor: "#EBE8E2" }}>
-        <div className="pt-8 pb-8 md:py-24 md:pb-24 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
+        <div className="pt-8 pb-8 md:py-16 md:pb-16 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
         <RevealSection>
           <h2 className="h2-banner">過去のイベント</h2>
           <p>
@@ -431,7 +431,7 @@ export default async function Home() {
 
       {/* お問い合わせセクション */}
       <section id="contact" style={{ backgroundColor: "#E3E0DA" }}>
-        <div className="pt-4 pb-24 md:py-24 px-8 max-w-3xl mx-auto">
+        <div className="pt-4 pb-24 md:py-16 px-8 max-w-3xl mx-auto">
           <RevealSection>
             <h2 className="h2-banner">お問い合わせ</h2>
           </RevealSection>
