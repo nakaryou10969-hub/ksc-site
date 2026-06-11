@@ -91,7 +91,7 @@ export default async function Home() {
 
       {/* KSCとはセクション */}
       <section id="about" style={{ backgroundColor: "#E3E0DA" }}>
-        <div className="pt-0 pb-8 md:pt-12 md:pb-24 px-8 max-w-7xl mx-auto">
+        <div className="pt-0 pb-8 md:pt-12 md:pb-24 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
         <RevealSection>
           <h2 className="h2-banner">KANDA<br className="md:hidden" />Startup<br className="md:hidden" />Commons とは</h2>
           <h3 className="no-marker mt-4" style={{ color: "#3B3C3E" }}>社会課題から、<br className="md:hidden" />次世代の豊かさへ</h3>
@@ -128,7 +128,7 @@ export default async function Home() {
 
       {/* 役割を持って持ち寄るセクション */}
       <section style={{ backgroundColor: "#EBE8E2" }}>
-        <div className="pt-8 pb-8 md:py-24 px-8 max-w-7xl mx-auto">
+        <div className="pt-8 pb-8 md:py-24 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
           <RevealSection delay="reveal-delay-2" className="space-y-6 leading-relaxed">
             <h3 className="no-marker">役割を持って関わる</h3>
             <p>
@@ -165,14 +165,13 @@ export default async function Home() {
 
       {/* 役割セクション */}
       <section id="roles" style={{ backgroundColor: "#E3E0DA" }}>
-        <div className="pt-0 pb-24 md:py-24 px-8">
-          {/* こんな人たちを募集しています：役割を持って関わると左端を揃える */}
-          <div className="max-w-7xl mx-auto">
+        <div className="pt-0 pb-24 md:py-24 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
+          {/* こんな人たちを募集しています */}
+          <div>
             <RevealSection>
               <h2>こんな人たちを<br className="md:hidden" />募集しています</h2>
             </RevealSection>
           </div>
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-[117px]">
 
           {/* 挑戦者 */}
           <div className="mb-20">
@@ -346,12 +345,11 @@ export default async function Home() {
             </div>
           </div>
         </div>
-        </div>
       </section>
 
       {/* 過去のイベント実績セクション */}
       <section id="openday" style={{ backgroundColor: "#EBE8E2" }}>
-        <div className="pt-8 pb-8 md:py-24 md:pb-24 px-8 max-w-7xl mx-auto">
+        <div className="pt-8 pb-8 md:py-24 md:pb-24 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
         <RevealSection>
           <h2 style={{ color: "#3B3C3E" }}>過去のイベント</h2>
           <p>
