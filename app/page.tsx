@@ -173,6 +173,8 @@ export default async function Home() {
             </RevealSection>
           </div>
 
+          <div style={{ height: "40px" }} />
+
           {/* 挑戦者 */}
           <div className="mb-20">
             <RevealSection>
