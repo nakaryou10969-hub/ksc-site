@@ -66,7 +66,7 @@ main h2 {
   font-size: 32px;
   line-height: 30px;
   color: var(--color-h2);
-  padding: 20px 12px;
+  padding: 40px 0;
 }
 
 /* h3: NotoSans JP Bold（DNP代替）, 28px, 行間30px, 色#585858, padding左右12px 上下12px, 左に■ */
@@ -76,7 +76,7 @@ main h3 {
   font-size: 28px;
   line-height: 30px;
   color: var(--color-h3);
-  padding: 12px 12px;
+  padding: 12px 20px;
   display: flex;
   align-items: center;
   gap: 8px;
