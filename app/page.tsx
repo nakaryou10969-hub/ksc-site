@@ -169,7 +169,7 @@ export default async function Home() {
           {/* こんな人たちを募集しています */}
           <div>
             <RevealSection>
-              <h2>こんな人たちを<br className="md:hidden" />募集しています</h2>
+              <h2 className="h2-banner">こんな人たちを<br className="md:hidden" />募集しています</h2>
             </RevealSection>
           </div>
 
@@ -351,7 +351,7 @@ export default async function Home() {
       <section id="openday" style={{ backgroundColor: "#EBE8E2" }}>
         <div className="pt-8 pb-8 md:py-24 md:pb-24 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
         <RevealSection>
-          <h2 style={{ color: "#3B3C3E" }}>過去のイベント</h2>
+          <h2 className="h2-banner">過去のイベント</h2>
           <p>
             多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
           </p>
@@ -431,7 +431,10 @@ export default async function Home() {
       <section id="contact" style={{ backgroundColor: "#E3E0DA" }}>
         <div className="pt-4 pb-24 md:py-24 px-8 max-w-3xl mx-auto">
           <RevealSection>
-            <h2>お問い合わせ</h2>
+            <h2 className="h2-banner">お問い合わせ</h2>
+          </RevealSection>
+          <RevealSection>
+            <p>皆様からのご連絡をお待ちしております</p>
           </RevealSection>
           <RevealSection>
             <ContactForm />
