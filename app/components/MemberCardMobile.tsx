@@ -73,7 +73,7 @@ export default function MemberCardMobile({
                 bottom: 0,
                 left: 0,
                 width: "50%",
-                height: "18%",
+                height: "22%",
                 backgroundColor: bgColor,
                 clipPath: "polygon(0 100%, 100% 100%, 0 0)",
               }}
@@ -85,7 +85,7 @@ export default function MemberCardMobile({
                 bottom: 0,
                 right: 0,
                 width: "50%",
-                height: "18%",
+                height: "22%",
                 backgroundColor: bgColor,
                 clipPath: "polygon(100% 100%, 0 100%, 100% 0)",
               }}
@@ -94,7 +94,7 @@ export default function MemberCardMobile({
             <div
               style={{
                 position: "absolute",
-                bottom: "6%",
+                bottom: "2%",
                 left: 0,
                 right: 0,
                 zIndex: 20,
