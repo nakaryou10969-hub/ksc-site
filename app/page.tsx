@@ -82,7 +82,7 @@ export default async function Home() {
           </div>
           <p
             className="mt-3 text-center font-bold tracking-widest"
-            style={{ color: "#ffffff", fontSize: "clamp(12px, 4vw, 20px)", letterSpacing: "0.1em", textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}
+            style={{ color: "#3B3C3E", fontSize: "clamp(12px, 4vw, 20px)", letterSpacing: "0.1em" }}
           >
             KANDA Startup Commons
           </p>
