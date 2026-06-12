@@ -1,4 +1,9 @@
+param(
+  [string]$Message = "update site"
+)
+
 Set-Location "C:\Users\nakar\site\ksc-site"
-git add app/components/ContactForm.tsx
-git commit -m "remove category dropdown from contact form"
+
+git add -A
+git commit -m $Message
 git push origin main

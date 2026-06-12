@@ -193,6 +193,19 @@ main h2.h2-banner {
   display: block;
 }
 
+.prose-content .ksc-half-right-figure {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  margin: 1.5em 0;
+}
+
+.prose-content .ksc-half-right-figure img.ksc-half-right-image {
+  width: min(var(--ksc-half-image-width, 50%), calc(100% - 20px));
+  max-width: calc(100% - 20px);
+  margin: 0;
+}
+
 .prose-content a {
   color: #374151;
   text-decoration: underline;

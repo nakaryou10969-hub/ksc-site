@@ -9,6 +9,79 @@ type Props = {
   params: Promise<{ id: string }>;
 };
 
+const COMPACT_IMAGE_EVENT_ID = "hwuj-4b16s";
+
+const compactImageTargets = [
+  { term: "パネルディスカッション", exact: true },
+  { term: "ちよだプラットフォームスクウェア運営" },
+  { term: "タクトピア株式会社" },
+  { term: "株式会社Sworkers" },
+  { term: "代表理事 平沢 純一" },
+  { term: "スゴシリョ" },
+  { term: "SenseDrive株式会社" },
+];
+
+function getTextContent(html: string) {
+  return html
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function appendClass(tag: string, className: string) {
+  if (tag.includes(className)) return tag;
+
+  if (/\sclass=/.test(tag)) {
+    return tag.replace(/\sclass=(["'])(.*?)\1/, ` class=$1$2 ${className}$1`);
+  }
+
+  return tag.replace(/>$/, ` class="${className}">`);
+}
+
+function addCompactImageStyle(imgTag: string) {
+  const widthMatch = imgTag.match(/\swidth=(["']?)(\d+)\1/);
+  const halfWidth = widthMatch ? Math.round(Number(widthMatch[2]) / 2) : undefined;
+  const imageClass = "ksc-half-right-image";
+  const nextTag = appendClass(imgTag, imageClass);
+
+  if (!halfWidth) return nextTag;
+
+  const customWidth = `--ksc-half-image-width: ${halfWidth}px`;
+  if (/\sstyle=/.test(nextTag)) {
+    return nextTag.replace(/\sstyle=(["'])(.*?)\1/, ` style=$1$2; ${customWidth}$1`);
+  }
+
+  return nextTag.replace(/>$/, ` style="${customWidth}">`);
+}
+
+function compactImagesBeforeTargets(html: string) {
+  const blockPattern =
+    /<figure[\s\S]*?<\/figure>|<h[1-6][\s\S]*?<\/h[1-6]>|<p[\s\S]*?<\/p>|<ul[\s\S]*?<\/ul>|<ol[\s\S]*?<\/ol>|<blockquote[\s\S]*?<\/blockquote>/g;
+  const blocks = html.match(blockPattern);
+  if (!blocks) return html;
+
+  const transformed = [...blocks];
+
+  for (let i = 1; i < transformed.length; i++) {
+    const text = getTextContent(blocks[i]);
+    const shouldCompact = compactImageTargets.some(({ term, exact }) =>
+      exact ? text === term : text.includes(term)
+    );
+
+    if (!shouldCompact || !/^<figure[\s\S]*<\/figure>$/.test(blocks[i - 1])) {
+      continue;
+    }
+
+    transformed[i - 1] = transformed[i - 1]
+      .replace(/^<figure\b([^>]*)>/, (tag) => appendClass(tag, "ksc-half-right-figure"))
+      .replace(/<img\b[^>]*>/, (tag) => addCompactImageStyle(tag));
+  }
+
+  let index = 0;
+  return html.replace(blockPattern, () => transformed[index++]);
+}
+
 export async function generateStaticParams() {
   try {
     const data = await client.getList<Event>({
@@ -57,6 +130,10 @@ export default async function EventDetail({ params }: Props) {
         day: "numeric",
       })
     : "";
+  const articleContent =
+    id === COMPACT_IMAGE_EVENT_ID && event!.content
+      ? compactImagesBeforeTargets(event!.content)
+      : event!.content;
 
   return (
     <main className="pt-[72px] lg:pt-[147px]">
@@ -104,10 +181,10 @@ export default async function EventDetail({ params }: Props) {
           )}
 
           {/* 本文 */}
-          {event!.content ? (
+          {articleContent ? (
             <div
               className="prose-content"
-              dangerouslySetInnerHTML={{ __html: event!.content }}
+              dangerouslySetInnerHTML={{ __html: articleContent }}
             />
           ) : (
             <p className="text-gray-400 text-sm">本文はまだ登録されていません。</p>
