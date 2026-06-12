@@ -195,8 +195,8 @@ main h2.h2-banner {
 
 .prose-content .ksc-half-right-figure {
   display: flex;
-  justify-content: flex-end;
-  padding-right: 20px;
+  justify-content: flex-start;
+  padding-left: 20px;
   margin: 1.5em 0;
 }
 
