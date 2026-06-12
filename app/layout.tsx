@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-const siteUrl = "https://d2o9pi7u09sdt1.cloudfront.net"; // TODO: 本番ドメインに変更
+const siteUrl = "https://www.kansta.jp";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
