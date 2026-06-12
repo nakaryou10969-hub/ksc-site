@@ -10,10 +10,10 @@ export default function Footer() {
             <p className="text-sm" style={{ color: "#D6D3CD" }}>神田から、次世代の豊かさへ</p>
           </div>
           <nav className="flex flex-col gap-3 text-sm" style={{ color: "#D6D3CD" }}>
-            <Link href="#about" className="hover:text-white transition-colors">KANDA Startup Commons とは</Link>
-            <Link href="#roles" className="hover:text-white transition-colors">メンバーについて</Link>
-            <Link href="#openday" className="hover:text-white transition-colors">過去のイベント</Link>
-            <Link href="#contact" className="hover:text-white transition-colors">お問い合わせ</Link>
+            <Link href="/#about" className="hover:text-white transition-colors">KANDA Startup Commons とは</Link>
+            <Link href="/#roles" className="hover:text-white transition-colors">メンバーについて</Link>
+            <Link href="/#openday" className="hover:text-white transition-colors">過去イベント</Link>
+            <Link href="/#contact" className="hover:text-white transition-colors">お問い合わせ</Link>
           </nav>
         </div>
         <div className="mt-10 pt-6 border-t text-center text-sm" style={{ borderColor: "#585858", color: "#767676" }}>

@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navItems = [
-  { label: "KANDA Startup Commons とは", href: "#about" },
-  { label: "メンバーについて", href: "#roles" },
-  { label: "過去イベント", href: "#openday" },
-  { label: "お問い合わせ", href: "#contact" },
+  { label: "KANDA Startup Commons とは", href: "/#about" },
+  { label: "メンバーについて", href: "/#roles" },
+  { label: "過去イベント", href: "/#openday" },
+  { label: "お問い合わせ", href: "/#contact" },
 ];
 
 export default function Header() {
@@ -16,15 +16,12 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: "#E3E0DA" }}>
       <div className="max-w-[1440px] mx-auto px-6 lg:px-[117px] h-[72px] flex items-center">
-        {/* ロゴ */}
         <Link href="/" className="shrink-0 font-bold text-base lg:text-2xl tracking-wide" style={{ color: "#3B3C3E" }}>
           KANDA startup Commons
         </Link>
 
-        {/* セパレーター */}
         <div className="hidden min-[1100px]:block" style={{ width: "1px", backgroundColor: "#3B3C3E", margin: "16px 40px", alignSelf: "stretch" }} />
 
-        {/* デスクトップナビ */}
         <nav className="hidden min-[1100px]:flex items-center justify-end gap-6 xl:gap-8 text-sm flex-1">
           {navItems.map((item) => (
             <Link
@@ -38,7 +35,6 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* ハンバーガーメニュー（モバイル） */}
         <button
           className="min-[1100px]:hidden ml-auto p-2 relative w-8 h-8 flex items-center justify-center"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -68,7 +64,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* モバイルメニュー */}
       {menuOpen && (
         <nav className="min-[1100px]:hidden border-t px-6 py-6 flex flex-col gap-5 text-sm" style={{ backgroundColor: "#E3E0DA", borderColor: "#3B3C3E" }}>
           {navItems.map((item) => (
