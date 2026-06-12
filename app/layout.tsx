@@ -40,6 +40,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className="h-full">
       <head>
+        <meta name="msvalidate.01" content="2ED68EDC3E76ABDE854DA926CDB3B280" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
