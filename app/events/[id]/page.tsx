@@ -10,6 +10,7 @@ type Props = {
 };
 
 const COMPACT_IMAGE_EVENT_ID = "hwuj-4b16s";
+const LEFT_ALIGNED_IMAGE_EVENT_ID = "xfhqw3p4sn-k";
 
 const compactImageTargets = [
   { term: "パネルディスカッション", exact: true },
@@ -19,6 +20,16 @@ const compactImageTargets = [
   { term: "代表理事 平沢 純一" },
   { term: "スゴシリョ" },
   { term: "SenseDrive株式会社" },
+];
+
+const leftAlignedImageTargets = [
+  { term: "株式会社Sworkers", startsWith: true },
+  { term: "MINDX株式会社", startsWith: true },
+  { term: "経営コンサル", startsWith: true },
+  { term: "富士リプロ株式会社", startsWith: true },
+  { term: "fabula 株式会社", startsWith: true },
+  { term: "株式会社三菱UFJ銀行", startsWith: true },
+  { term: "安田不動産株式会社", startsWith: true },
 ];
 
 function getTextContent(html: string) {
@@ -55,7 +66,11 @@ function addCompactImageStyle(imgTag: string) {
   return nextTag.replace(/>$/, ` style="${customWidth}">`);
 }
 
-function compactImagesBeforeTargets(html: string) {
+function transformImagesBeforeTargets(
+  html: string,
+  targets: { term: string; exact?: boolean; startsWith?: boolean }[],
+  transformFigure: (figure: string) => string
+) {
   const blockPattern =
     /<figure[\s\S]*?<\/figure>|<h[1-6][\s\S]*?<\/h[1-6]>|<p[\s\S]*?<\/p>|<ul[\s\S]*?<\/ul>|<ol[\s\S]*?<\/ol>|<blockquote[\s\S]*?<\/blockquote>/g;
   const blocks = html.match(blockPattern);
@@ -65,21 +80,35 @@ function compactImagesBeforeTargets(html: string) {
 
   for (let i = 1; i < transformed.length; i++) {
     const text = getTextContent(blocks[i]);
-    const shouldCompact = compactImageTargets.some(({ term, exact }) =>
-      exact ? text === term : text.includes(term)
+    const shouldTransform = targets.some(({ term, exact, startsWith }) =>
+      exact ? text === term : startsWith ? text.startsWith(term) : text.includes(term)
     );
 
-    if (!shouldCompact || !/^<figure[\s\S]*<\/figure>$/.test(blocks[i - 1])) {
+    if (!shouldTransform || !/^<figure[\s\S]*<\/figure>$/.test(blocks[i - 1])) {
       continue;
     }
 
-    transformed[i - 1] = transformed[i - 1]
-      .replace(/^<figure\b([^>]*)>/, (tag) => appendClass(tag, "ksc-half-right-figure"))
-      .replace(/<img\b[^>]*>/, (tag) => addCompactImageStyle(tag));
+    transformed[i - 1] = transformFigure(transformed[i - 1]);
   }
 
   let index = 0;
   return html.replace(blockPattern, () => transformed[index++]);
+}
+
+function compactImagesBeforeTargets(html: string) {
+  return transformImagesBeforeTargets(html, compactImageTargets, (figure) =>
+    figure
+      .replace(/^<figure\b([^>]*)>/, (tag) => appendClass(tag, "ksc-half-right-figure"))
+      .replace(/<img\b[^>]*>/, (tag) => addCompactImageStyle(tag))
+  );
+}
+
+function leftAlignImagesBeforeTargets(html: string) {
+  return transformImagesBeforeTargets(html, leftAlignedImageTargets, (figure) =>
+    figure
+      .replace(/^<figure\b([^>]*)>/, (tag) => appendClass(tag, "ksc-left-figure"))
+      .replace(/<img\b[^>]*>/, (tag) => appendClass(tag, "ksc-left-image"))
+  );
 }
 
 export async function generateStaticParams() {
@@ -130,10 +159,13 @@ export default async function EventDetail({ params }: Props) {
         day: "numeric",
       })
     : "";
-  const articleContent =
-    id === COMPACT_IMAGE_EVENT_ID && event!.content
-      ? compactImagesBeforeTargets(event!.content)
-      : event!.content;
+  let articleContent = event!.content;
+  if (id === COMPACT_IMAGE_EVENT_ID && articleContent) {
+    articleContent = compactImagesBeforeTargets(articleContent);
+  }
+  if (id === LEFT_ALIGNED_IMAGE_EVENT_ID && articleContent) {
+    articleContent = leftAlignImagesBeforeTargets(articleContent);
+  }
 
   return (
     <main className="pt-[72px] lg:pt-[147px]">
