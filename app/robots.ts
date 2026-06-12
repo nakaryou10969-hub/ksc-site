@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://www.kansta.jp";
+const siteUrl = "https://kansta.jp";
 
 export const dynamic = "force-static";
 
