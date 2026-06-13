@@ -14,8 +14,13 @@ export const metadata: Metadata = {
   description: "神田から、次世代の豊かさへ。スタートアップ・新規事業・社会課題への挑戦を支えるコミュニティ。",
   authors: [{ name: "KANDA Startup Commons" }],
   icons: {
-    icon: "/images/events/kansta-logo.png",
-    apple: "/images/events/kansta-logo.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     type: "website",
