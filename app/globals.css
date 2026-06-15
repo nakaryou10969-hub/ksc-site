@@ -99,12 +99,12 @@ main h3.no-marker {
   display: block;
 }
 
-/* p（本文）: NotoSans JP SemiBold, 16px（SP:15px）, 行間1, padding左右20px 上下12px */
+/* p（本文）: NotoSans JP SemiBold, 16px（SP:15px）, 行間1.2, padding左右20px 上下12px */
 main p {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 600;
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.2;
   margin: 0;
   margin-bottom: 0;
   padding: 12px 20px;

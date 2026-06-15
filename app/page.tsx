@@ -61,7 +61,7 @@ export default async function Home() {
       </section>
 
       {/* スマホ版ヒーロー */}
-      <section className="relative w-full md:hidden" style={{ aspectRatio: "1562/2605" }}>
+      <section className="relative w-full md:hidden" style={{ height: "500px" }}>
         <Image
           src="/images/events/phone_hero.png"
           alt="KANDA Startup Commons スマホヒーロー"
@@ -96,7 +96,6 @@ export default async function Home() {
           <h2 className="h2-banner">KANDA <br className="md:hidden" />Startup <br className="md:hidden" />Commons とは</h2>
           <h3 className="no-marker mt-4" style={{ color: "#3B3C3E" }}>社会課題から、<br className="md:hidden" />次世代の豊かさへ</h3>
         </RevealSection>
-        <div style={{ height: "1.5em" }} />
         <div className="grid grid-cols-1 gap-16 items-start">
           <RevealSection className="space-y-6 leading-relaxed text-left" style={{ color: "#3B3C3E" }}>
             <p>
