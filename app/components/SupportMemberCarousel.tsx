@@ -42,18 +42,6 @@ const members = [
       </>
     ),
   },
-  {
-    role: "助っ人団",
-    label: "助っ人団（盛り上げ隊）",
-    desc: (
-      <>
-        自らの持つスキルやプロダクト、アセットなどでコミュニティ運営を<br />
-        裏側から強く支えていただく方たち。<br />
-        あなたのテクノロジー・プロダクトが<br />
-        KANDA Startup Commonsの円滑な運営を支えます。
-      </>
-    ),
-  },
 ];
 
 export default function SupportMemberCarousel() {
