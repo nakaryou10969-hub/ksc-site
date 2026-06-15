@@ -66,7 +66,7 @@ main h2 {
   font-size: 36px;
   line-height: 30px;
   color: var(--color-h2);
-  padding: 40px 0;
+  padding: 20px 0 40px;
 }
 
 /* h3: NotoSans JP Bold（DNP代替）, 32px（SP:28px）, 行間30px, 色#585858, padding左右12px 上下12px, 左に■ */
@@ -116,7 +116,7 @@ main h2.h2-banner {
   line-height: 1.4;
   color: #ffffff;
   background-color: #3B3C3E;
-  padding: 20px 24px;
+  padding: 10px 24px 20px;
   /* section の横 padding を打ち消して全幅に */
   margin-left: -2rem;
   margin-right: -2rem;
