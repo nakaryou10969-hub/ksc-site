@@ -59,21 +59,21 @@ main h1 {
   margin: 0;
 }
 
-/* h2: NotoSans JP Bold（DNP代替）, 32px, 行間30px, 色#767676, padding左右12px 上下20px */
+/* h2: NotoSans JP Bold（DNP代替）, 36px（SP:26px）, 行間30px, 色#767676, padding左右12px 上下20px */
 main h2 {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 36px;
   line-height: 30px;
   color: var(--color-h2);
   padding: 40px 0;
 }
 
-/* h3: NotoSans JP Bold（DNP代替）, 28px, 行間30px, 色#585858, padding左右12px 上下12px, 左に■ */
+/* h3: NotoSans JP Bold（DNP代替）, 32px（SP:28px）, 行間30px, 色#585858, padding左右12px 上下12px, 左に■ */
 main h3 {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 32px;
   line-height: 30px;
   color: var(--color-h3);
   padding: 20px 12px;
@@ -99,26 +99,20 @@ main h3.no-marker {
   display: block;
 }
 
-/* p（本文）: NotoSans JP SemiBold, 16px（SP:15px）, 行間1.2, padding左右20px 上下12px */
+/* p（本文）: NotoSans JP SemiBold, 18px（SP:16px）, 行間1.8（SP:1.5）, padding左右20px 上下12px */
 main p {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 1.2;
+  font-size: 18px;
+  line-height: 1.8;
   margin: 0;
   margin-bottom: 0;
   padding: 12px 20px;
 }
 
-@media (max-width: 768px) {
-  main p {
-    font-size: 15px;
-  }
-}
-
 /* h2-banner：全幅ダークグレー背景帯・白文字（PC/スマホ共通） */
 main h2.h2-banner {
-  font-size: 40px;
+  font-size: 36px;
   line-height: 1.4;
   color: #ffffff;
   background-color: #3B3C3E;
@@ -127,6 +121,22 @@ main h2.h2-banner {
   margin-left: -2rem;
   margin-right: -2rem;
   width: calc(100% + 4rem);
+}
+
+@media (max-width: 768px) {
+  main h2,
+  main h2.h2-banner {
+    font-size: 26px;
+  }
+
+  main h3 {
+    font-size: 28px;
+  }
+
+  main p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 /* button: NotoSans JP Bold（DNP代替）, 22px, 背面#767676, 文字#FFFFFF, 左右44px 上下16px（文字に対して）, 行間なし, 中央揃え */

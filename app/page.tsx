@@ -93,32 +93,16 @@ export default async function Home() {
       <section id="about" style={{ backgroundColor: "#E3E0DA" }}>
         <div className="pt-0 pb-8 md:pt-16 md:pb-16 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
         <RevealSection>
-          <h2 className="h2-banner">KANDA <br className="md:hidden" />Startup <br className="md:hidden" />Commons とは</h2>
-          <h3 className="no-marker mt-4" style={{ color: "#3B3C3E" }}>社会課題から、<br className="md:hidden" />次世代の豊かさへ</h3>
+          <h2 className="h2-banner">KANDA Startup Commons とは</h2>
+          <h3 className="no-marker mt-4" style={{ color: "#3B3C3E" }}>社会課題から、次世代の豊かさへ</h3>
         </RevealSection>
         <div className="grid grid-cols-1 gap-16 items-start">
           <RevealSection className="space-y-6 leading-relaxed text-left" style={{ color: "#3B3C3E" }}>
             <p>
-              KANDA Startup Commons(通称"神スタ")<br className="md:hidden" />
-              が応援したいのは、<br />
-              一人ひとりから湧き上がる想いや<br className="md:hidden" />
-              社会課題の解決を出発点にしながら、<br />
-              その先にある次世代の豊かさを<br className="md:hidden" />
-              生み出そうとする挑戦です。
+              KANDA Startup Commons(通称&quot;神スタ&quot;)が応援したいのは、一人ひとりから湧き上がる想いや社会課題の解決を出発点にしながら、その先にある次世代の豊かさを生み出そうとする挑戦です。
             </p>
             <p>
-              「できなかったことを、できるようにする」<br className="md:hidden" />
-              だけでなく、<br />
-              「<span style={{ color: "#D94C0B" }}>すでにある価値を、もっと面白く、<br className="md:hidden" />もっと豊かにする</span>」。<br />
-              その両方に向き合い、<br className="md:hidden" />
-              事業として継続していく意志と<br className="md:hidden" />
-              可能性を持つ挑戦を、<br className="md:hidden" />
-              私たちは大切にしています。
-            </p>
-            <p>
-              社会性と事業性、<br className="md:hidden" />
-              理想と現実のあいだを行き来しながら、<br />
-              <span style={{ color: "#D94C0B" }}>試し、学び、前に進もうとする人たちが<br className="md:hidden" />集まる場を、神田からつくっていきます。</span>
+              「できなかったことを、できるようにする」だけでなく、「<span style={{ color: "#D94C0B" }}>すでにある価値を、もっと面白く、もっと豊かにする</span>」。その両方に向き合い、事業として継続していく意志と可能性を持つ挑戦を、私たちは大切にしています。
             </p>
           </RevealSection>
         </div>
@@ -204,8 +188,7 @@ export default async function Home() {
                 {/* 右：テキストエリア */}
                 <div className="flex flex-col justify-center px-4 py-6 flex-1">
                   <p className="leading-relaxed text-sm" style={{ color: "#C79500", lineHeight: "1.8" }}>
-                    自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。<br />
-                    KANDA Startup Commonsの主役であり、自らの意思で世界を変えようと挑み続ける、熱い起業家たちです。
+                    自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。KANDA Startup Commonsの主役であり、自らの意思で世界を変えようと挑み続ける、熱い起業家たちです。
                   </p>
                 </div>
               </div>
@@ -219,8 +202,7 @@ export default async function Home() {
                 borderColor="#001597"
               >
                 <p className="leading-relaxed text-[13px]" style={{ fontSize: "13px", lineHeight: "1.8", color: "#C79500", wordBreak: "keep-all", overflowWrap: "anywhere" }}>
-                  自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。<br />
-                  KANDA Startup Commonsの主役であり、自らの意思で世界を変えようと挑み続ける、熱い起業家たちです。
+                  自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。KANDA Startup Commonsの主役であり、自らの意思で世界を変えようと挑み続ける、熱い起業家たちです。
                 </p>
               </MemberCardMobile>            </div>
           </div>
@@ -316,7 +298,7 @@ export default async function Home() {
       <section id="openday" style={{ backgroundColor: "#EBE8E2" }}>
         <div className="pt-8 pb-8 md:py-16 md:pb-16 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
         <RevealSection>
-          <h2 className="h2-banner">過去のイベント</h2>
+          <h2 className="h2-banner">イベントの様子</h2>
           <p>
             多様なプレイヤーが気軽に集い、交流できる場として神田町でのイベントを定期的に開催しています。
           </p>
