@@ -115,32 +115,17 @@ export default async function Home() {
           <RevealSection delay="reveal-delay-2" className="space-y-6 leading-relaxed">
             <h3 className="no-marker">役割を持って関わる</h3>
             <p>
-              KANDA Startup Commonsは、<br className="md:hidden" />
-              参画する一人ひとりが、<br className="md:hidden" />
-              <span style={{ color: "#D94C0B" }}>自分なりの役割を持って関わることを</span><br className="md:hidden" />
-              大切にしています。
+              KANDA Startup Commonsは、参画する一人ひとりが、<span style={{ color: "#D94C0B" }}>自分なりの役割を持って関わることを</span>大切にしています。
             </p>
 
             <p>
-              持ち寄ることで<br className="md:hidden" />
-              一人ではできなかったことが、<br className="md:hidden" />
-              少しずつ動き出す。<br />
-              それぞれができることを<br className="md:hidden" />
-              少しずつ出し合えば、<br className="md:hidden" />
-              もっと大きな挑戦ができる。
+              持ち寄ることで一人ではできなかったことが、少しずつ動き出す。それぞれができることを少しずつ出し合えば、もっと大きな挑戦ができる。
             </p>
             <p>
-              支援する・される、民間・行政、<br className="md:hidden" />
-              住む人・働く人。<br className="md:hidden" />
-              そうした垣根をこえて、<br />
-              一人ひとりのゆるやかな参加を通じて、<br className="md:hidden" />
-              共に創り上げていく。
+              支援する・される、民間・行政、住む人・働く人。そうした垣根をこえて、一人ひとりのゆるやかな参加を通じて、共に創り上げていく。
             </p>
             <p>
-              このまちに、<br className="md:hidden" />
-              そんな豊かな「<span style={{ color: "#C79500" }}>共（Commons）</span>」の<br className="md:hidden" />
-              土壌を育んでいきたいと、<br className="md:hidden" />
-              私たちは考えています。
+              このまちに、そんな豊かな「<span style={{ color: "#C79500" }}>共（Commons）</span>」の土壌を育んでいきたいと、私たちは考えています。
             </p>
           </RevealSection>
         </div>
