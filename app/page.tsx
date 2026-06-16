@@ -231,7 +231,7 @@ export default async function Home() {
                   </p>
                 </MemberCardMobile>
               </div>
-              <p>参画パートナー(応援団)：・安田不動産株式会社  ・株式会社三菱UFJ銀行 ・株式会社髙木ビル</p>
+              <p>参画パートナー：安田不動産株式会社，株式会社三菱UFJ銀行，株式会社髙木ビル</p>
             </div>
 
             {/* 盛り上げ隊：画像左・テキスト右 */}
@@ -274,7 +274,7 @@ export default async function Home() {
                   </p>
                 </MemberCardMobile>
               </div>
-              <p>参画パートナー(盛り上げ隊)・田中英和 株式会社A+plus　・株式会社YOUTRUST　・平野雅丈 エイプラス</p>
+              <p>参画パートナー： 田中英和 株式会社A+plus，株式会社YOUTRUST，平野雅丈 エイプラス</p>
             </div>
           </div>
         </div>
