@@ -123,11 +123,7 @@ export default async function Home() {
 
             <p>
               持ち寄ることで一人ではできなかったことが、少しずつ動き出す。それぞれができることを少しずつ出し合えば、もっと大きな挑戦ができる。
-            </p>
-            <p>
               支援する・される、民間・行政、住む人・働く人。そうした垣根をこえて、一人ひとりのゆるやかな参加を通じて、共に創り上げていく。
-            </p>
-            <p>
               このまちに、そんな豊かな「<span style={{ color: "#D94C0B" }}>共（Commons）</span>」の土壌を育んでいきたいと、私たちは考えています。
             </p>
           </RevealSection>
@@ -175,7 +171,7 @@ export default async function Home() {
                 </div>
                 {/* 右：テキストエリア */}
                 <div className="flex flex-col justify-center px-4 py-6 flex-1">
-                  <p className="leading-relaxed text-sm" style={{ color: "#C79500", lineHeight: "1.8" }}>
+                  <p className="leading-relaxed text-sm" style={{ color: "#E3E0DA", lineHeight: "1.8" }}>
                     自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。KANDA Startup Commonsの主役であり、自らの意思で世界を変えようと挑み続ける、熱い起業家たちです。
                   </p>
                 </div>
@@ -189,7 +185,7 @@ export default async function Home() {
                 alt="挑戦者"
                 borderColor="#001597"
               >
-                <p className="leading-relaxed text-[13px]" style={{ fontSize: "13px", lineHeight: "1.8", color: "#C79500", wordBreak: "keep-all", overflowWrap: "anywhere" }}>
+                <p className="leading-relaxed text-[13px]" style={{ fontSize: "13px", lineHeight: "1.8", color: "#E3E0DA", wordBreak: "keep-all", overflowWrap: "anywhere" }}>
                   自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。KANDA Startup Commonsの主役であり、自らの意思で世界を変えようと挑み続ける、熱い起業家たちです。
                 </p>
               </MemberCardMobile>            </div>
@@ -235,6 +231,7 @@ export default async function Home() {
                   </p>
                 </MemberCardMobile>
               </div>
+              <p>参画パートナー(応援団)：・安田不動産株式会社  ・株式会社三菱UFJ銀行 ・株式会社髙木ビル</p>
             </div>
 
             {/* 盛り上げ隊：画像左・テキスト右 */}
@@ -277,6 +274,7 @@ export default async function Home() {
                   </p>
                 </MemberCardMobile>
               </div>
+              <p>参画パートナー(盛り上げ隊)・田中英和 株式会社A+plus　・株式会社YOUTRUST　・平野雅丈 エイプラス</p>
             </div>
           </div>
         </div>
@@ -301,8 +299,8 @@ export default async function Home() {
             href="https://peatix.com/group/16534116"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-10 py-4 text-base hover:opacity-70 transition-opacity"
-            style={{ backgroundColor: "#D94C0B", color: "#ffffff", borderRadius: "9999px" }}
+            className="inline-flex items-center justify-center text-base hover:opacity-70 transition-opacity"
+            style={{ width: "395px", height: "65px", backgroundColor: "#D94C0B", color: "#ffffff", borderRadius: "9999px" }}
           >
             最新のイベント情報を確認する
           </a>
@@ -374,7 +372,7 @@ export default async function Home() {
 
             <div>
               <h3>
-                <a href="https://novolba.com/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                <a href="https://novolba.com/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
                   株式会社NovolBa
                 </a>
               </h3>
@@ -385,7 +383,7 @@ export default async function Home() {
 
             <div>
               <h3>
-                <a href="https://www.yamori.jp/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                <a href="https://www.yamori.jp/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
                   プラットフォームサービス株式会社
                 </a>
               </h3>
@@ -396,7 +394,7 @@ export default async function Home() {
 
             <div>
               <h3>
-                <a href="https://sworkers.jp/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                <a href="https://sworkers.jp/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
                   株式会社Sworkers
                 </a>
               </h3>
