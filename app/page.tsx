@@ -104,6 +104,9 @@ export default async function Home() {
             <p>
               「できなかったことを、できるようにする」だけでなく、「<span style={{ color: "#D94C0B" }}>すでにある価値を、もっと面白く、もっと豊かにする</span>」。その両方に向き合い、事業として継続していく意志と可能性を持つ挑戦を、私たちは大切にしています。
             </p>
+            <p>
+              社会性と事業性、理想と現実のあいだを行き来しながら、試し、学び、前に進もうとする人たちが集まる場を、神田からつくっていきます。
+            </p>
           </RevealSection>
         </div>
         </div>
@@ -125,7 +128,7 @@ export default async function Home() {
               支援する・される、民間・行政、住む人・働く人。そうした垣根をこえて、一人ひとりのゆるやかな参加を通じて、共に創り上げていく。
             </p>
             <p>
-              このまちに、そんな豊かな「<span style={{ color: "#C79500" }}>共（Commons）</span>」の土壌を育んでいきたいと、私たちは考えています。
+              このまちに、そんな豊かな「<span style={{ color: "#D94C0B" }}>共（Commons）</span>」の土壌を育んでいきたいと、私たちは考えています。
             </p>
           </RevealSection>
         </div>
@@ -137,7 +140,7 @@ export default async function Home() {
           {/* こんな人たちを募集しています */}
           <div>
             <RevealSection>
-              <h2 className="h2-banner">こんな人たちを<br className="md:hidden" />募集しています</h2>
+              <h2 className="h2-banner">こんな人たちを募集しています</h2>
             </RevealSection>
           </div>
 
@@ -356,6 +359,77 @@ export default async function Home() {
           </a>
         </RevealSection>
         */}
+        </div>
+      </section>
+
+      {/* 運営主体セクション */}
+      <section style={{ backgroundColor: "#E3E0DA" }}>
+        <div className="pt-0 pb-8 md:pt-16 md:pb-16 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
+          <RevealSection>
+            <h2 className="h2-banner">運営主体</h2>
+          </RevealSection>
+
+          <RevealSection className="space-y-6 leading-relaxed text-left" style={{ color: "#3B3C3E" }}>
+            <p>KANDA Startup Commonsは主に以下3社が主体として実行委員会を運営しています。</p>
+
+            <div>
+              <h3>
+                <a href="https://novolba.com/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                  株式会社NovolBa
+                </a>
+              </h3>
+              <p>
+                株式会社NovolBa(昇る場）は、「挑戦者が輝く世界を創る」をミッションに、スタートアップが働きやすい場として家具サブスクや家具付きオフィスのサブスクを提供しています。また、スタートアップを様々な関係者と繋げるメディア運営、コミュニティ活動もしています。
+              </p>
+            </div>
+
+            <div>
+              <h3>
+                <a href="https://www.yamori.jp/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                  プラットフォームサービス株式会社
+                </a>
+              </h3>
+              <p>
+                「ちよだプラットフォームスクウェア」は、様々な世代と地域が共創しながら新たなビジネスや文化を生み出していくための拠点施設です。
+              </p>
+            </div>
+
+            <div>
+              <h3>
+                <a href="https://sworkers.jp/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                  株式会社Sworkers
+                </a>
+              </h3>
+              <p>
+                「スタートアップに挑む人を、ふやす」をビジョンに掲げ、スタートアップ・成長企業と挑戦する個人をつなぐ人材支援・女性起業家支援プログラムの提供。女性向けキャリアカンファレンスの運営を行っています。
+              </p>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* 参画パートナーセクション */}
+      <section style={{ backgroundColor: "#E3E0DA" }}>
+        <div className="pt-0 pb-8 md:pt-16 md:pb-16 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
+          <RevealSection>
+            <h2 className="h2-banner">参画パートナー</h2>
+          </RevealSection>
+
+          <RevealSection className="space-y-6 leading-relaxed text-left" style={{ color: "#3B3C3E" }}>
+            <div>
+              <h3>応援団</h3>
+              <p>・安田不動産株式会社</p>
+              <p>・株式会社三菱UFJ銀行</p>
+              <p>・株式会社髙木ビル</p>
+            </div>
+
+            <div>
+              <h3>盛り上げ隊</h3>
+              <p>・田中英和 株式会社A+plus</p>
+              <p>・株式会社YOUTRUST</p>
+              <p>・平野雅丈 エイプラス</p>
+            </div>
+          </RevealSection>
         </div>
       </section>
 
