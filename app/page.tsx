@@ -171,7 +171,7 @@ export default async function Home() {
                 </div>
                 {/* 右：テキストエリア */}
                 <div className="flex flex-col justify-center px-4 py-6 flex-1">
-                  <p className="leading-relaxed text-sm" style={{ color: "#E3E0DA", lineHeight: "1.8" }}>
+                  <p className="leading-relaxed text-sm" style={{ color: "#3B3C3E", lineHeight: "1.8" }}>
                     自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。KANDA Startup Commonsの主役であり、自らの意思で世界を変えようと挑み続ける、熱い起業家たちです。
                   </p>
                 </div>
@@ -185,7 +185,7 @@ export default async function Home() {
                 alt="挑戦者"
                 borderColor="#001597"
               >
-                <p className="leading-relaxed text-[13px]" style={{ fontSize: "13px", lineHeight: "1.8", color: "#E3E0DA", wordBreak: "keep-all", overflowWrap: "anywhere" }}>
+                <p className="leading-relaxed text-[13px]" style={{ fontSize: "13px", lineHeight: "1.8", color: "#3B3C3E", wordBreak: "keep-all", overflowWrap: "anywhere" }}>
                   自ら旗を掲げて起業し、情熱をもって事業を推進するチャレンジャー。KANDA Startup Commonsの主役であり、自らの意思で世界を変えようと挑み続ける、熱い起業家たちです。
                 </p>
               </MemberCardMobile>            </div>
@@ -401,31 +401,6 @@ export default async function Home() {
               <p>
                 「スタートアップに挑む人を、ふやす」をビジョンに掲げ、スタートアップ・成長企業と挑戦する個人をつなぐ人材支援・女性起業家支援プログラムの提供。女性向けキャリアカンファレンスの運営を行っています。
               </p>
-            </div>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* 参画パートナーセクション */}
-      <section style={{ backgroundColor: "#E3E0DA" }}>
-        <div className="pt-0 pb-4 md:pt-16 md:pb-16 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
-          <RevealSection>
-            <h2 className="h2-banner">参画パートナー</h2>
-          </RevealSection>
-
-          <RevealSection className="space-y-6 leading-relaxed text-left" style={{ color: "#3B3C3E" }}>
-            <div>
-              <h3>応援団</h3>
-              <p>・安田不動産株式会社</p>
-              <p>・株式会社三菱UFJ銀行</p>
-              <p>・株式会社髙木ビル</p>
-            </div>
-
-            <div>
-              <h3>盛り上げ隊</h3>
-              <p>・田中英和 株式会社A+plus</p>
-              <p>・株式会社YOUTRUST</p>
-              <p>・平野雅丈 エイプラス</p>
             </div>
           </RevealSection>
         </div>
