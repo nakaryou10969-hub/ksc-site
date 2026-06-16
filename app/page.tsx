@@ -435,16 +435,18 @@ export default async function Home() {
 
       {/* お問い合わせセクション */}
       <section id="contact" style={{ backgroundColor: "#E3E0DA" }}>
-        <div className="pt-2 pb-12 md:py-16 px-8 max-w-3xl mx-auto">
+        <div className="pt-2 pb-12 md:py-16 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
           <RevealSection>
             <h2 className="h2-banner">お問い合わせ</h2>
           </RevealSection>
-          <RevealSection>
-            <p>皆様からのご連絡をお待ちしております</p>
-          </RevealSection>
-          <RevealSection>
-            <ContactForm />
-          </RevealSection>
+          <div className="max-w-3xl mx-auto">
+            <RevealSection>
+              <p>皆様からのご連絡をお待ちしております</p>
+            </RevealSection>
+            <RevealSection>
+              <ContactForm />
+            </RevealSection>
+          </div>
         </div>
       </section>
     </main>
