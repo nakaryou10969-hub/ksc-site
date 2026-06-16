@@ -7,6 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           <div>
             <p className="font-bold text-lg mb-2">KANDA Startup Commons</p>
+            <p className="text-sm mb-3" style={{ color: "#D6D3CD" }}>神田から、次世代の豊かさへ</p>
             <div className="flex items-center gap-3 mb-3" style={{ color: "#D6D3CD" }}>
               <a
                 href="https://www.instagram.com/kanda.startup_commons/"
@@ -33,7 +34,6 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
-            <p className="text-sm" style={{ color: "#D6D3CD" }}>神田から、次世代の豊かさへ</p>
           </div>
           <nav className="flex flex-col gap-3 text-sm" style={{ color: "#D6D3CD" }}>
             <Link href="/#about" className="hover:text-white transition-colors">KANDA Startup Commons とは</Link>
