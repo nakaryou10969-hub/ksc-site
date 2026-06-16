@@ -114,7 +114,7 @@ export default async function Home() {
 
       {/* 役割を持って持ち寄るセクション */}
       <section style={{ backgroundColor: "#EBE8E2" }}>
-        <div className="pt-8 pb-8 md:py-16 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
+        <div className="pt-4 pb-4 md:py-16 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
           <RevealSection delay="reveal-delay-2" className="space-y-6 leading-relaxed">
             <h3 className="no-marker">役割を持って関わる</h3>
             <p>
@@ -364,7 +364,7 @@ export default async function Home() {
 
       {/* 運営主体セクション */}
       <section style={{ backgroundColor: "#E3E0DA" }}>
-        <div className="pt-0 pb-8 md:pt-16 md:pb-16 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
+        <div className="pt-0 pb-4 md:pt-16 md:pb-16 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
           <RevealSection>
             <h2 className="h2-banner">運営主体</h2>
           </RevealSection>
@@ -410,7 +410,7 @@ export default async function Home() {
 
       {/* 参画パートナーセクション */}
       <section style={{ backgroundColor: "#E3E0DA" }}>
-        <div className="pt-0 pb-8 md:pt-16 md:pb-16 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
+        <div className="pt-0 pb-4 md:pt-16 md:pb-16 max-w-[1440px] mx-auto px-6 lg:px-[117px]">
           <RevealSection>
             <h2 className="h2-banner">参画パートナー</h2>
           </RevealSection>
@@ -435,7 +435,7 @@ export default async function Home() {
 
       {/* お問い合わせセクション */}
       <section id="contact" style={{ backgroundColor: "#E3E0DA" }}>
-        <div className="pt-4 pb-24 md:py-16 px-8 max-w-3xl mx-auto">
+        <div className="pt-2 pb-12 md:py-16 px-8 max-w-3xl mx-auto">
           <RevealSection>
             <h2 className="h2-banner">お問い合わせ</h2>
           </RevealSection>
