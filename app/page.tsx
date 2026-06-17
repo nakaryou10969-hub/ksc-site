@@ -371,7 +371,7 @@ export default async function Home() {
             <p>KANDA Startup Commonsは主に以下3社が主体として実行委員会を運営しています。</p>
 
             <div>
-              <h3>
+              <h3 className="no-marker">
                 <a href="https://novolba.com/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
                   株式会社NovolBa
                 </a>
@@ -382,7 +382,7 @@ export default async function Home() {
             </div>
 
             <div>
-              <h3>
+              <h3 className="no-marker">
                 <a href="https://www.yamori.jp/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
                   プラットフォームサービス株式会社
                 </a>
@@ -393,7 +393,7 @@ export default async function Home() {
             </div>
 
             <div>
-              <h3>
+              <h3 className="no-marker">
                 <a href="https://sworkers.jp/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
                   株式会社Sworkers
                 </a>
