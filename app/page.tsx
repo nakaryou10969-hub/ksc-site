@@ -231,7 +231,20 @@ export default async function Home() {
                   </p>
                 </MemberCardMobile>
               </div>
-              <p>参画パートナー：安田不動産株式会社，株式会社三菱UFJ銀行，株式会社髙木ビル</p>
+              <p>
+                参画パートナー：
+                <a href="https://www.yasuda-re.co.jp/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
+                  安田不動産株式会社
+                </a>
+                ，
+                <a href="https://www.bk.mufg.jp/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
+                  株式会社三菱UFJ銀行
+                </a>
+                ，
+                <a href="https://t-bldg.jp/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
+                  株式会社髙木ビル
+                </a>
+              </p>
             </div>
 
             {/* 盛り上げ隊：画像左・テキスト右 */}
@@ -274,7 +287,20 @@ export default async function Home() {
                   </p>
                 </MemberCardMobile>
               </div>
-              <p>参画パートナー： 田中英和 株式会社A+plus，株式会社YOUTRUST，平野雅丈 エイプラス</p>
+              <p>
+                参画パートナー： 田中英和{" "}
+                <a href="https://aplus-inc.co.jp/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
+                  株式会社A+plus
+                </a>
+                ，
+                <a href="https://youtrust.co.jp/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
+                  株式会社YOUTRUST
+                </a>
+                ，平野雅丈{" "}
+                <a href="https://a-plus.hp.peraichi.com/world" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
+                  エイプラス
+                </a>
+              </p>
             </div>
           </div>
         </div>
