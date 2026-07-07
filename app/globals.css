@@ -293,3 +293,23 @@ main h2.h2-banner {
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
+
+.event-report-track {
+  transform: translateX(calc(var(--event-report-index, 0) * -100%));
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.event-report-slide {
+  flex: 0 0 100%;
+}
+
+@media (min-width: 530px) {
+  .event-report-track {
+    transform: translateX(calc(var(--event-report-index, 0) * -50%));
+  }
+
+  .event-report-slide {
+    flex-basis: 50%;
+  }
+}
