@@ -365,8 +365,8 @@ export default async function Home() {
             href="https://peatix.com/group/16534116"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center text-base hover:opacity-70 transition-opacity"
-            style={{ width: "395px", height: "65px", backgroundColor: "#D94C0B", color: "#ffffff", borderRadius: "9999px" }}
+            className="inline-flex w-full max-w-[395px] min-h-[56px] md:min-h-[65px] items-center justify-center px-6 py-4 text-center text-sm md:text-base leading-snug hover:opacity-70 transition-opacity"
+            style={{ backgroundColor: "#D94C0B", color: "#ffffff", borderRadius: "9999px" }}
           >
             最新のイベント情報を確認する
           </a>
