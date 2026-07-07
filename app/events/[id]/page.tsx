@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { renderArticleContent } from "@/libs/renderArticleContent";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -159,7 +160,7 @@ export default async function EventDetail({ params }: Props) {
         day: "numeric",
       })
     : "";
-  let articleContent = event!.content;
+  let articleContent = event!.content ? renderArticleContent(event!.content) : event!.content;
   if (id === COMPACT_IMAGE_EVENT_ID && articleContent) {
     articleContent = compactImagesBeforeTargets(articleContent);
   }
