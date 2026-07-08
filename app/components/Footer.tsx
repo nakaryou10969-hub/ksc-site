@@ -39,6 +39,7 @@ export default function Footer() {
             <Link href="/#about" className="hover:text-white transition-colors">KANDA Startup Commons とは</Link>
             <Link href="/#roles" className="hover:text-white transition-colors">メンバーについて</Link>
             <Link href="/#openday" className="hover:text-white transition-colors">過去イベント</Link>
+            <Link href="/#topics" className="hover:text-white transition-colors">トピック</Link>
             <Link href="/#contact" className="hover:text-white transition-colors">お問い合わせ</Link>
           </nav>
         </div>
