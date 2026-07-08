@@ -1,4 +1,10 @@
-import Link from "next/link";
+const footerNavItems = [
+  { label: "KANDA Startup Commons とは", href: "/#about" },
+  { label: "メンバーについて", href: "/#roles" },
+  { label: "過去イベント", href: "/#openday" },
+  { label: "トピック", href: "/#topics" },
+  { label: "お問い合わせ", href: "/#contact" },
+];
 
 export default function Footer() {
   return (
@@ -35,18 +41,44 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <nav className="flex flex-col gap-3 text-sm" style={{ color: "#D6D3CD" }}>
-            <Link href="/#about" className="hover:text-white transition-colors">KANDA Startup Commons とは</Link>
-            <Link href="/#roles" className="hover:text-white transition-colors">メンバーについて</Link>
-            <Link href="/#openday" className="hover:text-white transition-colors">過去イベント</Link>
-            <Link href="/#topics" className="hover:text-white transition-colors">トピック</Link>
-            <Link href="/#contact" className="hover:text-white transition-colors">お問い合わせ</Link>
+          <nav data-ksc-footer-nav className="flex flex-col gap-3 text-sm" style={{ color: "#D6D3CD" }}>
+            {footerNavItems.map((item) => (
+              <a key={item.href} href={item.href} className="hover:text-white transition-colors">
+                {item.label}
+              </a>
+            ))}
           </nav>
         </div>
         <div className="mt-10 pt-6 border-t text-center text-sm" style={{ borderColor: "#585858", color: "#767676" }}>
           <p>&copy; {new Date().getFullYear()} KANDA Startup Commons. All rights reserved.</p>
         </div>
       </div>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+(() => {
+  if (window.__kscFooterNavBound) return;
+  window.__kscFooterNavBound = true;
+
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("[data-ksc-footer-nav] a[href^='/#']");
+    if (!link) return;
+
+    const hash = link.getAttribute("href").slice(1);
+    const isTopPage = window.location.pathname === "/" || window.location.pathname === "";
+    if (!isTopPage) return;
+
+    const target = document.querySelector(hash);
+    if (!target) return;
+
+    event.preventDefault();
+    history.pushState(null, "", hash);
+    target.scrollIntoView({ block: "start" });
+  });
+})();
+          `,
+        }}
+      />
     </footer>
   );
 }
