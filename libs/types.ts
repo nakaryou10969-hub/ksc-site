@@ -23,3 +23,15 @@ export type EventListResponse = {
   offset: number;
   limit: number;
 };
+
+export type Topic = {
+  id: string;
+  title?: string;
+  タイトル?: string;
+  link?: string;
+  リンク?: string;
+  date?: string;
+  publishedAt?: string;
+  revisedAt?: string;
+  createdAt?: string;
+};

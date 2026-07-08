@@ -1,17 +1,32 @@
 import { client } from "@/libs/client";
-import { Event } from "@/libs/types";
+import { Event, Topic } from "@/libs/types";
 import ContactForm from "./components/ContactForm";
 import EventSlider from "./components/EventSlider";
 import EventArticleCarousel from "./components/EventArticleCarousel";
+import TopicSection from "./components/TopicSection";
 import RevealSection from "./components/RevealSection";
 import Image from "next/image";
 import MemberCardMobile from "./components/MemberCardMobile";
+
+const TOPIC_ENDPOINT = process.env.MICROCMS_TOPIC_ENDPOINT ?? "news";
 
 async function getLatestEvents(): Promise<Event[]> {
   try {
     const data = await client.getList<Event>({
       endpoint: "blog",
       queries: { limit: 12, orders: "-date", fields: "id,title,date,eyecatch" },
+    });
+    return data.contents;
+  } catch {
+    return [];
+  }
+}
+
+async function getLatestTopics(): Promise<Topic[]> {
+  try {
+    const data = await client.getList<Topic>({
+      endpoint: TOPIC_ENDPOINT,
+      queries: { limit: 10, orders: "-publishedAt" },
     });
     return data.contents;
   } catch {
@@ -48,6 +63,7 @@ function formatEventDate(date: string) {
 
 export default async function Home() {
   const events = await getLatestEvents();
+  const topics = await getLatestTopics();
   const articleItems =
     events.length > 0
       ? events.map((event) => ({
@@ -388,6 +404,8 @@ export default async function Home() {
         */}
         </div>
       </section>
+
+      <TopicSection topics={topics} />
 
       {/* 運営主体セクション */}
       <section style={{ backgroundColor: "#E3E0DA" }}>
