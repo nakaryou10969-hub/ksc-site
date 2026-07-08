@@ -41,6 +41,18 @@ function getTopicLink(topic: Topic) {
   return topic.link ?? topic.リンク ?? "";
 }
 
+function getTopicPublishedDate(topic: Topic) {
+  return (
+    topic.公開日時 ??
+    topic.publishedDate ??
+    topic.publishDate ??
+    topic.date ??
+    topic.publishedAt ??
+    topic.revisedAt ??
+    topic.createdAt
+  );
+}
+
 function toTopicItem(topic: Topic): TopicItem | null {
   const title = getTopicTitle(topic).trim();
   const href = normalizeHref(getTopicLink(topic));
@@ -51,7 +63,7 @@ function toTopicItem(topic: Topic): TopicItem | null {
     id: topic.id,
     title,
     href,
-    date: formatTopicDate(topic.publishedAt ?? topic.date ?? topic.revisedAt ?? topic.createdAt),
+    date: formatTopicDate(getTopicPublishedDate(topic)),
     isPdf: /\.pdf($|[?#])/i.test(href),
   };
 }

@@ -30,6 +30,9 @@ export type Topic = {
   タイトル?: string;
   link?: string;
   リンク?: string;
+  公開日時?: string;
+  publishedDate?: string;
+  publishDate?: string;
   date?: string;
   publishedAt?: string;
   revisedAt?: string;
