@@ -99,6 +99,26 @@ main h3.no-marker {
   display: block;
 }
 
+.ksc-menu-line--top {
+  transform: translateY(-7px);
+}
+
+.ksc-menu-line--bottom {
+  transform: translateY(7px);
+}
+
+.ksc-menu-button[data-open] .ksc-menu-line--top {
+  transform: rotate(45deg);
+}
+
+.ksc-menu-button[data-open] .ksc-menu-line--middle {
+  opacity: 0;
+}
+
+.ksc-menu-button[data-open] .ksc-menu-line--bottom {
+  transform: rotate(-45deg);
+}
+
 .topic-panel {
   position: relative;
   border: 1px solid #c9c6bf;
