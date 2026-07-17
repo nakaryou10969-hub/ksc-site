@@ -343,17 +343,17 @@ export default async function Home() {
               </div>
               <RevealSection>
                 <p>
-                  参画パートナー： 田中英和{" "}
+                  参画パートナー：{" "}
                   <a href="https://aplus-inc.co.jp/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
-                    株式会社A+plus
+                    田中英和 株式会社A+plus
                   </a>
                   ，
                   <a href="https://youtrust.co.jp/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
                     株式会社YOUTRUST
                   </a>
-                  ，平野雅丈{" "}
+                  ，
                   <a href="https://a-plus.hp.peraichi.com/world" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
-                    エイプラス
+                    平野雅丈 エイプラス
                   </a>
                 </p>
               </RevealSection>
