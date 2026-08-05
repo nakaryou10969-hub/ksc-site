@@ -297,6 +297,10 @@ export default async function Home() {
                   <a href="https://t-bldg.jp/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
                     株式会社髙木ビル
                   </a>
+                  ，
+                  <a href="https://cbl-jp.com/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">
+                    Cross Border Learning株式会社
+                  </a>
                 </p>
               </RevealSection>
             </div>
