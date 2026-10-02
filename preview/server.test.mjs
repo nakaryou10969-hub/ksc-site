@@ -181,6 +181,44 @@ test("unpublished content and edits to published content use draftKey without ca
   assert.ok(!unpublished.text.includes(input.draftKey));
 });
 
+test("KSC blog schema-shaped drafts combine select tags, datetime and nullable image fields", async (t) => {
+  const base = {
+    id: input.contentId, title: "実スキーマの下書き", content: "<p>下書きの本文</p>",
+    slug: "MUST_NOT_BE_RETURNED",
+    createdAt: "2026-10-03T00:00:00.000Z", updatedAt: "2026-10-03T01:00:00.000Z",
+    publishedAt: null, revisedAt: "2026-10-03T01:00:00.000Z",
+  };
+  const image = { url: "https://images.microcms-assets.io/assets/test/schema.png", width: 1280, height: 720 };
+  const cases = [
+    { label: "empty tags, null date and image", tag: [], date: null, eyecatch: null },
+    { label: "single tag, datetime and image", tag: ["イベント"], date: "2026-10-01T00:00:00.000Z", eyecatch: image },
+    { label: "multiple tags, absent date and null image", tag: ["イベント", "交流会"], eyecatch: null },
+  ];
+  for (const example of cases) {
+    await t.test(example.label, async (subtest) => {
+      const { call, upstreamCalls } = await fixture(subtest, { upstream: (_req, res) => {
+        res.setHeader("Content-Type", "application/json");
+        res.end(JSON.stringify({ ...base, tag: example.tag, date: example.date, eyecatch: example.eyecatch }));
+      } });
+      const response = await call("/api/preview", { body: JSON.stringify({ ...input, endpoint: "blog" }) });
+      assert.equal(response.status, 200); privateHeaders(response);
+      const content = JSON.parse(response.text).content;
+      assert.deepEqual(content, {
+        id: base.id, title: base.title, content: base.content, tag: example.tag,
+        createdAt: base.createdAt, updatedAt: base.updatedAt, revisedAt: base.revisedAt,
+        ...(typeof example.date === "string" ? { date: example.date } : {}),
+        ...(example.eyecatch ? { eyecatch: example.eyecatch } : {}),
+      });
+      assert.equal(Object.hasOwn(content, "slug"), false);
+      assert.equal(Object.hasOwn(content, "summary"), false);
+      assert.equal(upstreamCalls.length, 2);
+      assert.equal(upstreamCalls[0].url.searchParams.get("fields"), "id");
+      assert.equal(upstreamCalls[1].url.searchParams.get("fields"), SITE.fields.join(","));
+      assert.ok(!response.text.includes("MUST_NOT_BE_RETURNED"));
+    });
+  }
+});
+
 test("each explicitly allowlisted endpoint works and other endpoints never reach upstream", async (t) => {
   const { call, upstreamCalls } = await fixture(t);
   for (const allowed of SITE.endpoints) {
