@@ -1,5 +1,22 @@
 # microCMS プレビューの作業仕様
 
+## 2026-10-03 KSCプレビューの利用可能化
+
+NovolBa WITHの実表示成功後、ユーザーはKSCにもプレビュー機能を実装するよう指示した。既存のKSC main・AWSプレビュー配備・microCMS設定を確認し、不足する部分だけを実装する。NovolBaで確認したRevisionId再読と安全な並行変更検査をKSCへ適用する。カテゴリ/著者の型はKSCの実スキーマを照合してから判断し、NovolBaのselect処理を無条件にコピーしない。
+
+- 追加ID・パスワードなし、記事ごとのdraftKeyで閲覧する既存方式を維持する。
+- support側GitHubを使用し、本番静的配備・公開デザイン・Vercel連携は変更しない。[skip ci]で変更不要な本番push配備を起動せず、検証済みの専用プレビュー配備だけ実行する。
+- ローカル再現・テスト・独立レビュー・リモート内容照合を先に完了し、Actionsを診断用途に使わない。未知失敗時は再送前に停止して実状態を確認する。
+- 秘密値を取得/転記/保存せず、既存キーと権限範囲を維持する。新リソース/キー/権限拡張は今回予定しない。
+- microCMSの管理画面への本人ログインが必要なら本人へ依頼する。画面プレビューURL設定は今回の実装範囲に含む。記事編集・新規作成・公開は本人が行う。
+- 完了条件は配備成功、画面プレビュー設定、保存済み新規下書き/公開済み記事の編集下書きの実表示。記事が存在しない等で確認できない状態は未確認と明示する。
+
+現状確認: KSC mainは匿名fetchでeb2b838698a9a58e1176d0a7f7e6e8a99396e9d0、取得/表示関連8ファイルはローカルUTF-8 LFと一致。本人ログイン済みksc.microcms.ioのblog画面プレビューURLは空欄。実スキーマはtitle/slug=text、content=richtext、tag=select、eyecatch=image、date=datetimeの6項目。現serverはtag配列とdate文字列に対応しておりNovolBaのauthor/category正規化は不要。取得外slug、実スキーマに無いsummaryの挙動も保持する。実スキーマ結合fixtureとしてtag空/単一/複数、date有/無/null、画像object/null、本文/title、取得外slug省略を検証し、main反映前に独立レビューする。記事一覧は現在3件すべて公開中で、確認用下書き準備を本人へ依頼済み。
+
+反映前検証: KSC旧配備runtimeの実SDK loopbackで更新番号不一致412を1回再現後、CF準備完了後のGetFunction再読・初期hash必須・所有/状態/並行コード変更検査を移植。Lambda44/44成功、対象Lint・UTF-8・差分検査・独立レビュー成功。配備3ファイルはNovolBa成功main d8e7ae4とUTF-8 LF完全一致。KSC実6field結合fixture3件を追加しpreview47/47、対象Lint/UTF-8/差分検査・独立レビュー成功。今回の反映対象はdeploy.mjs/deploy.test.mjs/sdk-integration.test.mjs/server.test.mjs/workspace-spec.mdの5ファイルで、server/clientと既存本番配備workflowは変更しない。
+
+設定確認: 既存AWSスタックksc-microcms-previewはaccount305678528731/us-east-1でUPDATE_COMPLETE。既存Function URLを出力タブで確認し、blog画面プレビューに https://4ycjutadccnuzhkrjxw6tyqfhu0ziueo.lambda-url.us-east-1.on.aws/preview/?endpoint=blog&contentId={CONTENT_ID}#draftKey={DRAFT_KEY} を保存。ページ再読込後も同じ値とボタン表示ONを確認。実キー/記事編集は行っていない。配備と実下書き表示は確認待ち。
+
 ## 目的と対象
 main 6df03dd479decbd81dcc7c34fbc144aae83d6e38 の分離コピーへ blog 記事のプレビューを実装する。
 
