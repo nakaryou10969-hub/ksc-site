@@ -1,33 +1,18 @@
 import { client } from "@/libs/client";
-import { Event, Topic } from "@/libs/types";
+import { Event } from "@/libs/types";
 import { getKscArticlesFromNovolba } from "@/libs/novolbaWith";
 import ContactForm from "./components/ContactForm";
 import EventSlider from "./components/EventSlider";
 import EventArticleCarousel from "./components/EventArticleCarousel";
-import TopicSection from "./components/TopicSection";
 import RevealSection from "./components/RevealSection";
 import Image from "next/image";
 import MemberCardMobile from "./components/MemberCardMobile";
-
-const TOPIC_ENDPOINT = process.env.MICROCMS_TOPIC_ENDPOINT ?? "news";
 
 async function getLatestEvents(): Promise<Event[]> {
   try {
     const data = await client.getList<Event>({
       endpoint: "blog",
       queries: { limit: 12, orders: "-date", fields: "id,title,date,eyecatch" },
-    });
-    return data.contents;
-  } catch {
-    return [];
-  }
-}
-
-async function getLatestTopics(): Promise<Topic[]> {
-  try {
-    const data = await client.getList<Topic>({
-      endpoint: TOPIC_ENDPOINT,
-      queries: { limit: 10, orders: "-publishedAt" },
     });
     return data.contents;
   } catch {
@@ -64,7 +49,6 @@ function formatEventDate(date: string) {
 }
 
 export default async function Home() {
-  const topics = await getLatestTopics();
   // 記事カードは NovolBa の WITH で「KSCサイトに表示」がオンの記事を表示する。
   // NovolBa の接続情報が無い・取得に失敗した場合は、従来どおり KSC の blog を使う。
   const novolbaArticles = await getKscArticlesFromNovolba(formatEventDate);
@@ -414,8 +398,6 @@ export default async function Home() {
         */}
         </div>
       </section>
-
-      <TopicSection topics={topics} />
 
       {/* 運営主体セクション */}
       <section style={{ backgroundColor: "#E3E0DA" }}>

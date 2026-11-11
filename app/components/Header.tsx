@@ -4,7 +4,6 @@ const navItems = [
   { label: "KANDA Startup Commons とは", href: "/#about" },
   { label: "メンバーについて", href: "/#roles" },
   { label: "過去イベント", href: "/#openday" },
-  { label: "トピック", href: "/#topics" },
   { label: "お問い合わせ", href: "/#contact" },
 ];
 
