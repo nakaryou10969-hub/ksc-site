@@ -1,5 +1,6 @@
 import { client } from "@/libs/client";
 import { Event, Topic } from "@/libs/types";
+import { getKscArticlesFromNovolba } from "@/libs/novolbaWith";
 import ContactForm from "./components/ContactForm";
 import EventSlider from "./components/EventSlider";
 import EventArticleCarousel from "./components/EventArticleCarousel";
@@ -57,22 +58,27 @@ function formatEventDate(date: string) {
       year: "numeric",
       month: "2-digit",
       day: "2-digit",
+      timeZone: "Asia/Tokyo",
     })
     .replace(/\//g, ".");
 }
 
 export default async function Home() {
-  const events = await getLatestEvents();
   const topics = await getLatestTopics();
-  const articleItems =
-    events.length > 0
-      ? events.map((event) => ({
+  // 記事カードは NovolBa の WITH で「KSCサイトに表示」がオンの記事を表示する。
+  // NovolBa の接続情報が無い・取得に失敗した場合は、従来どおり KSC の blog を使う。
+  const novolbaArticles = await getKscArticlesFromNovolba(formatEventDate);
+  const blogArticles =
+    novolbaArticles === null
+      ? (await getLatestEvents()).map((event) => ({
           href: `/events/${event.id}/`,
           img: event.eyecatch?.url ?? "",
           title: event.title,
           date: event.date ? formatEventDate(event.date) : "",
         }))
-      : fallbackArticles;
+      : [];
+  const sourceArticles = novolbaArticles ?? blogArticles;
+  const articleItems = sourceArticles.length > 0 ? sourceArticles : fallbackArticles;
 
   return (
     <main className="pt-[72px]">

@@ -6,6 +6,7 @@ on:
       - main
   repository_dispatch:
     types: [microcms_update]
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -28,6 +29,9 @@ jobs:
         env:
           MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
           MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
+          # 記事カードは NovolBa の microCMS（WITH）から取得する
+          NOVOLBA_MICROCMS_SERVICE_DOMAIN: miu4stli4b
+          NOVOLBA_MICROCMS_API_KEY: ${{ secrets.NOVOLBA_MICROCMS_API_KEY }}
           NEXT_PUBLIC_FORMSPREE_ENDPOINT: ${{ secrets.NEXT_PUBLIC_FORMSPREE_ENDPOINT }}
         run: npm run build
 
